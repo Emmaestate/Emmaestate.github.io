@@ -1,0 +1,86 @@
+.home-valuation-section {
+  position: relative;
+  width: 100vw;       /* full viewport width */
+  min-height: 600px;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),
+    url("https://media-production.lp-cdn.com/media/gtyekz9gwyizy8amjc7w");
+  background-size: cover;
+  background-position: center;
+  padding-top: 250px; /* vertical padding only */
+  box-sizing: border-box;
+  overflow-x: hidden; /* prevent horizontal scroll if any */
+}
+
+.home-valuation-content-wrapper {
+  max-width: 1720px;  /* your desired max width */
+  margin: 0 auto;     /* center horizontally */
+  padding-left: 20px; /* space from left */
+  padding-right: 20px; /* space from right */
+  box-sizing: border-box;
+}
+
+.home-valuation-title h2 {
+  color: white;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+.search-wrapper {
+  background-color: white;
+  padding: 25px 20px; /* padding inside the box */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  margin-right: 10px;
+}
+
+.search-icon-img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  padding-top: 2px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.btn3 {
+  font-size: 1.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .home-valuation-section {
+    padding: 150px 0 0 0;
+  }
+  
+  .home-valuation-title {
+    padding: 0 3vw;
+  }
+
+  .search-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn3 {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}

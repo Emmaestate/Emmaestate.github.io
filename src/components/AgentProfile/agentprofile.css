@@ -1,0 +1,193 @@
+/* Main wrapper for the agent profile */
+.agent-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 2%;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgb(33, 31, 31);
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 120px;
+}
+
+/* Left image column with fixed size */
+.agent-profile__image2 {
+  flex-shrink: 0;
+  width: 500px; /* Fixed width */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agent-image2 {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.034);
+  object-fit: cover;
+}
+
+/* Right content column */
+.agent-profile__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+  min-width: 0; /* Prevents overflow on small screens */
+}
+
+.agent-name {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.agent-position {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.agent-description p {
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+/* Footer content */
+.content-footer {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+  border-top: 2px solid #000000;  /* green border */
+  border-bottom: 2px solid #000000;
+}
+
+/* Social icons */
+.lp-socials {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.lp-socials__link {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #e0f5e7; /* light green tint */
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.lp-socials__link:hover {
+  background-color: #00b318;
+  border-color: #00b318;
+  box-shadow: 0 0 2px rgba(0, 179, 24, 0.6); /* green glow */
+}
+
+/* Icon placeholders */
+.lp-i {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lp-i--linkedin {
+  background-image: url('../../assets/facebook.png');
+}
+.lp-i--facebook {
+  background-image: url('../../assets/facebook.png');
+}
+.lp-i--zillow {
+  background-image: url('../../assets/facebook.png');
+}
+.lp-i--wechat {
+  background-image: url('../../assets/wechat.png');
+}
+.lp-i--youtube {
+  background-image: url('../../assets/youtube.png');
+}
+.lp-i--instagram {
+  background-image: url('../../assets/instagram.png');
+}
+
+.lp-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgb(33, 31, 31);
+}
+
+.lp-link:hover {
+  color: #00b318;  /* changed from #555 to green */
+}
+
+.agent-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.agent-contact .contact-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.agent-link {
+  color: #00b318; /* green links */
+  text-decoration: underline;
+}
+
+.agent-link:hover {
+  color: #007f1f; /* slightly darker green on hover */
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Responsive stack for mobile */
+@media (max-width: 700px) {
+  .agent-profile {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .agent-profile__image {
+    width: 300px;
+  }
+
+  .agent-name {
+    font-size: 32px;
+  }
+
+  .agent-position {
+    font-size: 17px;
+  }
+
+  .agent-description p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,34 @@
+.agent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  transition: transform 0.2s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-5px);
+}
+
+.agent-image {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #ddd;
+}
+
+.agent-card-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.agent-label {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 0.25rem;
+}

@@ -1,0 +1,63 @@
+.split-section {
+  display: flex;
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
+}
+
+.split-section-image {
+  flex: 4;
+  margin: 0;
+  padding: 0;
+}
+
+.split-section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.split-section-text {
+  flex: 3;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.split-section-text h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  
+}
+
+.split-section-text p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.paragraphs p {
+  margin-bottom: 1.2rem; /* Adds space between paragraphs */
+  line-height: 1.6;
+}
+
+.hoverable-image__text-col .paragraphs p {
+  margin-bottom: 1.5rem;     /* Space between paragraphs */
+  line-height: 1.7;          /* Improve text readability */
+  font-size: 1rem;           /* Consistent font size */
+  color: rgba(0, 0, 0, 0.85);/* Slightly softened black */
+}
+
+.hoverable-image__text-col {
+  padding: 80px 40px 80px 120px; /* existing padding plus consistent spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+

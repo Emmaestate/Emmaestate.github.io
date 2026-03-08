@@ -1,0 +1,54 @@
+ .communities-container{
+  margin: 80px auto;
+  text-align: center;
+} 
+
+ .communities{
+  margin: 80px auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.community img{
+  width: 300px;
+  height: 340px;
+  border-radius: 1px;
+  object-fit: cover;
+  display: block;
+}
+
+.community{
+  flex-basis: 19%;
+  border-radius: 1px;
+  position: relative;
+}
+
+.caption{
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 15, 152, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  padding-top: 70%;
+  transition: 0.4s;
+}
+
+.caption p{
+  font-size: 65%;
+}
+
+.community:hover .caption{
+  opacity: 1;
+  padding-top: 0;
+}

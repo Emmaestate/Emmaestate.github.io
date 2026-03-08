@@ -1,0 +1,111 @@
+:root {
+  --gradient-color: var(--overlay-color, rgba(0, 0, 0, 0.4));
+  --global-primary-font-family: Cinzel, serif;
+  --global-secondary-font-family: 'Open Sans', sans-serif;
+  --fontColor: #fff;
+}
+
+/* Main container */
+.company-stats {
+  color: black;
+  background-color: #ffffff;
+  background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), 
+    url('https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/https://media-production.lp-cdn.com/media/xxrgdusdmr5ahmaffeio');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  padding: var(--global-section-padding, 35px) 0;
+}
+
+/* Sticky background effect on large screens */
+@media only screen and (min-width: 993px) {
+  .company-stats {
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 1280px) and (orientation: landscape) {
+  .company-stats {
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), 
+      url('https://media-production.lp-cdn.com/media/xxrgdusdmr5ahmaffeio');
+  }
+}
+
+/* Container layout */
+.company-stats .lp-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+
+/* Stat grid */
+.company-stats__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 32px;
+  gap: 24px;
+}
+
+.company-stats__row--four .company-stats__col {
+  flex: 1 1 calc(25% - 24px);
+  min-width: 240px;
+  display: flex;
+  justify-content: center;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 24px;
+  color: var(--fontColor);
+}
+
+.stat-card__value {
+  font-size: var(--global-h2-font-size, 41px);
+  font-family: var(--global-primary-font-family);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.stat-card__title {
+  font-size: 18px;
+  font-family: var(--global-secondary-font-family);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .company-stats__row--four .company-stats__col {
+    flex: 1 1 50%;
+  }
+
+  .stat-card__value {
+    font-size: 36px;
+  }
+
+  .stat-card__title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .company-stats__row--four .company-stats__col {
+    flex: 1 1 100%;
+  }
+
+  .company-stats {
+    padding: 48px 0;
+  }
+
+  .stat-card__value {
+    font-size: 30px;
+  }
+
+  .stat-card__title {
+    font-size: 15px;
+  }
+}

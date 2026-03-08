@@ -1,0 +1,112 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 15vw;
+  min-width: 380px;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  z-index: 2000;
+
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.open {
+  display: flex !important;
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Close button */
+.sidebar__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgba(19, 15, 58, 0.95);
+  padding: 10px;
+  line-height: 1;
+}
+
+/* Nav container */
+.sidebar__content {
+  width: 100%;
+}
+
+.sidebar__nav {
+  list-style-type: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar__nav-item {
+  border-bottom: 1px solid rgba(19, 15, 58, 0.164);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.sidebar__nav-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Main nav links */
+.sidebar__nav-link,
+.sidebar__dropdown-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.sidebar__nav-link:hover,
+.sidebar__dropdown-link:hover {
+  color: #00b318;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.sidebar__dropdown-toggle {
+  cursor: pointer;
+  display: block;
+}
+
+/* Match spacing/alignment with other items */
+.sidebar__dropdown {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.3rem;
+}
+
+/* Caret animation */
+.caret-icon {
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.caret-icon.rotate {
+  transform: rotate(180deg);
+}

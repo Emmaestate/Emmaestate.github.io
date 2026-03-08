@@ -1,0 +1,155 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+/*  */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  transition: top 0.2s ease-in-out;
+  color: #fff;
+}
+
+.sticky {
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+.header .navbar-container {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 4.16vw;
+  padding-right: 4.16vw;
+  display: flex;
+  width: 100%;
+}
+
+/* Left and Right Sections */
+.nav-section {
+  flex: 1;
+}
+
+.nav-section.left {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1%;
+}
+
+.nav-section.right {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1%;
+}
+
+/* Nav Lists */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.dark-nav {
+  background: #000000f1;
+  transition: 0.5s;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Logo Centered Absolutely */
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  margin-top: 2%;
+  padding-bottom: 4%;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1f1f1f;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 150px;
+  z-index: 10;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 1.5rem 0;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dropdown-link:hover {
+  color: #00b318;
+}
+
+/* Hamburger */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.5rem;
+}
+
+.line {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+}
+
+@media (max-width: 900px) {
+  /* Hide left and center nav sections */
+  .nav-section.left,
+  .nav-logo {
+    display: none;
+  }
+
+  /* Keep right nav-section visible to keep hamburger */
+  .nav-section.right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Hide all right nav items except the hamburger */
+  .nav-section.right .nav-list > .nav-item:not(.hamburger-wrapper) {
+    display: none;
+  }
+
+  /* Make sure hamburger is visible and clickable */
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+
