@@ -47,73 +47,21 @@
 }
 
 .contact-form__contents {
-  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 .contact-form__contents-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-right: 20%;
-}
-
-.contact-form__field {
-  position: relative;
-}
-
-.contact-form__field-input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-}
-
-.contact-form__field-label {
-  position: absolute;
-  top: -8px;
-  left: 12px;
-  background: #fff;
-  font-size: 0.75rem;
-  padding: 0 4px;
-  color: #333;
-}
-
-.contact-form__footer {
-  margin-top: 20px;
-}
-
-.lp-disclaimer {
-  font-size: 0.9rem;
-  color: #000000;
-  margin-bottom: 12px;
-}
-
-.lp-tcr-message {
-  color: black;
-}
-
-.lp-tcr-message a {
-  text-decoration: underline;
-  color: #00b318;
-}
-
-.link-btn {
-  padding: 10px 20px;
-  background-color: #1f1e1e;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.link-btn:hover {
-  background-color: #333;
+  flex: 1.2;
+  /* Remove padding-right to let flex handle spacing */
 }
 
 .contact-form__info {
-  flex: 1;
-  padding-left: 40px;
+  flex: 0.8;
+  padding-left: 0; /* Remove padding-left as we use gap */
+  margin-top: 20px; /* Align with form top visually */
 }
 
 .info-footer__title {

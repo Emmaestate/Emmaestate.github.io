@@ -67,6 +67,40 @@
   transition: 0.6s;
 }
 
+.scrollDownBtn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  z-index: 10;
+  padding: 0;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.scrollDownBtn:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-5px) translateX(-50%);
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .title {

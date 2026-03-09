@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import styles from './Hero2.module.css'; // ✅ Correct CSS module import
+import React, { useState } from "react";
+import styles from "./Hero2.module.css"; // ✅ Correct CSS module import
 
 const Hero2 = ({
-  subtitle = '',
-  title = '',
-  description = '',
-  btnText = '',
-  backgroundImage = '/assets/hero.jpg',
-  height = '700px',
-  paddingTop = '80px',
+  subtitle = "",
+  title = "",
+  description = "",
+  btnText = "",
+  backgroundImage = "/assets/hero.jpg",
+  height = "700px",
+  paddingTop = "80px",
   showButton = true,
 }) => {
   const [hovered, setHovered] = useState(false);
 
   const heroStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.17), rgba(110, 110, 110, 0.23)), url(${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '100vh', // or remove completely and use CSS
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100vh", // or remove completely and use CSS
   };
 
   return (

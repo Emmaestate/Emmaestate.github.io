@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import WOW from "../lib/wow";
+import ContactForm from "../components/ContactForm/ContactForm";
 import x_icon from "../assets/X.png";
 import instagram_icon from "../assets/instagram.png";
 import wechat_icon from "../assets/wechat.png";
@@ -114,100 +115,9 @@ function Contact() {
         </p>
       </div>
 
-      <form className="contact-form__form">
-        <input type="hidden" name="source" value="CONTACT_INQUIRY" />
-
-        <div className="contact-form__contents">
-          <div className="contact-form__contents-form">
-            <div className="contact-form__field contact-form__field--name">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="contact-form__field-input"
-                placeholder="Name"
-                required
-              />
-            </div>
-
-            <div className="form-group h-pot">
-              <input
-                id="middleName"
-                name="middleName"
-                autoComplete="off"
-                tabIndex="-1"
-              />
-            </div>
-
-            <div className="contact-form__field contact-form__field--email">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="contact-form__field-input"
-                placeholder="E-mail"
-                required
-              />
-            </div>
-
-            <div className="contact-form__field contact-form__field--message">
-              <input
-                type="text"
-                id="message"
-                name="message"
-                className="contact-form__field-input"
-                placeholder="Your Message"
-                required
-              />
-            </div>
-
-            <div className="contact-form__footer">
-              <div className="lp-disclaimer">
-                <label htmlFor="termsAccepted" style={{ display: "none" }}>
-                  Opt In/Disclaimer Consent:
-                </label>
-                <label className="lp-tcr-content">
-                  <span className="lp-tcr-checkbox">
-                    <input
-                      type="checkbox"
-                      id="termsAccepted"
-                      name="termsAccepted"
-                      required
-                    />
-                  </span>
-                  <span className="lp-tcr-message">
-                    By providing your contact information to{" "}
-                    <strong>Emma Ju Estate</strong>, you acknowledge and agree
-                    to our{" "}
-                    <a
-                      href="/privacy-policy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Privacy Policy
-                    </a>{" "}
-                    and consent to receiving marketing communications, including
-                    through automated calls, texts, and emails, some of which
-                    may use artificial or prerecorded voices. This consent is
-                    not required to purchase any products or services, and you
-                    may opt out at any time. To opt out of texts, reply "STOP"
-                    at any time. To opt out of emails, click the unsubscribe
-                    link included in our emails. Message and data rates may
-                    apply.
-                  </span>
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                className="link-btn link--arrow hyperlink-style-3"
-              >
-                Send
-              </button>
-              <div className="loading-placeholder">Sending...</div>
-              <div className="success-placeholder">Success!</div>
-            </div>
-          </div>
+      <div className="contact-form__contents">
+        <div className="contact-form__contents-form">
+          <ContactForm />
         </div>
 
         <div className="contact-form__info">
@@ -300,7 +210,7 @@ function Contact() {
             </ul>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 }

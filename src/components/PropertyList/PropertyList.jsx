@@ -1,12 +1,13 @@
 // src/Components/PropertyList/PropertyList.jsx
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './PropertyList.css';
+import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import "./PropertyList.css";
 
 const PropertyList = ({ properties = [] }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const propertiesPerPage = 6;
   const navigate = useNavigate();
+  const listRef = useRef(null);
 
   const indexOfLast = currentPage * propertiesPerPage;
   const indexOfFirst = indexOfLast - propertiesPerPage;
@@ -14,13 +15,25 @@ const PropertyList = ({ properties = [] }) => {
 
   const totalPages = Math.ceil(properties.length / propertiesPerPage);
 
+  // Create an array of empty slots if currentProperties is less than propertiesPerPage
+  const emptySlots = Array.from({
+    length: propertiesPerPage - currentProperties.length,
+  });
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    if (listRef.current) {
+      listRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleClick = (id) => {
     navigate(`/property/${id}`);
   };
 
   return (
-    <div className="property-list-container">
-      <div className="property-grid">
+    <div className="property-list-container" ref={listRef}>
+      <div className="property-grid fade-in" key={currentPage}>
         {currentProperties.map((property) => (
           <div
             key={property.id}
@@ -36,10 +49,28 @@ const PropertyList = ({ properties = [] }) => {
             </div>
             <div className="property-details">
               <p className="property-address">{property.address}</p>
-              <p className="property-price">${property.price.toLocaleString()}</p>
-              <p className="property-info">
-                {property.bedrooms} Beds | {property.bathrooms} Baths | {property.sqft} sqft
+              <p className="property-price">
+                ${property.price.toLocaleString()}
               </p>
+              <p className="property-info">
+                {property.bedrooms} Beds | {property.bathrooms} Baths |{" "}
+                {property.sqft} sqft
+              </p>
+            </div>
+          </div>
+        ))}
+        {emptySlots.map((_, index) => (
+          <div
+            key={`empty-${index}`}
+            className="property-card"
+            style={{ visibility: "hidden", pointerEvents: "none" }}
+          >
+            {/* Render an invisible structure to maintain layout height */}
+            <div className="property-image-container"></div>
+            <div className="property-details">
+              <p className="property-address">&nbsp;</p>
+              <p className="property-price">&nbsp;</p>
+              <p className="property-info">&nbsp;</p>
             </div>
           </div>
         ))}
@@ -49,8 +80,8 @@ const PropertyList = ({ properties = [] }) => {
         {Array.from({ length: totalPages }, (_, idx) => (
           <button
             key={idx + 1}
-            className={`pagination-btn ${currentPage === idx + 1 ? 'active' : ''}`}
-            onClick={() => setCurrentPage(idx + 1)}
+            className={`pagination-btn ${currentPage === idx + 1 ? "active" : ""}`}
+            onClick={() => handlePageChange(idx + 1)}
           >
             {idx + 1}
           </button>

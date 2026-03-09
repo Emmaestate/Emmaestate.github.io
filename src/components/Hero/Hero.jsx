@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = ({
@@ -12,6 +13,7 @@ const Hero = ({
   showButton= true,
 }) => {
   const [hovered, setHovered] = useState(false);
+  const navigate = useNavigate();
 
   const heroStyle = {
     backgroundImage: `linear-gradient(rgba(175,175,175,0.69), rgba(0,0,0,0.7)), url(${backgroundImage})`,
@@ -19,6 +21,12 @@ const Hero = ({
     backgroundPosition: 'center',
     height,
     paddingTop,
+  };
+
+  const handleClick = () => {
+    if (title === "CONNECT WITH EMMA") {
+      navigate('/about');
+    }
   };
 
   return (
@@ -33,6 +41,7 @@ const Hero = ({
             className="btn5"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
+            onClick={handleClick}
           >
             {btnText} {hovered && <span>&nbsp;&#8640;</span>}
           </button>

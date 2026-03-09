@@ -1,10 +1,10 @@
-import React from 'react';
-import x_icon from '../../assets/X.png';
-import instagram_icon from '../../assets/instagram.png';
-import wechat_icon from '../../assets/wechat.png';
-import youtube_icon from '../../assets/youtube.png';
-import facebook_icon from '../../assets/facebook.png';
-import './AgentProfile2.css';
+import React from "react";
+import x_icon from "../../assets/X.png";
+import instagram_icon from "../../assets/instagram.png";
+import wechat_icon from "../../assets/wechat.png";
+import youtube_icon from "../../assets/youtube.png";
+import facebook_icon from "../../assets/facebook.png";
+import "./AgentProfile2.css";
 
 const AgentProfile2 = () => {
   return (
@@ -31,7 +31,11 @@ const AgentProfile2 = () => {
                 <div className="split-item">
                   <div className="contact-item">
                     <p className="contact-title">Primary phone</p>
-                    <a className="agent-link" href="tel:(518) 578-1104" aria-label="call (518) 578-1104">
+                    <a
+                      className="agent-link"
+                      href="tel:(518) 578-1104"
+                      aria-label="call (518) 578-1104"
+                    >
                       (123) 456-7890
                     </a>
                   </div>
@@ -45,7 +49,10 @@ const AgentProfile2 = () => {
               {/* Row 2: Full width */}
               <div className="contact-row">
                 <p className="contact-title">Email</p>
-                <a className="agent-link" href="mailto:jessicawilliams@christiesrennj.com">
+                <a
+                  className="agent-link"
+                  href="mailto:jessicawilliams@christiesrennj.com"
+                >
                   emmaju@acreny.us
                 </a>
               </div>
@@ -64,35 +71,65 @@ const AgentProfile2 = () => {
           <div className="content-footer">
             <ul className="lp-socials">
               <li>
-                <a href="#" className="lp-socials__link socials__item" target="_blank" rel="noopener noreferrer" aria-label="X">
+                <a
+                  href="#"
+                  className="lp-socials__link socials__item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X"
+                >
                   <div className="icon-wrapper">
                     <img src={x_icon} alt="X" />
                   </div>
                 </a>
               </li>
               <li>
-                <a href="#" className="lp-socials__link socials__item" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a
+                  href="#"
+                  className="lp-socials__link socials__item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
                   <div className="icon-wrapper">
                     <img src={instagram_icon} alt="Instagram" />
                   </div>
                 </a>
               </li>
               <li>
-                <a href="#" className="lp-socials__link socials__item" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a
+                  href="#"
+                  className="lp-socials__link socials__item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
                   <div className="icon-wrapper">
                     <img src={facebook_icon} alt="Facebook" />
                   </div>
                 </a>
               </li>
               <li>
-                <a href="#" className="lp-socials__link socials__item" target="_blank" rel="noopener noreferrer" aria-label="WeChat">
+                <a
+                  href="#"
+                  className="lp-socials__link socials__item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WeChat"
+                >
                   <div className="icon-wrapper">
                     <img src={wechat_icon} alt="WeChat" />
                   </div>
                 </a>
               </li>
               <li>
-                <a href="#" className="lp-socials__link socials__item" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <a
+                  href="#"
+                  className="lp-socials__link socials__item"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
                   <div className="icon-wrapper">
                     <img src={youtube_icon} alt="YouTube" />
                   </div>
@@ -101,7 +138,9 @@ const AgentProfile2 = () => {
             </ul>
 
             <div className="cta">
-              <a href="/about" className="lp-link lp-link--dark">Learn More</a>
+              <a href="#/about" className="lp-link lp-link--dark">
+                Learn More
+              </a>
             </div>
           </div>
         </div>
