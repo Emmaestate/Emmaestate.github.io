@@ -1,3 +1,4 @@
+import { soldImages } from './soldImages';
 import white_beeches from '../assets/tempProperties/73_white_beeches.jpg';
 import heatherhill from '../assets/tempProperties/9_heatherhill.jpg';
 import ray from '../assets/tempProperties/21_ray.jpg';
@@ -15,6 +16,7 @@ import temp7 from '../assets/tempProperties/temp7.jpeg';
 import temp8 from '../assets/tempProperties/temp8.jpeg';
 
 export const images = {
+  ...soldImages,
   white_beeches,
   heatherhill,
   ray,
