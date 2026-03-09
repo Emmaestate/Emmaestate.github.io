@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "imageKey": "heatherhill",
+    "address": "9 Heatherhill Rd, Demarest, NJ",
+    "price": 2650000,
+    "bedrooms": 6,
+    "bathrooms": 7,
+    "sqft": 5000
+  },
+  {
+    "id": "2",
+    "imageKey": "jones",
+    "address": "2187 Jones Rd, Fort Lee, NJ",
+    "price": 1450000,
+    "bedrooms": 3,
+    "bathrooms": 6,
+    "sqft": 4200
+  },
+  {
+    "id": "3",
+    "imageKey": "laurel",
+    "address": "263 Laurel Ave, Kearny, NJ",
+    "price": 850000,
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "sqft": 1944
+  },
+  {
+    "id": "4",
+    "imageKey": "drexel",
+    "address": "671 Drexel Rd, Paramus, NJ",
+    "price": 1445000,
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "sqft": 3000
+  },
+  {
+    "id": "5",
+    "imageKey": "longview",
+    "address": "502 Longview Place, Cliffside Park, NJ",
+    "price": 999000,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqft": 3000
+  },
+  {
+    "id": "6",
+    "imageKey": "white_beeches",
+    "address": "73 White Beeches Dr, Dumont, NJ",
+    "price": 760000,
+    "bedrooms": 4,
+    "bathrooms": 2.5,
+    "sqft": 7710
+  },
+  {
+    "id": "7",
+    "imageKey": "ray",
+    "address": "21 Ray Ave, Leonia, NJ",
+    "price": 999800,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqft": 9439
+  }
+]

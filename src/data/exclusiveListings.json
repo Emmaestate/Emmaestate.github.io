@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "imageKey": "white_beeches",
+    "address": "123 Maple Street, Fort Lee, NJ",
+    "price": 950000,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2800
+  },
+  {
+    "id": "2",
+    "imageKey": "temp2",
+    "address": "456 Oak Avenue, Paramus, NJ",
+    "price": 925000,
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "sqft": 3200
+  },
+  {
+    "id": "3",
+    "imageKey": "temp3",
+    "address": "789 Pine Lane, Tenafly, NJ",
+    "price": 790000,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 2500
+  },
+  {
+    "id": "4",
+    "imageKey": "temp4",
+    "address": "321 Cedar Rd, Englewood, NJ",
+    "price": 870000,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2800
+  },
+  {
+    "id": "5",
+    "imageKey": "temp5",
+    "address": "654 Spruce Blvd, Ridgewood, NJ",
+    "price": 950000,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "sqft": 3400
+  },
+  {
+    "id": "6",
+    "imageKey": "temp6",
+    "address": "987 Elm St, Closter, NJ",
+    "price": 880000,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "sqft": 2700
+  },
+  {
+    "id": "7",
+    "imageKey": "temp7",
+    "address": "101 Birch Rd, Leonia, NJ",
+    "price": 810000,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 2300
+  },
+  {
+    "id": "8",
+    "imageKey": "temp8",
+    "address": "101 Beech Rd, Teaneck, NJ",
+    "price": 710000,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2300
+  }
+]
