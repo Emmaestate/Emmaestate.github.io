@@ -1,5 +1,5 @@
 :root {
-  --gradient-color: var(--overlay-color, rgba(0, 0, 0, 0.4));
+  /* --gradient-color: var(--overlay-color, rgba(0, 0, 0, 0.4)); */
   --global-primary-font-family: Cinzel, serif;
   --global-secondary-font-family: 'Open Sans', sans-serif;
   --fontColor: #fff;
@@ -9,7 +9,7 @@
 .company-stats {
   color: black;
   background-color: #ffffff;
-  background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
     url('../../assets/company-stats-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -27,7 +27,7 @@
 
 @media (min-width: 1280px) and (orientation: landscape) {
   .company-stats {
-    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
       url('../../assets/company-stats-bg.jpg');
   }
 }
