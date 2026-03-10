@@ -65,6 +65,7 @@ const Footer = () => {
           <a href="/featured-listings">Featured Listings</a>
           <a href="/valuation">Home Valuation</a>
           <a href="/contact">Let's Connect</a>
+          <a href="/#/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
         </div>
 
         <div className="container-social-media">

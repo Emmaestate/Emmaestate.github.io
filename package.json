@@ -11,7 +11,8 @@
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview",
-    "update-sold": "node scripts/update-sold.js"
+    "update-sold": "node scripts/update-sold.js",
+    "update-exclusive": "node scripts/update-exclusive.js"
   },
   "dependencies": {
     "animate.css": "^4.1.1",

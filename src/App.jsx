@@ -12,6 +12,7 @@ import About from "./pages/About.jsx";
 import ScrollToTop from "./Components/ScrollToTop.jsx";
 import Team from "./pages/Team.jsx";
 import Social from "./pages/Social.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         {/* <Route path="/neighborhoods/:path" element={<NeighborhoodPage />} /> */}
         <Route path="/team" element={<Team />} />
         <Route path="/social" element={<Social />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         {/* Routes WITHOUT Layout (like Contact) */}
         <Route path="/contact" element={<Contact />} />

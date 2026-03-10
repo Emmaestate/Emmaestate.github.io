@@ -65,12 +65,12 @@ const SidebarContent = () => {
           )}
         </li>
 
-        <li className="sidebar__nav-item">
+        {/* <li className="sidebar__nav-item">
           <Link to="/social" className="sidebar__nav-link" onClick={handleScrollToTop}>SOCIAL</Link>
         </li>
         <li className="sidebar__nav-item">
           <Link to="/neighborhoods" className="sidebar__nav-link" onClick={handleScrollToTop}>COMMUNITIES</Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

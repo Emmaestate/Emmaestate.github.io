@@ -59,9 +59,9 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                 </div>
               )}
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <span className="nav-link">HOME SEARCH</span>
-            </li>
+            </li> */}
           </ul>
         </div>
 

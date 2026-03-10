@@ -76,7 +76,7 @@ const ContactForm = ({ className = '', style = {} }) => {
                     By providing Emma Ju Estates your contact
                     information, you acknowledge and agree to our{' '}
                     <a
-                      href="/terms-and-conditions"
+                      href="/#/privacy-policy"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Privacy Policy - open in a new tab"

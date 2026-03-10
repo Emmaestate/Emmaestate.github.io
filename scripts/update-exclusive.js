@@ -7,12 +7,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const EXCEL_FILE = path.join(PROJECT_ROOT, 'source/sold_listings.xlsx');
-const SOURCE_IMAGES_DIR = path.join(PROJECT_ROOT, 'source/sold_listings_image');
-const DEST_IMAGES_DIR = path.join(PROJECT_ROOT, 'src/assets/soldProperties');
-const OUTPUT_JSON = path.join(PROJECT_ROOT, 'src/data/soldListings.json');
+const EXCEL_FILE = path.join(PROJECT_ROOT, 'source/exclusive_listings.xlsx');
+const SOURCE_IMAGES_DIR = path.join(PROJECT_ROOT, 'source/exclusive_listings_image');
+const DEST_IMAGES_DIR = path.join(PROJECT_ROOT, 'src/assets/exclusiveProperties');
+const OUTPUT_JSON = path.join(PROJECT_ROOT, 'src/data/exclusiveListings.json');
 const IMAGES_JS_FILE = path.join(PROJECT_ROOT, 'src/data/images.js');
-const SOLD_IMAGES_JS_FILE = path.join(PROJECT_ROOT, 'src/data/soldImages.js');
+const EXCLUSIVE_IMAGES_JS_FILE = path.join(PROJECT_ROOT, 'src/data/exclusiveImages.js');
 
 // Ensure destination directory exists
 if (!fs.existsSync(DEST_IMAGES_DIR)) {
@@ -34,6 +34,11 @@ function normalizeFilename(address) {
 
 // Helper to find matching image file
 function findImageFile(address) {
+  if (!fs.existsSync(SOURCE_IMAGES_DIR)) {
+    console.warn(`Warning: Source images directory not found: ${SOURCE_IMAGES_DIR}`);
+    return null;
+  }
+  
   const files = fs.readdirSync(SOURCE_IMAGES_DIR);
   const streetPart = address.split(',')[0].trim();
   
@@ -42,9 +47,6 @@ function findImageFile(address) {
   
   if (!match) {
     // Try fuzzy match or just look for street name
-    // This part can be improved based on actual filenames
-    // Based on user provided list, filenames look like "1060 Anderson Ave.jpg"
-    // So "1060 Anderson Ave" should match
     
     // Normalize spaces
     const normalizedStreet = streetPart.replace(/\s+/g, ' ').toLowerCase();
@@ -59,12 +61,17 @@ function findImageFile(address) {
 
 // Read Excel
 console.log('Reading Excel file...');
+if (!fs.existsSync(EXCEL_FILE)) {
+    console.error(`Error: Excel file not found: ${EXCEL_FILE}`);
+    process.exit(1);
+}
+
 const workbook = xlsx.readFile(EXCEL_FILE);
 const sheetName = workbook.SheetNames[0];
 const worksheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(worksheet);
 
-const soldListings = [];
+const exclusiveListings = [];
 const imageImports = {};
 
 console.log(`Found ${data.length} records.`);
@@ -74,7 +81,7 @@ data.forEach((row, index) => {
   if (!address) return;
 
   const normalizedName = normalizeFilename(address);
-  const imageKey = `sold_${normalizedName}`;
+  const imageKey = `exclusive_${normalizedName}`;
   
   // Find and copy image
   const imageFile = findImageFile(address);
@@ -89,17 +96,17 @@ data.forEach((row, index) => {
     fs.copyFileSync(srcPath, destPath);
     console.log(`Copied image for ${address} -> ${destFilename}`);
     
-    // We export the image import path relative to src/data/soldImages.js
-    // soldImages.js is in src/data, images are in src/assets/soldProperties
-    // So path is ../assets/soldProperties/filename
-    imageImports[imageKey] = `../assets/soldProperties/${destFilename}`;
+    // We export the image import path relative to src/data/exclusiveImages.js
+    // exclusiveImages.js is in src/data, images are in src/assets/exclusiveProperties
+    // So path is ../assets/exclusiveProperties/filename
+    imageImports[imageKey] = `../assets/exclusiveProperties/${destFilename}`;
     hasImage = true;
   } else {
     console.warn(`Warning: No image found for ${address}`);
   }
 
   // Construct listing object
-  soldListings.push({
+  exclusiveListings.push({
     id: (index + 1).toString(),
     imageKey: hasImage ? imageKey : null, 
     address: address,
@@ -112,11 +119,11 @@ data.forEach((row, index) => {
 });
 
 // Write JSON
-console.log('Writing soldListings.json...');
-fs.writeFileSync(OUTPUT_JSON, JSON.stringify(soldListings, null, 2));
+console.log('Writing exclusiveListings.json...');
+fs.writeFileSync(OUTPUT_JSON, JSON.stringify(exclusiveListings, null, 2));
 
-// Generate soldImages.js
-console.log('Generating soldImages.js...');
+// Generate exclusiveImages.js
+console.log('Generating exclusiveImages.js...');
 let jsContent = '';
 const importKeys = Object.keys(imageImports);
 
@@ -124,34 +131,34 @@ importKeys.forEach(key => {
   jsContent += `import ${key} from '${imageImports[key]}';\n`;
 });
 
-jsContent += '\nexport const soldImages = {\n';
+jsContent += '\nexport const exclusiveImages = {\n';
 importKeys.forEach(key => {
   jsContent += `  ${key},\n`;
 });
 jsContent += '};\n';
 
-fs.writeFileSync(SOLD_IMAGES_JS_FILE, jsContent);
+fs.writeFileSync(EXCLUSIVE_IMAGES_JS_FILE, jsContent);
 
-// Update images.js to include soldImages
+// Update images.js to include exclusiveImages
 console.log('Updating images.js...');
 let imagesJsContent = fs.readFileSync(IMAGES_JS_FILE, 'utf8');
 
-// Check if soldImages import already exists
-if (!imagesJsContent.includes("import { soldImages } from './soldImages';")) {
+// Check if exclusiveImages import already exists
+if (!imagesJsContent.includes("import { exclusiveImages } from './exclusiveImages';")) {
   // Add import at the top
-  imagesJsContent = "import { soldImages } from './soldImages';\n" + imagesJsContent;
+  imagesJsContent = "import { exclusiveImages } from './exclusiveImages';\n" + imagesJsContent;
 }
 
 // Check if spread exists in export
-if (!imagesJsContent.includes('...soldImages')) {
+if (!imagesJsContent.includes('...exclusiveImages')) {
   // Add spread to export object
   // Look for "export const images = {"
   imagesJsContent = imagesJsContent.replace(
     'export const images = {',
-    'export const images = {\n  ...soldImages,'
+    'export const images = {\n  ...exclusiveImages,'
   );
 }
 
 fs.writeFileSync(IMAGES_JS_FILE, imagesJsContent);
 
-console.log('Done! Sold listings updated.');
+console.log('Done! Exclusive listings updated.');
