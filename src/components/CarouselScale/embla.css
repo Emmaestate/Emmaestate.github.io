@@ -6,6 +6,29 @@
   --slide-size: 50%;
 }
 
+@media (max-width: 768px) {
+  .embla {
+    --slide-size: 100%;
+    --slide-height: auto;
+  }
+  
+  .embla__controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .embla__heading {
+    font-size: 3rem;
+  }
+
+  .embla__buttons {
+    padding-top: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
 .embla__viewport {
   overflow: hidden;
 }

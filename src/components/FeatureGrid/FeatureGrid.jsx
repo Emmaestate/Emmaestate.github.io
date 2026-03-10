@@ -1,8 +1,8 @@
 // FeatureGrid.jsx
-import React from 'react';
-import './FeatureGrid.css';
+import React from "react";
+import "./FeatureGrid.css";
 
-const FeatureGrid = ({ title, items }) => {
+const FeatureGrid = ({ title, items, src }) => {
   return (
     <div className="feature-grid-container">
       {title && (
@@ -13,10 +13,12 @@ const FeatureGrid = ({ title, items }) => {
 
       <div className="feature-grid">
         {items.map((item, index) => (
-          <div className="feature-card" key={index}>
-            {item.image && (
-              <img src={item.image} alt={`${item.title} image`} />
-            )}
+          <div
+            className="feature-card"
+            key={index}
+            onClick={() => (window.location.href = `#${item.src}`)}
+          >
+            {item.image && <img src={item.image} alt={`${item.title} image`} />}
             {/* Title overlay */}
             <div className="title">
               <h2>{item.title}</h2>

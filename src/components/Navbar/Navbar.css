@@ -128,16 +128,36 @@
 }
 
 @media (max-width: 900px) {
-  /* Hide left and center nav sections */
-  .nav-section.left,
-  .nav-logo {
+  .nav-section.left {
     display: none;
+  }
+  
+  .nav-logo {
+    position: relative;
+    left: 0;
+    transform: none;
+    display: block; /* Ensure logo is visible */
+    margin: 0; /* Align left */
+  }
+
+  .nav-logo .logo-img {
+    height: 40px; /* Smaller logo for mobile */
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .header .navbar-container {
+    justify-content: space-between; /* Space between logo and hamburger */
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   /* Keep right nav-section visible to keep hamburger */
   .nav-section.right {
     display: flex;
     justify-content: flex-end;
+    flex: 0 0 auto; /* Don't grow, just fit content */
   }
 
   /* Hide all right nav items except the hamburger */
