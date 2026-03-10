@@ -1,9 +1,15 @@
 import React from "react";
 import "./CompanyStats.css";
+import companyStatsBg from "../../assets/company-stats-bg.jpg";
 
 const CompanyStats = () => {
   return (
-    <div className="company-stats lp-vertical-paddings">
+    <div 
+      className="company-stats lp-vertical-paddings"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${companyStatsBg})`
+      }}
+    >
       <div className="lp-container-stats">
         <div className="lp-title-group">
           <h2

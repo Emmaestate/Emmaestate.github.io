@@ -9,8 +9,7 @@
 .company-stats {
   color: black;
   background-color: #ffffff;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-    url('../../assets/company-stats-bg.jpg');
+  /* background-image is set inline in JSX for better path resolution */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -27,8 +26,7 @@
 
 @media (min-width: 1280px) and (orientation: landscape) {
   .company-stats {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-      url('../../assets/company-stats-bg.jpg');
+    /* Background image handled inline */
   }
 }
 
