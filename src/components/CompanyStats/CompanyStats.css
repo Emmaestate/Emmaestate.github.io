@@ -10,7 +10,7 @@
   color: black;
   background-color: #ffffff;
   background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), 
-    url('https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/https://media-production.lp-cdn.com/media/xxrgdusdmr5ahmaffeio');
+    url('../../assets/company-stats-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -28,7 +28,7 @@
 @media (min-width: 1280px) and (orientation: landscape) {
   .company-stats {
     background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), 
-      url('https://media-production.lp-cdn.com/media/xxrgdusdmr5ahmaffeio');
+      url('../../assets/company-stats-bg.jpg');
   }
 }
 
