@@ -56,8 +56,7 @@ const Home = () => {
     </div> */}
       <div className="container-type1">
         <Footer />
-      </div>{" "}
-      */
+      </div>
     </div>
   );
 };
