@@ -43,13 +43,6 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                     Our Exclusive Listings
                   </Link>
                   <Link
-                    to="/properties/featuredlist"
-                    className="dropdown-link"
-                    onClick={handleScrollToTop}
-                  >
-                    Our Featured Leases
-                  </Link>
-                  <Link
                     to="/properties/soldlist"
                     className="dropdown-link"
                     onClick={handleScrollToTop}

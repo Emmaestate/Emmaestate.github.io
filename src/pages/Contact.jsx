@@ -131,10 +131,10 @@ function Contact() {
               <ul className="links-list">
                 <li className="link">
                   <a
-                    href="mailto:emmaju@acreny.us"
+                    href="mailto:realtorlzj@gmail.com"
                     className="hyperlink-style-3"
                   >
-                    emmaju@acreny.us
+                    realtorlzj@gmail.com
                   </a>
                 </li>
                 <li className="link">
@@ -157,7 +157,7 @@ function Contact() {
 
           <div className="social-media-icons">
             <ul className="social-icons-list">
-              <li>
+              <li style={{ display: 'none' }}>
                 <a
                   href="#"
                   aria-label="X"
@@ -169,7 +169,7 @@ function Contact() {
               </li>
               <li>
                 <a
-                  href="https://instagram.com/yourprofile"
+                  href="https://www.instagram.com/emmarocks_nyc?igsh=cWhrdndsMmp2OHVn&utm_source=qr"
                   aria-label="Instagram"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -177,7 +177,7 @@ function Contact() {
                   <img src={instagram_icon} alt="Instagram" />
                 </a>
               </li>
-              <li>
+              <li style={{ display: 'none' }}>
                 <a
                   href="https://facebook.com/yourprofile"
                   aria-label="Facebook"
@@ -188,18 +188,20 @@ function Contact() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://wechat.com/yourprofile"
-                  aria-label="WeChat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={wechat_icon} alt="WeChat" />
-                </a>
+                <div className="tooltip-container">
+                  <a
+                    href="#"
+                    aria-label="WeChat"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <img src={wechat_icon} alt="WeChat" />
+                  </a>
+                  <span className="tooltip-text">WeChat: emmarocks2</span>
+                </div>
               </li>
               <li>
                 <a
-                  href="https://youtube.com/yourchannel"
+                  href="https://youtube.com/@emmaju1124?si=_26WGzY3BKVt_IJv"
                   aria-label="YouTube"
                   target="_blank"
                   rel="noopener noreferrer"

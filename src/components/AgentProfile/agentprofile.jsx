@@ -20,12 +20,10 @@ const AgentProfile = () => {
         </div>
         <div className="agent-profile__content">
           <h2 className="agent-name">Meet Emma Ju</h2>
-          <p className="agent-position">Real Estate Specialist at Acre NJ</p>
+          <p className="agent-position">Real estate specialist in New York and New Jersey.</p>
           <div className="agent-description">
             <p>
-              Emma Ju is a real estate professional with Acre NJ, specializing
-              in residential and investment properties across Bergen County, New
-              Jersey, and New York. With deep market knowledge and a reputation
+               Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation
               for trust and professionalism, she helps clients navigate both
               suburban and city transactions with ease.
             </p>
@@ -40,7 +38,7 @@ const AgentProfile = () => {
 
           <div className="content-footer">
             <ul className="lp-socials">
-              <li>
+              <li style={{ display: 'none' }}>
                 <a
                   href=""
                   className="lp-socials__link socials__item"
@@ -55,7 +53,7 @@ const AgentProfile = () => {
               </li>
               <li>
                 <a
-                  href=""
+                  href="https://www.instagram.com/emmarocks_nyc?igsh=cWhrdndsMmp2OHVn&utm_source=qr"
                   className="lp-socials__link socials__item"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -66,7 +64,7 @@ const AgentProfile = () => {
                   </div>
                 </a>
               </li>
-              <li>
+              <li style={{ display: 'none' }}>
                 <a
                   href=""
                   className="lp-socials__link socials__item"
@@ -80,21 +78,23 @@ const AgentProfile = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href=""
-                  className="lp-socials__link socials__item"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="WeChat"
-                >
-                  <div className="icon-wrapper">
-                    <img src={wechat_icon} alt="WeChat" />
-                  </div>
-                </a>
+                <div className="tooltip-container">
+                  <a
+                    href="#"
+                    className="lp-socials__link socials__item"
+                    aria-label="WeChat"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <div className="icon-wrapper">
+                      <img src={wechat_icon} alt="WeChat" />
+                    </div>
+                  </a>
+                  <span className="tooltip-text">WeChat: emmarocks2</span>
+                </div>
               </li>
               <li>
                 <a
-                  href=""
+                  href="https://youtube.com/@emmaju1124?si=_26WGzY3BKVt_IJv"
                   className="lp-socials__link socials__item"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -40,7 +40,7 @@ const Footer = () => {
               <h3>
                 <b>Contact Us</b>
               </h3>
-              <a href="mailto:emmaju@acreny.us">emmaju@acreny.us</a>
+              <a href="mailto:realtorlzj@gmail.com">realtorlzj@gmail.com</a>
               <br />
               <a href="tel:2017421625">(201)-742-1625</a>
             </div>
@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="container-social-media">
           <ul>
-            <li>
+            <li style={{ display: 'none' }}>
               <a
                 href=""
                 className="lp-socials__link socials__item"
@@ -85,7 +85,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href=""
+                href="https://www.instagram.com/emmarocks_nyc?igsh=cWhrdndsMmp2OHVn&utm_source=qr"
                 className="lp-socials__link socials__item"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -96,7 +96,7 @@ const Footer = () => {
                 </div>
               </a>
             </li>
-            <li>
+            <li style={{ display: 'none' }}>
               <a
                 href=""
                 className="lp-socials__link socials__item"
@@ -110,21 +110,23 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a
-                href=""
-                className="lp-socials__link socials__item"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WeChat"
-              >
-                <div className="icon-wrapper">
-                  <img src={wechat_icon} alt="WeChat" />
-                </div>
-              </a>
+              <div className="tooltip-container">
+                <a
+                  href="#"
+                  className="lp-socials__link socials__item"
+                  aria-label="WeChat"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <div className="icon-wrapper">
+                    <img src={wechat_icon} alt="WeChat" />
+                  </div>
+                </a>
+                <span className="tooltip-text">WeChat: emmarocks2</span>
+              </div>
             </li>
             <li>
               <a
-                href=""
+                href="https://youtube.com/@emmaju1124?si=_26WGzY3BKVt_IJv"
                 className="lp-socials__link socials__item"
                 target="_blank"
                 rel="noopener noreferrer"

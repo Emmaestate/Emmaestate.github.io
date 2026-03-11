@@ -45,15 +45,6 @@ const SidebarContent = () => {
               </li>
               <li>
                 <Link
-                  to="/properties/featuredlist"
-                  className="sidebar__dropdown-link"
-                  onClick={handleScrollToTop}
-                >
-                  Featured Leases
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/properties/soldlist"
                   className="sidebar__dropdown-link"
                   onClick={handleScrollToTop}

@@ -51,9 +51,9 @@ const AgentProfile2 = () => {
                 <p className="contact-title">Email</p>
                 <a
                   className="agent-link"
-                  href="mailto:jessicawilliams@christiesrennj.com"
+                  href="mailto:realtorlzj@gmail.com"
                 >
-                  emmaju@acreny.us
+                  realtorlzj@gmail.com
                 </a>
               </div>
 
@@ -70,7 +70,7 @@ const AgentProfile2 = () => {
           {/* Footer: Social Icons + CTA */}
           <div className="content-footer">
             <ul className="lp-socials">
-              <li>
+              <li style={{ display: 'none' }}>
                 <a
                   href="#"
                   className="lp-socials__link socials__item"
@@ -85,7 +85,7 @@ const AgentProfile2 = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/emmarocks_nyc?igsh=cWhrdndsMmp2OHVn&utm_source=qr"
                   className="lp-socials__link socials__item"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -96,7 +96,7 @@ const AgentProfile2 = () => {
                   </div>
                 </a>
               </li>
-              <li>
+              <li style={{ display: 'none' }}>
                 <a
                   href="#"
                   className="lp-socials__link socials__item"
@@ -110,21 +110,23 @@ const AgentProfile2 = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="lp-socials__link socials__item"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="WeChat"
-                >
-                  <div className="icon-wrapper">
-                    <img src={wechat_icon} alt="WeChat" />
-                  </div>
-                </a>
+                <div className="tooltip-container">
+                  <a
+                    href="#"
+                    className="lp-socials__link socials__item"
+                    aria-label="WeChat"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <div className="icon-wrapper">
+                      <img src={wechat_icon} alt="WeChat" />
+                    </div>
+                  </a>
+                  <span className="tooltip-text">WeChat: emmarocks2</span>
+                </div>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://youtube.com/@emmaju1124?si=_26WGzY3BKVt_IJv"
                   className="lp-socials__link socials__item"
                   target="_blank"
                   rel="noopener noreferrer"
