@@ -1,0 +1,170 @@
+.property-detail-page {
+  background-color: #fff;
+  min-height: 100vh;
+  padding-top: 100px; /* Add padding to clear fixed navbar */
+}
+
+.property-hero {
+  position: relative;
+  /* Use max-width and margin auto for contained look, or keep full width */
+  width: 100%; 
+  max-width: 1200px; /* Match property-content-container max-width */
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh; /* Limit height to prevent taking too much space */
+  overflow: hidden;
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.hero-image {
+  width: 100%;
+  height: auto; /* Let height adjust to aspect ratio */
+  display: block;
+  object-fit: cover; /* Cover to fill width without empty spaces */
+  max-height: 70vh;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 40px 5%;
+  color: white;
+}
+
+.hero-address {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-price {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.property-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.status-sold {
+  color: #d32f2f;
+}
+
+.status-active {
+  color: #00b318;
+}
+
+.property-description h2, 
+.property-features h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.property-description p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.features-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.features-list li {
+  position: relative;
+  padding-left: 20px;
+  color: #555;
+}
+
+.features-list li::before {
+  content: "•";
+  color: #00b318;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.agent-card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  position: sticky;
+  top: 100px;
+}
+
+.agent-card h3 {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 15px;
+}
+
+.contact-agent-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-agent-btn:hover {
+  background-color: #000;
+}
+
+@media (max-width: 900px) {
+  .property-content-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .property-hero {
+    height: 40vh;
+  }
+  
+  .hero-address {
+    font-size: 1.8rem;
+  }
+}

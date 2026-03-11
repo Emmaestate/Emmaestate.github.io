@@ -26,7 +26,7 @@ const PropertyList = ({ properties = [] }) => {
       // But since we are rendering new content, React will do it.
       // We need to capture the height after render.
       // A simple way is to use a ResizeObserver or just measure after render.
-      
+
       const height = gridRef.current.scrollHeight;
       setGridHeight(`${height}px`);
     }
@@ -40,8 +40,8 @@ const PropertyList = ({ properties = [] }) => {
   };
 
   const handleClick = (id) => {
-    // navigate(`/property/${id}`);
-    setIsPopupOpen(true);
+    navigate(`/property/${id}`);
+    // setIsPopupOpen(true);
   };
 
   const closePopup = () => {
@@ -50,13 +50,13 @@ const PropertyList = ({ properties = [] }) => {
 
   return (
     <div className="property-list-container" ref={listRef}>
-      <div 
-        className="property-grid-wrapper" 
-        style={{ 
+      <div
+        className="property-grid-wrapper"
+        style={{
           height: gridHeight,
-          minHeight: '200px', // Prevent collapse to 0
-          transition: 'height 0.4s ease-out',
-          overflow: 'hidden'
+          minHeight: "200px", // Prevent collapse to 0
+          transition: "height 0.4s ease-out",
+          overflow: "hidden",
         }}
       >
         <div className="property-grid fade-in" key={currentPage} ref={gridRef}>
@@ -105,8 +105,8 @@ const PropertyList = ({ properties = [] }) => {
           id="contact-popup"
           className="pop-up"
           style={{
-            '--backgroundColor': 'rgba(20, 20, 20, 1)',
-            '--textColor': 'rgba(255, 255, 255, 1)',
+            "--backgroundColor": "rgba(20, 20, 20, 1)",
+            "--textColor": "rgba(255, 255, 255, 1)",
           }}
           role="dialog"
           aria-modal="true"

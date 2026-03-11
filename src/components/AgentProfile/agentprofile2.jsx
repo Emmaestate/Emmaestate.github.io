@@ -1,5 +1,6 @@
 import React from "react";
 import x_icon from "../../assets/X.png";
+import emma_image from "../../assets/emma.jpeg";
 import instagram_icon from "../../assets/instagram.png";
 import wechat_icon from "../../assets/wechat.png";
 import youtube_icon from "../../assets/youtube.png";
@@ -12,11 +13,7 @@ const AgentProfile2 = () => {
       <div className="agent-profile">
         {/* Agent Image */}
         <div className="agent-profile__image">
-          <img
-            className="agent-image"
-            src="https://images.pexels.com/photos/7693223/pexels-photo-7693223.jpeg"
-            alt="Meet Emma"
-          />
+          <img className="agent-image" src={emma_image} alt="Meet Emma" />
         </div>
 
         {/* Agent Content */}
@@ -49,10 +46,7 @@ const AgentProfile2 = () => {
               {/* Row 2: Full width */}
               <div className="contact-row">
                 <p className="contact-title">Email</p>
-                <a
-                  className="agent-link"
-                  href="mailto:realtorlzj@gmail.com"
-                >
+                <a className="agent-link" href="mailto:realtorlzj@gmail.com">
                   realtorlzj@gmail.com
                 </a>
               </div>
@@ -70,7 +64,7 @@ const AgentProfile2 = () => {
           {/* Footer: Social Icons + CTA */}
           <div className="content-footer">
             <ul className="lp-socials">
-              <li style={{ display: 'none' }}>
+              <li style={{ display: "none" }}>
                 <a
                   href="#"
                   className="lp-socials__link socials__item"
@@ -96,7 +90,7 @@ const AgentProfile2 = () => {
                   </div>
                 </a>
               </li>
-              <li style={{ display: 'none' }}>
+              <li style={{ display: "none" }}>
                 <a
                   href="#"
                   className="lp-socials__link socials__item"

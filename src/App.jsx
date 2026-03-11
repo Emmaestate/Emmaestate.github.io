@@ -13,6 +13,7 @@ import ScrollToTop from "./Components/ScrollToTop.jsx";
 import Team from "./pages/Team.jsx";
 import Social from "./pages/Social.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import PropertyDetail from "./pages/PropertyDetail/PropertyDetail.jsx";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         />
         <Route path="/properties/featuredlist" element={<FeaturedListings />} />
         <Route path="/properties/soldlist" element={<SoldListings />} />
+        <Route path="/property/:id" element={<PropertyDetail />} />
         <Route path="/neighborhoods" element={<Neighborhoods />} />
         <Route path="/about" element={<About />} />
         {/* <Route path="/neighborhoods/:path" element={<NeighborhoodPage />} /> */}

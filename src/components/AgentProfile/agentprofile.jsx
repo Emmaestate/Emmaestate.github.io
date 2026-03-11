@@ -1,5 +1,6 @@
 // AgentProfile.jsx
 import React from "react";
+import emma_image from "../../assets/emma.jpeg";
 import x_icon from "../../assets/X.png";
 import instagram_icon from "../../assets/instagram.png";
 import wechat_icon from "../../assets/wechat.png";
@@ -12,20 +13,19 @@ const AgentProfile = () => {
     <div className="communities-container">
       <div className="agent-profile">
         <div className="agent-profile__image">
-          <img
-            className="agent-image"
-            src="https://images.pexels.com/photos/7693223/pexels-photo-7693223.jpeg"
-            alt="Meet Jessica"
-          />
+          <img className="agent-image" src={emma_image} alt="Meet Emma" />
         </div>
         <div className="agent-profile__content">
           <h2 className="agent-name">Meet Emma Ju</h2>
-          <p className="agent-position">Real estate specialist in New York and New Jersey.</p>
+          <p className="agent-position">
+            Real estate specialist in New York and New Jersey.
+          </p>
           <div className="agent-description">
             <p>
-               Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation
-              for trust and professionalism, she helps clients navigate both
-              suburban and city transactions with ease.
+              Emma Ju is a real estate professional with Acre NY Realty and Acre
+              NJ. With deep market knowledge and a reputation for trust and
+              professionalism, she helps clients navigate both suburban and city
+              transactions with ease.
             </p>
 
             <p>
@@ -38,7 +38,7 @@ const AgentProfile = () => {
 
           <div className="content-footer">
             <ul className="lp-socials">
-              <li style={{ display: 'none' }}>
+              <li style={{ display: "none" }}>
                 <a
                   href=""
                   className="lp-socials__link socials__item"
@@ -64,7 +64,7 @@ const AgentProfile = () => {
                   </div>
                 </a>
               </li>
-              <li style={{ display: 'none' }}>
+              <li style={{ display: "none" }}>
                 <a
                   href=""
                   className="lp-socials__link socials__item"

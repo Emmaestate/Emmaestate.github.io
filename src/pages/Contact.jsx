@@ -157,7 +157,7 @@ function Contact() {
 
           <div className="social-media-icons">
             <ul className="social-icons-list">
-              <li style={{ display: 'none' }}>
+              <li style={{ display: "none" }}>
                 <a
                   href="#"
                   aria-label="X"
@@ -177,7 +177,7 @@ function Contact() {
                   <img src={instagram_icon} alt="Instagram" />
                 </a>
               </li>
-              <li style={{ display: 'none' }}>
+              <li style={{ display: "none" }}>
                 <a
                   href="https://facebook.com/yourprofile"
                   aria-label="Facebook"

@@ -214,21 +214,43 @@
   .agent-profile {
     flex-direction: column;
     gap: 40px;
+    align-items: center; /* Ensure items are centered */
   }
 
   .agent-profile__image {
     width: 300px;
+    margin: 0 auto; /* Explicitly center the image container */
+    display: flex;
+    justify-content: center;
+  }
+
+  .agent-image {
+    width: 100%; /* Ensure image fits container */
+    height: auto;
+    border-radius: 50%; /* Keep circular shape if needed */
   }
 
   .agent-name {
     font-size: 32px;
+    text-align: center; /* Center text on mobile */
   }
 
   .agent-position {
     font-size: 17px;
+    text-align: center;
   }
 
   .agent-description p {
     font-size: 15px;
+    text-align: center;
+  }
+
+  .agent-profile__content {
+    align-items: center; /* Center content items */
+    text-align: center;
+  }
+  
+  .content-footer {
+    justify-content: center; /* Center footer content */
   }
 }

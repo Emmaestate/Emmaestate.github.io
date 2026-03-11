@@ -39,7 +39,7 @@
   padding: 20px 0;
   box-sizing: border-box;
   display: flex;
-  justify-content: flex-end; /* align newsletter to right */
+  justify-content: flex-start; /* changed from flex-end to flex-start for better mobile layout, or keep flex-end if you want right alignment on desktop */
 }
 
 /* Prevent newsletter from stretching too wide */

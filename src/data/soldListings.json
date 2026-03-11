@@ -1,124 +1,7 @@
 [
   {
     "id": "1",
-    "imageKey": null,
-    "address": "362 Lafayette Ave #A, Cliffside Park, NJ 07010",
-    "price": 1199000,
-    "bedrooms": 4,
-    "bathrooms": 4,
-    "sqft": null
-  },
-  {
-    "id": "2",
-    "imageKey": "sold_1060_anderson_ave",
-    "address": "1060 Anderson Ave, Fort Lee, NJ 07024",
-    "price": 1680000,
-    "bedrooms": 4,
-    "bathrooms": 4.5,
-    "sqft": null
-  },
-  {
-    "id": "3",
-    "imageKey": null,
-    "address": "441 Elizabeth St, Fort Lee, NJ 07024",
-    "price": 1588000,
-    "bedrooms": 3,
-    "bathrooms": 4.5,
-    "sqft": null
-  },
-  {
-    "id": "4",
-    "imageKey": "sold_12_thistle_ct",
-    "address": "12 Thistle Ct, Totowa, NJ 07512",
-    "price": 1260000,
-    "bedrooms": 5,
-    "bathrooms": 4,
-    "sqft": null
-  },
-  {
-    "id": "5",
-    "imageKey": "sold_76_franklin_st",
-    "address": "76 Franklin St, Verona, NJ 07044",
-    "price": 899000,
-    "bedrooms": 4,
-    "bathrooms": 3.5,
-    "sqft": null
-  },
-  {
-    "id": "6",
-    "imageKey": null,
-    "address": "211 70th St #3, Guttenberg, NJ 07093",
-    "price": 695000,
-    "bedrooms": 3,
-    "bathrooms": 2.5,
-    "sqft": 1500
-  },
-  {
-    "id": "7",
-    "imageKey": "sold_73_white_beeches_dr",
-    "address": "73 White Beeches Dr, Dumont, NJ 07628",
-    "price": 699000,
-    "bedrooms": 4,
-    "bathrooms": 2.5,
-    "sqft": null
-  },
-  {
-    "id": "8",
-    "imageKey": "sold_2350_linwood_ave",
-    "address": "2350 Linwood Ave #4D, Fort Lee, NJ 07024",
-    "price": 369000,
-    "bedrooms": 2,
-    "bathrooms": 1,
-    "sqft": 855
-  },
-  {
-    "id": "9",
-    "imageKey": "sold_502_longview_pl",
-    "address": "502 Longview Pl, Cliffside Park, NJ 07010",
-    "price": 949000,
-    "bedrooms": 3,
-    "bathrooms": 2.5,
-    "sqft": null
-  },
-  {
-    "id": "10",
-    "imageKey": "sold_9_heatherhill_rd",
-    "address": "9 Heatherhill Rd, Demarest, NJ 07627",
-    "price": 2790000,
-    "bedrooms": 6,
-    "bathrooms": 6.5,
-    "sqft": null
-  },
-  {
-    "id": "11",
-    "imageKey": "sold_781_jefferson_ave",
-    "address": "781 Jefferson Ave #781, Cliffside Park, NJ 07010",
-    "price": 1399000,
-    "bedrooms": 3,
-    "bathrooms": 3.5,
-    "sqft": "3300+/-"
-  },
-  {
-    "id": "12",
-    "imageKey": "sold_220_washington_pl",
-    "address": "220 Washington Pl, Cliffside Park, NJ 07010",
-    "price": 1389000,
-    "bedrooms": 4,
-    "bathrooms": 4.5,
-    "sqft": 3350
-  },
-  {
-    "id": "13",
-    "imageKey": "sold_771_jefferson_ave",
-    "address": "771 Jefferson Ave #771, Cliffside Park, NJ 07010",
-    "price": 1399000,
-    "bedrooms": 3,
-    "bathrooms": 3.5,
-    "sqft": "3300+/-"
-  },
-  {
-    "id": "14",
-    "imageKey": null,
+    "imageKey": "sold_475_oakdene_ave",
     "address": "475 Oakdene Ave #1, Cliffside Park, NJ 07010",
     "price": 1099000,
     "bedrooms": 4,
@@ -126,66 +9,21 @@
     "sqft": null
   },
   {
-    "id": "15",
-    "imageKey": null,
-    "address": "7020 Polk St #8, Guttenberg, NJ 07093",
-    "price": 209000,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "sqft": 544
-  },
-  {
-    "id": "16",
-    "imageKey": "sold_504_stockton_ct",
-    "address": "504 Stockton Ct #504, Edgewater, NJ 07020",
-    "price": 655000,
-    "bedrooms": 3,
-    "bathrooms": 2.5,
+    "id": "2",
+    "imageKey": "sold_475_oakdene_ave",
+    "address": "475 Oakdene Ave #2, Cliffside Park, NJ 07010",
+    "price": 1099000,
+    "bedrooms": 4,
+    "bathrooms": 3,
     "sqft": null
   },
   {
-    "id": "17",
-    "imageKey": null,
+    "id": "3",
+    "imageKey": "sold_65_columbia_ave",
     "address": "65 Columbia Ave, Cliffside Park, NJ 07010",
     "price": 975000,
     "bedrooms": 3,
     "bathrooms": 2.5,
-    "sqft": null
-  },
-  {
-    "id": "18",
-    "imageKey": null,
-    "address": "211 70th St #2, Guttenberg, NJ 07093",
-    "price": 650000,
-    "bedrooms": 3,
-    "bathrooms": 2.5,
-    "sqft": 1550
-  },
-  {
-    "id": "19",
-    "imageKey": null,
-    "address": "224 The Promenade #224, Edgewater, NJ 07020",
-    "price": 450000,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "sqft": 850
-  },
-  {
-    "id": "20",
-    "imageKey": null,
-    "address": "660 Bloomfield Ave #206, Bloomfield, NJ 07003",
-    "price": 595000,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "sqft": 1070
-  },
-  {
-    "id": "21",
-    "imageKey": null,
-    "address": "750 River Rd, Teaneck, NJ 07666",
-    "price": 630000,
-    "bedrooms": 3,
-    "bathrooms": 1.5,
     "sqft": null
   }
 ]

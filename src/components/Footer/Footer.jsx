@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import ContactForm from "../ContactForm/ContactForm";
+import ContactFormPopup from "../ContactFormPopup/ContactFormPopup";
 import x_icon from "../../assets/X.png";
 import instagram_icon from "../../assets/instagram.png";
 import wechat_icon from "../../assets/wechat.png";
@@ -50,7 +50,38 @@ const Footer = () => {
         <div className="footer-layout-right">
           <div className="newsletter">
             <div className="newsletter-info">
-              <ContactForm />
+              <h3 style={{ marginBottom: "20px", color: "#000" }}>
+                Leave a Message
+              </h3>
+              <p
+                style={{
+                  marginBottom: "20px",
+                  color: "#333",
+                  lineHeight: "1.6",
+                }}
+              >
+                Interested in buying or selling? Let's connect and find your
+                perfect solution.
+              </p>
+              <div style={{ display: "flex", justifyContent: "flex-start" }}>
+                <ContactFormPopup 
+                  customButton={
+                    <button style={{
+                      backgroundColor: '#333',
+                      color: '#fff',
+                      border: 'none',
+                      padding: '10px 20px',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      fontSize: '14px',
+                      fontWeight: '500',
+                      transition: 'background-color 0.3s'
+                    }}>
+                      LET'S CONNECT
+                    </button>
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -65,12 +96,14 @@ const Footer = () => {
           <a href="/featured-listings">Featured Listings</a>
           <a href="/valuation">Home Valuation</a>
           <a href="/contact">Let's Connect</a>
-          <a href="/#/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <a href="/#/privacy-policy" target="_blank" rel="noopener noreferrer">
+            Privacy Policy
+          </a>
         </div>
 
         <div className="container-social-media">
           <ul>
-            <li style={{ display: 'none' }}>
+            <li style={{ display: "none" }}>
               <a
                 href=""
                 className="lp-socials__link socials__item"
@@ -96,7 +129,7 @@ const Footer = () => {
                 </div>
               </a>
             </li>
-            <li style={{ display: 'none' }}>
+            <li style={{ display: "none" }}>
               <a
                 href=""
                 className="lp-socials__link socials__item"

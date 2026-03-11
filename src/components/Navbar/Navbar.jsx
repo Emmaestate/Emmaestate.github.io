@@ -1,8 +1,8 @@
 // src/Components/Navbar/Navbar.jsx
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import logo from '../../assets/logo.png';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import logo from "../../assets/logo.png";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
   const [sticky, setSticky] = useState(false);
@@ -12,22 +12,22 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     const handleScroll = () => {
       setSticky(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setShowDropdown(false);
   };
 
   return (
-    <header className={`header ${sticky ? 'dark-nav' : ''}`}>
+    <header className={`header ${sticky ? "dark-nav" : ""}`}>
       <div className="navbar-container">
         {/* Left Navigation */}
         <div className="nav-section left">
           <ul className="nav-list">
-            <li 
+            <li
               className="nav-item dropdown"
               onMouseEnter={() => setShowDropdown(true)}
               onMouseLeave={() => setShowDropdown(false)}
@@ -40,7 +40,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                     className="dropdown-link"
                     onClick={handleScrollToTop}
                   >
-                    Our Exclusive Listings
+                    Off Market Listings
                   </Link>
                   <Link
                     to="/properties/soldlist"
@@ -69,13 +69,25 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         <div className="nav-section right">
           <ul className="nav-list">
             <li className="nav-item">
-              <Link to="/contact" className="nav-link" onClick={handleScrollToTop}>Contact</Link>
+              <Link
+                to="/contact"
+                className="nav-link"
+                onClick={handleScrollToTop}
+              >
+                Contact
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="tel:1234567890" className="nav-link">(201)-742-1625</a>
+              <a href="tel:1234567890" className="nav-link">
+                (201)-742-1625
+              </a>
             </li>
             <li className="nav-item hamburger-wrapper">
-              <button className="hamburger" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+              <button
+                className="hamburger"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Toggle menu"
+              >
                 <span className="line"></span>
                 <span className="line"></span>
                 <span className="line"></span>

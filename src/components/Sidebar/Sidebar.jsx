@@ -1,13 +1,13 @@
 // src/Components/Sidebar/Sidebar.jsx
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Sidebar.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Sidebar.css";
 
 const SidebarContent = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setShowDropdown(false);
   };
 
@@ -15,13 +15,31 @@ const SidebarContent = () => {
     <div className="sidebar__content">
       <ul className="sidebar__nav">
         <li className="sidebar__nav-item">
-          <Link to="/home" className="sidebar__nav-link" onClick={handleScrollToTop}>HOME</Link>
+          <Link
+            to="/home"
+            className="sidebar__nav-link"
+            onClick={handleScrollToTop}
+          >
+            HOME
+          </Link>
         </li>
         <li className="sidebar__nav-item">
-          <Link to="/about" className="sidebar__nav-link" onClick={handleScrollToTop}>ABOUT EMMA</Link>
+          <Link
+            to="/about"
+            className="sidebar__nav-link"
+            onClick={handleScrollToTop}
+          >
+            ABOUT EMMA
+          </Link>
         </li>
         <li className="sidebar__nav-item">
-          <Link to="/team" className="sidebar__nav-link" onClick={handleScrollToTop}>TEAM</Link>
+          <Link
+            to="/team"
+            className="sidebar__nav-link"
+            onClick={handleScrollToTop}
+          >
+            TEAM
+          </Link>
         </li>
 
         <li className="sidebar__nav-item">
@@ -30,7 +48,9 @@ const SidebarContent = () => {
             onClick={() => setShowDropdown(!showDropdown)}
           >
             PROPERTIES
-            <span className={`caret-icon ${showDropdown ? 'rotate' : ''}`}>▾</span>
+            <span className={`caret-icon ${showDropdown ? "rotate" : ""}`}>
+              ▾
+            </span>
           </span>
           {showDropdown && (
             <ul className="sidebar__dropdown">
@@ -40,7 +60,7 @@ const SidebarContent = () => {
                   className="sidebar__dropdown-link"
                   onClick={handleScrollToTop}
                 >
-                  Exclusive Listings
+                  Off Market Listings
                 </Link>
               </li>
               <li>
@@ -69,8 +89,12 @@ const SidebarContent = () => {
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <button className="sidebar__close" aria-label="Close sidebar" onClick={() => setIsOpen(false)}>
+    <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      <button
+        className="sidebar__close"
+        aria-label="Close sidebar"
+        onClick={() => setIsOpen(false)}
+      >
         &#10005;
       </button>
       <SidebarContent />
