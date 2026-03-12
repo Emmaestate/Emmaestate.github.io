@@ -23,7 +23,7 @@
   position: relative;
   flex: 1 1 300px;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 600px; /* Increased max-width to allow wider cards for 2-column layout */
   margin: 0 auto;
   border-radius: 1px;
   overflow: hidden;

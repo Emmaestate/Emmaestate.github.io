@@ -9,7 +9,7 @@ import Layout from "../Components/Layout/Layout.jsx";
 import VideoWrapper from "../Components/VideoWrapper/VideoWrapper.jsx";
 import CompanyStats from "../Components/CompanyStats/CompanyStats.jsx";
 import FeatureGrid from "../Components/FeatureGrid/FeatureGrid.jsx";
-import ServicesGrid from "../Components/ServicesGrid/ServicesGrid.jsx";
+import ServicesSection from "../Components/ServicesSection/ServicesSection.jsx";
 import CommunitiesGrid from "../Components/CommunitiesGrid/CommunitiesGrid.jsx";
 import SplitSection1 from "../Components/SplitSection1/SplitSection1.jsx";
 import connectWithUsImg from "../assets/connectwithus.jpg";
@@ -28,9 +28,7 @@ const Home = () => {
       </div>
       <CompanyStats />
       {/* <CommunitiesGrid/> */}
-      <div className="container-type2">
-        <ServicesGrid />
-      </div>
+      <ServicesSection />
       {/* <div className="container-type2">
       <SplitSection1/>
       </div> */}
@@ -50,9 +48,9 @@ const Home = () => {
       </div>
       {/* <ChatBot/> */}
       <ContactFormPopup />
-      <Hero_2/>
+      <Hero_2 />
       <div className="container-type2">
-        <Programs/>
+        <Programs />
       </div>
       <div className="container-type1">
         <Footer />

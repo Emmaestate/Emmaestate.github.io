@@ -1,25 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import './VideoWrapper.css';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "./VideoWrapper.css";
 
-
-const preheadlinePhrases = [
-  'WELCOME TO',
-  '',
-  '',
-];
+const preheadlinePhrases = ["WELCOME TO", "", ""];
 
 const headlinePhrases = [
+  "EMMA JU ESTATES",
   <>
-    ACRE NEW JERSEY <br /> REAL ESTATE
+    Specializing in Luxury
+    <br /> REAL ESTATE
   </>,
-  'EMMA JU ESTATES',
-  'BERGEN COUNTY EXPERTS',
+  "Personalized Real Estate Experience",
 ];
 
 const subheadingPhrases = [
-  'Your Luxury Home Professional',
-  'Real estate group in Bergen County',
-  'Personalized Real Estate Experience',
+  "Your Luxury Home Professional",
+  "Real estate group in Bergen County",
+  "Specializing in Manhattan, Fort Lee, Edgewater and new constructions",
 ];
 
 const VideoWrapper = () => {
@@ -27,6 +24,7 @@ const VideoWrapper = () => {
   const [preheadlineIndex, setpreHeadlineIndex] = useState(0);
   const [headlineIndex, setHeadlineIndex] = useState(0);
   const [subheadingIndex, setSubheadingIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const headlineInterval = setInterval(() => {
@@ -72,11 +70,14 @@ const VideoWrapper = () => {
       <div className="hero-text">
         <p className="subtitle">{preheadlinePhrases[preheadlineIndex]}</p>
         <p className="fade-text">{headlinePhrases[headlineIndex]}</p>
-        <p className="description fade-text">{subheadingPhrases[subheadingIndex]}</p>
+        <p className="description fade-text">
+          {subheadingPhrases[subheadingIndex]}
+        </p>
         <button
           className="btn5"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
+          onClick={() => navigate("/properties/exclusivelist")}
         >
           OUR PROPERTIES {hovered && <span>&nbsp;&#8640;</span>}
         </button>

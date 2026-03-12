@@ -5,6 +5,7 @@ import instagram_icon from "../../assets/instagram.png";
 import wechat_icon from "../../assets/wechat.png";
 import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
+import ContactFormPopup from "../ContactFormPopup/ContactFormPopup.jsx";
 import "./AgentProfile2.css";
 
 const AgentProfile2 = () => {
@@ -134,9 +135,16 @@ const AgentProfile2 = () => {
             </ul>
 
             <div className="cta">
-              <a href="#/about" className="lp-link lp-link--dark">
-                Learn More
-              </a>
+              <ContactFormPopup
+                customButton={
+                  <a
+                    className="lp-link lp-link--dark"
+                    style={{ cursor: "pointer" }}
+                  >
+                    Connect with Emma
+                  </a>
+                }
+              />
             </div>
           </div>
         </div>

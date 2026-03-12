@@ -41,7 +41,7 @@ const SoldListings = () => {
         <Hero
           subtitle="New Jersey & New York Licensed Realtor"
           title="CONNECT WITH EMMA"
-          description="Emma specializes in Bergen County NJ and NYC buyers, sellers, and renters."
+          description="Emma Ju  Specializing in luxury real estate in Manhattan, Fort Lee, Edgewater and Bergen county new constructions."
           btnText="CONTACT EMMA"
           backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
           height="700px"

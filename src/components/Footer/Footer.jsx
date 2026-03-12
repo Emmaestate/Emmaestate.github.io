@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="company-left-group">
               <div className="company-acre">
                 <h3>
-                  <b>Acre NJ Real Estate</b>
+                  <b>Specializing in Luxury Real Estate</b>
                 </h3>
                 Lizhen(Emma) Ju | NJ RE#12345678 <br />
                 Jeff Vasquez | NJ RE#2331270
@@ -64,19 +64,21 @@ const Footer = () => {
                 perfect solution.
               </p>
               <div style={{ display: "flex", justifyContent: "flex-start" }}>
-                <ContactFormPopup 
+                <ContactFormPopup
                   customButton={
-                    <button style={{
-                      backgroundColor: '#333',
-                      color: '#fff',
-                      border: 'none',
-                      padding: '10px 20px',
-                      borderRadius: '4px',
-                      cursor: 'pointer',
-                      fontSize: '14px',
-                      fontWeight: '500',
-                      transition: 'background-color 0.3s'
-                    }}>
+                    <button
+                      style={{
+                        backgroundColor: "#333",
+                        color: "#fff",
+                        border: "none",
+                        padding: "10px 20px",
+                        borderRadius: "4px",
+                        cursor: "pointer",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                        transition: "background-color 0.3s",
+                      }}
+                    >
                       LET'S CONNECT
                     </button>
                   }
