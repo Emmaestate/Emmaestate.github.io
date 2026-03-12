@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import WOW from "../lib/wow";
-import ContactForm from "../components/ContactForm/ContactForm";
+import ContactFormPopup from "../components/ContactFormPopup/ContactFormPopup";
 import x_icon from "../assets/X.png";
 import instagram_icon from "../assets/instagram.png";
 import wechat_icon from "../assets/wechat.png";
@@ -117,7 +117,20 @@ function Contact() {
 
       <div className="contact-form__contents">
         <div className="contact-form__contents-form">
-          <ContactForm />
+          <div className="contact-form-message">
+            <h3>Leave a Message</h3>
+            <p>
+              Interested in buying or selling? Let's connect and find your
+              perfect solution.
+            </p>
+            <div style={{ marginTop: "20px" }}>
+              <ContactFormPopup
+                customButton={
+                  <button className="link-btn">LET'S CONNECT</button>
+                }
+              />
+            </div>
+          </div>
         </div>
 
         <div className="contact-form__info">
