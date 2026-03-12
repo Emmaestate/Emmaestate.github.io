@@ -39,7 +39,7 @@ const SoldListings = () => {
 
       <div>
         <Hero
-          subtitle="New Jersey & New York Licensed Realtor"
+          subtitle="Manhattan, Fort Lee, Edgewater and Bergen county Licensed Realtor"
           title="CONNECT WITH EMMA"
           description="Emma Ju  Specializing in luxury real estate in Manhattan, Fort Lee, Edgewater and Bergen county new constructions."
           btnText="CONTACT EMMA"

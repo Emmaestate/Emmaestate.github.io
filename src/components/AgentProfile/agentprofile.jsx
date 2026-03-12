@@ -18,7 +18,8 @@ const AgentProfile = () => {
         <div className="agent-profile__content">
           <h2 className="agent-name">Meet Emma Ju</h2>
           <p className="agent-position">
-            Real estate specialist in New York and New Jersey.
+            Real estate specialist in Manhattan, Fort Lee, Edgewater and Bergen
+            county.
           </p>
           <div className="agent-description">
             <p>
