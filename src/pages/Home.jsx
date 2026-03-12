@@ -48,10 +48,10 @@ const Home = () => {
       </div>
       {/* <ChatBot/> */}
       <ContactFormPopup />
-      <Hero_2 />
-      <div className="container-type2">
-        <Programs />
-      </div>
+
+      {/*<Hero_2 /> <div className="container-type2">
+       <Programs />
+       </div>*/}
       <div className="container-type1">
         <Footer />
       </div>
