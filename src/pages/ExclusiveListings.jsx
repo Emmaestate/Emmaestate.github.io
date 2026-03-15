@@ -23,7 +23,7 @@ const ExclusiveListings = () => {
 
       <div>
         <Hero2
-          title="Off Market Listings"
+          title="Exclusive Listings"
           description="Emma Ju features Bergen Counties property. Ju can find real estate in Alpine, Tenafly, Englewood Cliffs, NJ & more"
           showButton={false}
           backgroundImage="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg"

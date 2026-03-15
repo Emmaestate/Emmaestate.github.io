@@ -40,7 +40,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                     className="dropdown-link"
                     onClick={handleScrollToTop}
                   >
-                    Off Market Listings
+                    Exclusive Listings
                   </Link>
                   <Link
                     to="/properties/soldlist"

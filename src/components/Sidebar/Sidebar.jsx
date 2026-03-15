@@ -60,7 +60,7 @@ const SidebarContent = () => {
                   className="sidebar__dropdown-link"
                   onClick={handleScrollToTop}
                 >
-                  Off Market Listings
+                  Exclusive Listings
                 </Link>
               </li>
               <li>
