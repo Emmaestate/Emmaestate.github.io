@@ -99,13 +99,6 @@
   margin-top: 2px;
 }
 
-.testimonial-rating-date {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-  gap: 8px;
-}
-
 .testimonial-stars {
   display: flex;
   color: #e0e0e0;
