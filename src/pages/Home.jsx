@@ -42,9 +42,9 @@ const Home = () => {
       {/*<HomeValuation/>*/}
       <div>
         <Hero
-          subtitle="Manhattan, Fort Lee, Edgewater and Bergen county Licensed Realtor"
+          subtitle="New York City and New Jersey Licensed Realtor"
           title="CONNECT WITH EMMA"
-          description="Emma specializes in Bergen County NJ and NYC buyers, sellers, and renters."
+          description="Emma specializes in representing buyers and sellers in Manhattan, Bergen county and along the NJ Gold Coast."
           btnText="CONTACT EMMA"
           backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
           height="700px"

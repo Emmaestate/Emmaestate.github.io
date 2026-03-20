@@ -2,21 +2,19 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./VideoWrapper.css";
 
-const preheadlinePhrases = ["WELCOME TO", "", ""];
+const preheadlinePhrases = ["WELCOME TO", ""];
 
 const headlinePhrases = [
   "EMMA JU ESTATES",
   <>
     Specializing in Luxury
     <br /> REAL ESTATE
-  </>,
-  "Personalized Real Estate Experience",
+  </>
 ];
 
 const subheadingPhrases = [
   "Your Luxury Home Professional",
-  "Real estate group in Bergen County",
-  "Specializing in Manhattan, Fort Lee, Edgewater and new constructions",
+  "Across Manhattan and the NJ Gold Coast"
 ];
 
 const VideoWrapper = () => {

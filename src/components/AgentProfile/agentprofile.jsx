@@ -18,22 +18,15 @@ const AgentProfile = () => {
         <div className="agent-profile__content">
           <h2 className="agent-name">Meet Emma Ju</h2>
           <p className="agent-position">
-            Real estate specialist in Manhattan, Fort Lee, Edgewater and Bergen
-            county.
+            Real estate specialist in Manhattan and the NJ gold coast
           </p>
           <div className="agent-description">
             <p>
-              Emma Ju is a real estate professional with Acre NY Realty and Acre
-              NJ. With deep market knowledge and a reputation for trust and
-              professionalism, she helps clients navigate both suburban and city
-              transactions with ease.
+              Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both city and suburban transactions with ease.
             </p>
 
             <p>
-              Fluent in English and Mandarin, Emma works with a diverse range of
-              buyers, sellers, and investors. Her client-first approach, clear
-              communication, and dedication to long-term relationships make her
-              a standout guide in today’s competitive real estate market.
+              Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a trusted guide in today’s competitive real estate market.
             </p>
           </div>
 
