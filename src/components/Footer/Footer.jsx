@@ -103,9 +103,6 @@ const Footer = () => {
           <a href="/featured-listings">Featured Listings</a>
           <a href="/valuation">Home Valuation</a>
           <a href="/contact">Let's Connect</a>
-          <a href="/#/privacy-policy" target="_blank" rel="noopener noreferrer">
-            Privacy Policy
-          </a>
         </div>
 
         <div className="container-social-media">
@@ -181,12 +178,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-label">
+      <div className="footer-label" style={{ justifyContent: "center" }}>
         <div>
-          <p>Website Designed and Developed by Jason He.</p>
-        </div>
-        <div>
-          <p>© Copyright 2025 | Privacy Policy</p>
+          <p>© Copyright 2026</p>
         </div>
       </div>
     </div>
