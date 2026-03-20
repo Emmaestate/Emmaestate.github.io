@@ -1,0 +1,251 @@
+.testimonials-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-title-wrapper {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonials-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.testimonials-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.testimonials-swiper {
+  padding-bottom: 50px !important; /* space for pagination */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #1a73e8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.testimonial-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #202124;
+  font-weight: 500;
+}
+
+.testimonial-stats {
+  font-size: 0.85rem;
+  color: #70757a;
+  margin-top: 2px;
+}
+
+.testimonial-rating-date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.testimonial-stars {
+  display: flex;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+
+.testimonial-stars .star.active {
+  color: #fbbc04; /* Google yellow */
+}
+
+.testimonial-date {
+  font-size: 0.85rem;
+  color: #70757a;
+}
+
+.testimonial-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-text-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+/* Default collapsed state for long texts */
+.testimonial-card:has(.read-more-btn) .testimonial-text-wrapper {
+  grid-template-rows: 0fr;
+}
+
+/* 
+  Trick: To show the first few lines, we actually don't use grid-template-rows: 0fr for the collapsed state.
+  Instead, we use a max-height approach or CSS line-clamp.
+*/
+
+.testimonial-text-wrapper {
+  display: block; /* override grid */
+}
+
+.testimonial-text-wrapper p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #3c4043;
+  white-space: pre-wrap;
+  
+  /* The magic for CSS line clamp */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* Show about 4 lines */
+  overflow: hidden;
+  transition: all 0.25s linear;
+}
+
+.testimonial-text-wrapper.expanded p {
+  -webkit-line-clamp: unset; /* Remove line clamp */
+}
+
+/* 
+  Since line-clamp can't be transitioned smoothly natively, 
+  we use a max-height transition on the wrapper instead, 
+  while keeping the text intact. 
+*/
+
+.testimonial-text-wrapper {
+  max-height: 95px; /* Approx 4 lines of text (1.6 * 0.95rem * 4) */
+  overflow: hidden;
+  transition: max-height 0.25s linear;
+}
+
+.testimonial-text-wrapper p {
+  /* reset the webkit box so we use pure max-height */
+  display: block; 
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+/* Mask for text fade out effect */
+.testimonial-text-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+  pointer-events: none;
+  transition: opacity 0.25s linear;
+}
+
+.testimonial-text-wrapper.expanded {
+  max-height: 1000px; /* Arbitrary large value to allow full expansion */
+}
+
+.testimonial-text-wrapper.expanded::after {
+  opacity: 0; /* Hide the fade mask when expanded */
+}
+
+/* If text is naturally short (no read-more btn), it shouldn't have a mask */
+.testimonial-card:not(:has(.read-more-btn)) .testimonial-text-wrapper::after {
+  display: none;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  padding: 0;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet-active {
+  background-color: #1a73e8 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #1a73e8 !important;
+  transform: scale(0.6);
+  background: white;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important;
+  font-weight: bold;
+}

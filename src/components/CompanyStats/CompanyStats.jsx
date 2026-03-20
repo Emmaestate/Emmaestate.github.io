@@ -39,7 +39,7 @@ const CompanyStats = () => {
             </span>
           </h2>
         </div>
-        <div className="company-stats__row company-stats__row--four">
+        {/* <div className="company-stats__row company-stats__row--four">
           <div className="company-stats__col">
             <div className="stat-card">
               <h3 className="stat-card__value jsValue">15 Years</h3>
@@ -68,7 +68,7 @@ const CompanyStats = () => {
               <p className="stat-card__title">Agents In New Jersey</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

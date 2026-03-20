@@ -17,6 +17,7 @@ import ExclusiveListings from "../Components/ExclusiveListings/ExlcusiveListings
 import HomeValuation from "../Components/HomeValuation/HomeValuation.jsx";
 import ChatBot from "../Components/ChatBot/ChatBot.jsx";
 import ContactFormPopup from "../Components/ContactFormPopup/ContactFormPopup.jsx";
+import Testimonials from "../components/Testimonials/Testimonials.jsx";
 
 const Home = () => {
   return (
@@ -26,7 +27,7 @@ const Home = () => {
       <div className="container-type1">
         <AgentProfile />
       </div>
-      <CompanyStats />
+      {/* <CompanyStats /> */}
       {/* <CommunitiesGrid/> */}
       <ServicesSection />
       {/* <div className="container-type2">
@@ -35,6 +36,9 @@ const Home = () => {
       <div className="container-type2">
         <ExclusiveListings />
       </div>
+
+      <Testimonials />
+
       {/*<HomeValuation/>*/}
       <div>
         <Hero
