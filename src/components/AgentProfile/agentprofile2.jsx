@@ -31,16 +31,13 @@ const AgentProfile2 = () => {
                     <p className="contact-title">Primary phone</p>
                     <a
                       className="agent-link"
-                      href="tel:(518) 578-1104"
-                      aria-label="call (518) 578-1104"
+                      href="tel:(201)-742-1625"
+                      aria-label="call (201)-742-1625"
                     >
-                      (123) 456-7890
+                      (201)-742-1625
                     </a>
                   </div>
-                  <div className="contact-item">
-                    <p className="contact-title">License Number</p>
-                    #12345678
-                  </div>
+                  <div className="contact-item"></div>
                 </div>
               </div>
 
@@ -55,9 +52,13 @@ const AgentProfile2 = () => {
               {/* Row 3: Full width */}
               <div className="contact-row">
                 <p className="contact-title">Address</p>
-                2160 N Central Rd #111, <br />
-                Fort Lee, <br />
-                NJ 07024
+                <span style={{ color: "#aaa" }}>NJ OFFICE:</span> 2160 N Central
+                Rd #111, <br />
+                Fort Lee, NJ 07024
+                <br /> <br />
+                <span style={{ color: "#aaa" }}>NY OFFICE:</span> 45-10 Court
+                Square FL 1, <br />
+                Long Island City, New York, 11101
               </div>
             </div>
           </div>

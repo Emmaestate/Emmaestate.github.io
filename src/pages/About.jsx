@@ -17,7 +17,7 @@ function About() {
       <Hero2
         title="Emma Ju"
         backgroundImage="https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=2560/https://media-production.lp-cdn.com/media/mxxjbeckbidzmuygjbph"
-        description="Specializing in luxury real estate in Manhattan, Fort Lee, Edgewater and Bergen county new constructions"
+        description="Specializing in New York City and New Jersey Gold Coast"
         showButton={false}
       />
 
@@ -26,9 +26,9 @@ function About() {
         <TextContainer
           title="GET TO KNOW ME"
           text={`
-          Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both suburban and city transactions with ease.
+          Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both city and suburban transactions with ease.
 
-          Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a standout guide in today’s competitive real estate market.`}
+          Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a trusted guide in today’s competitive real estate market.`}
         />
       </div>
 

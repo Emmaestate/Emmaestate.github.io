@@ -35,7 +35,6 @@ const App = () => {
         {/* <Route path="/neighborhoods/:path" element={<NeighborhoodPage />} /> */}
         <Route path="/team" element={<Team />} />
         <Route path="/social" element={<Social />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         {/* Routes WITHOUT Layout (like Contact) */}
         <Route path="/contact" element={<Contact />} />

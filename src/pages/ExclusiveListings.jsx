@@ -24,7 +24,7 @@ const ExclusiveListings = () => {
       <div>
         <Hero2
           title="Exclusive Listings"
-          description="Emma Ju features Bergen Counties property. Ju can find real estate in Alpine, Tenafly, Englewood Cliffs, NJ & more"
+          description="Emma Ju represents sellers across Manhattan, Bergen County, and Hudson County,<br/> showcasing exclusive listings in sought-after communities such as Fort Lee, Edgewater, Englewood Cliffs, Weehawken, and Jersey City."
           showButton={false}
           backgroundImage="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg"
         />

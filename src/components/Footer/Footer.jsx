@@ -23,15 +23,20 @@ const Footer = () => {
                 <h3>
                   <b>Specializing in Luxury Real Estate</b>
                 </h3>
-                Lizhen(Emma) Ju | NJ RE#12345678 <br />
-                Jeff Vasquez | NJ RE#2331270
+                Lizhen(Emma) Ju
               </div>
               <div className="company-location">
                 <h3>
                   <b>Location</b>
                 </h3>
-                2160 N Central Rd #111 <br />
+                <span style={{ color: "#aaa" }}>NJ OFFICE:</span> 2160 N Central
+                Rd #111
+                <br />
                 Fort Lee, NJ 07024
+                <br />
+                <span style={{ color: "#aaa" }}>NY OFFICE:</span> 45-10 Court
+                Square FL 1, <br />
+                Long Island City, New York, 11101
               </div>
             </div>
 

@@ -138,9 +138,9 @@ function Contact() {
             <div className="info-footer__col">
               <div className="info-footer__title">Contact Details</div>
               <div>
-                <strong>Acre NJ Real Estate</strong>
+                <strong>Specializing in Luxury Real Estate</strong>
               </div>
-              <div>Lizhen (Emma) Ju | NJ RE#12345678</div>
+              <div>Lizhen (Emma) Ju</div>
               <ul className="links-list">
                 <li className="link">
                   <a
@@ -161,9 +161,13 @@ function Contact() {
             <div className="info-footer__col">
               <div className="info-footer__title">Location</div>
               <p>
-                2160 N Central Rd #111
-                <br />
+                <span style={{ color: "#aaa" }}>NJ OFFICE:</span> 2160 N Central
+                Rd #111, <br />
                 Fort Lee, NJ 07024
+                <br />
+                <span style={{ color: "#aaa" }}>NY OFFICE:</span> 45-10 Court
+                Square FL 1, <br />
+                Long Island City, New York, 11101
               </p>
             </div>
           </div>
