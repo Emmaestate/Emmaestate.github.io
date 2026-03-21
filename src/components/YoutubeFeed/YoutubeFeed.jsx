@@ -28,7 +28,13 @@ const YoutubeFeed = () => {
         (item) => item.id.kind === "youtube#video"
       );
       
-      setVideos((prev) => [...prev, ...fetchedVideos]);
+      setVideos((prev) => {
+        const newList = pageToken ? [...prev, ...fetchedVideos] : fetchedVideos;
+        // Deduplicate based on videoId to prevent React StrictMode double-fetch issues
+        return Array.from(
+          new Map(newList.map((video) => [video.id.videoId, video])).values()
+        );
+      });
       setNextPageToken(data.nextPageToken || "");
     } catch (err) {
       setError(err.message);
