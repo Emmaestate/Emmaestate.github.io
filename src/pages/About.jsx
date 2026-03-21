@@ -8,6 +8,7 @@ import Hero from "../Components/Hero/Hero.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import connectWithUsImg from "../assets/connectwithus.jpg";
 import ContactFormPopup from "../Components/ContactFormPopup/ContactFormPopup.jsx";
+import YoutubeFeed from "../components/YoutubeFeed/YoutubeFeed.jsx";
 
 function About() {
   return (
@@ -31,6 +32,8 @@ function About() {
           Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a trusted guide in today’s competitive real estate market.`}
         />
       </div>
+
+      <YoutubeFeed />
 
       <Hero
         subtitle="Manhattan, Fort Lee, Edgewater and Bergen county Licensed Realtor"
