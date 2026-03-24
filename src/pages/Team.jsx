@@ -1,14 +1,19 @@
 import React from "react";
-import Layout from "../Components/Layout/Layout.jsx";
-import ContactFormPopup from "../Components/ContactFormPopup/ContactFormPopup.jsx";
-import Hero from "../Components/Hero/Hero.jsx";
-import Hero2 from "../Components/Hero2/Hero2.jsx";
-import Footer from "../Components/Footer/Footer.jsx";
-import AgentCard from "../Components/AgentCard/AgentCard.jsx";
-import pfpTemp from "../assets/connectwithus.jpg";
+import Layout from "../components/Layout/Layout.jsx";
+import ContactFormPopup from "../components/ContactFormPopup/ContactFormPopup.jsx";
+import Hero from "../components/Hero/Hero.jsx";
+import Hero2 from "../components/Hero2/Hero2.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import AgentCard from "../components/AgentCard/AgentCard.jsx";
+import emma_image from "../assets/emma.jpeg";
+import placeholder_image from "../assets/placeholder.png";
+import teamData from "../data/team.json";
 import "./Team.css";
 
 function Team() {
+  const leader = teamData.find(member => member.name.includes("Emma"));
+  const teamMembers = teamData.filter(member => !member.name.includes("Emma"));
+
   return (
     <div>
       <Layout />
@@ -19,44 +24,30 @@ function Team() {
         showButton={false}
       />
       <div className="container-type4">
-        <div className="lead-agent-wrapper">
-          <AgentCard
-            image="https://images.pexels.com/photos/7693223/pexels-photo-7693223.jpeg"
-            name="Jessica Liu"
-            label="Team Leader"
-          />
-        </div>
+        {leader && (
+          <div className="lead-agent-wrapper">
+            <AgentCard
+              image={emma_image}
+              name={leader.name}
+              label={leader.label}
+              description={leader.description}
+              email={leader.email}
+              phone={leader.phone}
+            />
+          </div>
+        )}
         <div className="team-grid">
-          <AgentCard
-            image="https://images.pexels.com/photos/33109594/pexels-photo-33109594.jpeg"
-            name="Jeffery"
-            label="Licensed Real Estate Salesperson"
-          />
-          <AgentCard
-            image="https://images.pexels.com/photos/5971254/pexels-photo-5971254.jpeg"
-            name="Rita"
-            label="Licensed Real Estate Salesperson"
-          />
-          <AgentCard
-            image="https://images.pexels.com/photos/33100431/pexels-photo-33100431.jpeg"
-            name="Jason He"
-            label="Licensed Real Estate Salesperson"
-          />
-          <AgentCard
-            image="https://images.pexels.com/photos/10041233/pexels-photo-10041233.jpeg"
-            name="Jenny"
-            label="Licensed Real Estate Salesperson"
-          />
-          <AgentCard
-            image="https://images.pexels.com/photos/7504785/pexels-photo-7504785.jpeg"
-            name="Jose Gonzalez"
-            label="Licensed Real Estate Salesperson"
-          />
-          <AgentCard
-            image="https://images.pexels.com/photos/1587009/pexels-photo-1587009.jpeg"
-            name="Lena"
-            label="Licensed Real Estate Salesperson"
-          />
+          {teamMembers.map((member, index) => (
+            <AgentCard
+              key={index}
+              image={placeholder_image}
+              name={member.name}
+              label={member.label}
+              description={member.description}
+              email={member.email}
+              phone={member.phone}
+            />
+          ))}
         </div>
       </div>
       <ContactFormPopup />
@@ -70,8 +61,7 @@ function Team() {
       />
       <div className="container-type1">
         <Footer />
-      </div>{" "}
-      */
+      </div>
     </div>
   );
 }

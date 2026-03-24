@@ -7,6 +7,7 @@ import TextContainer from "../Components/TextContainer/TextContainer.jsx";
 import Hero from "../Components/Hero/Hero.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import connectWithUsImg from "../assets/connectwithus.jpg";
+import aboutHeroImg from "../assets/about2.webp";
 import ContactFormPopup from "../Components/ContactFormPopup/ContactFormPopup.jsx";
 import YoutubeFeed from "../components/YoutubeFeed/YoutubeFeed.jsx";
 
@@ -17,7 +18,7 @@ function About() {
 
       <Hero2
         title="Emma Ju"
-        backgroundImage="https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=2560/https://media-production.lp-cdn.com/media/mxxjbeckbidzmuygjbph"
+        backgroundImage={aboutHeroImg}
         description="Specializing in New York City and New Jersey Gold Coast"
         showButton={false}
       />

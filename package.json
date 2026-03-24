@@ -12,7 +12,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "update-sold": "node scripts/update-sold.js",
-    "update-exclusive": "node scripts/update-exclusive.js"
+    "update-exclusive": "node scripts/update-exclusive.js",
+    "update-team": "node scripts/update-team.js"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
