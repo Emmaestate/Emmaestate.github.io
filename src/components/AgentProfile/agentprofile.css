@@ -17,19 +17,20 @@
 }
 
 /* Left image column with fixed size */
-.agent-profile__image2 {
+.agent-profile__image {
   flex-shrink: 0;
   width: 500px; /* Fixed width */
-  height: auto;
+  height: 500px; /* Fixed height to ensure perfect circle */
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 
-.agent-image2 {
+.agent-image {
   width: 100%;
-  height: auto;
-  border-radius: 2px;
+  height: 100%;
+  border-radius: 50%; /* Force circle instead of square */
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.034);
   object-fit: cover;
 }

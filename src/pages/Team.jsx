@@ -4,6 +4,7 @@ import ContactFormPopup from "../components/ContactFormPopup/ContactFormPopup.js
 import Hero from "../components/Hero/Hero.jsx";
 import Hero2 from "../components/Hero2/Hero2.jsx";
 import Footer from "../components/Footer/Footer.jsx";
+import aboutHeroImg from "../assets/about1.webp";
 import AgentCard from "../components/AgentCard/AgentCard.jsx";
 import emma_image from "../assets/emma.jpeg";
 import placeholder_image from "../assets/placeholder.png";
@@ -19,7 +20,7 @@ function Team() {
       <Layout />
       <Hero2
         title="Meet the Team"
-        backgroundImage="https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=2560/https://media-production.lp-cdn.com/media/mxxjbeckbidzmuygjbph"
+        backgroundImage={aboutHeroImg}
         description="Learn about the exclusive neighborhoods in Los Angeles and Beverly Hills."
         showButton={false}
       />

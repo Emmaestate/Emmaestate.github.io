@@ -29,6 +29,25 @@
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
 }
 
+.agent-profile__image {
+  width: 400px; /* fixed width */
+  height: 400px; /* fixed height to ensure circle */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 50%; /* Ensure container handles overflow if needed */
+}
+
+.agent-profile__image .agent-image {
+  width: 100%;      /* full width */
+  height: 100%;     /* stretch to parent's height */
+  object-fit: cover; /* scale image nicely */
+  border-radius: 50%;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+}
+
 /* Right content column: info + footer stacked vertically */
 .agent-profile2-agent-profile__content {
   flex: 3;

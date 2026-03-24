@@ -7,7 +7,7 @@ import TextContainer from "../Components/TextContainer/TextContainer.jsx";
 import Hero from "../Components/Hero/Hero.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import connectWithUsImg from "../assets/connectwithus.jpg";
-import aboutHeroImg from "../assets/about2.webp";
+import aboutHeroImg from "../assets/about1.webp";
 import ContactFormPopup from "../Components/ContactFormPopup/ContactFormPopup.jsx";
 import YoutubeFeed from "../components/YoutubeFeed/YoutubeFeed.jsx";
 
