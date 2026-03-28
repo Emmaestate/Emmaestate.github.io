@@ -157,6 +157,18 @@
   margin-bottom: 25px;
 }
 
+.company-info-newsletter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.company-info-newsletter .company-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* === BOTTOM ROW: Links left + Social icons right === */
 .footer-bottom-row {
   display: flex;

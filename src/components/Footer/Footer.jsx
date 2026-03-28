@@ -6,6 +6,7 @@ import instagram_icon from "../../assets/instagram.png";
 import wechat_icon from "../../assets/wechat.png";
 import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
+import companyLogo from "../../assets/company.jpeg";
 
 const Footer = () => {
   return (
@@ -14,6 +15,7 @@ const Footer = () => {
         <div className="footer-layout-left">
           <div className="company-info-newsletter">
             <h1>EMMA JU ESTATE</h1>
+            <img src={companyLogo} alt="Company" className="company-logo" />
           </div>
 
           <div className="company-contacts">
