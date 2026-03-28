@@ -14,6 +14,21 @@ import "./Team.css";
 function Team() {
   const leader = teamData.find(member => member.name.includes("Emma"));
   const teamMembers = teamData.filter(member => !member.name.includes("Emma"));
+  const importedImages = import.meta.glob("../../source/team/*.{jpg,jpeg,png,webp}", {
+    eager: true,
+    import: "default",
+  });
+  const imageLookup = Object.fromEntries(
+    Object.entries(importedImages).map(([fullPath, url]) => {
+      const file = fullPath.split("/").pop() || "";
+      const base = file.replace(/\.[^/.]+$/, "").toLowerCase();
+      return [base, url];
+    })
+  );
+  const resolveMemberImage = (name) => {
+    const key = (name || "").trim().toLowerCase();
+    return imageLookup[key] || placeholder_image;
+  };
 
   return (
     <div>
@@ -41,7 +56,7 @@ function Team() {
           {teamMembers.map((member, index) => (
             <AgentCard
               key={index}
-              image={placeholder_image}
+              image={resolveMemberImage(member.name)}
               name={member.name}
               label={member.label}
               description={member.description}
