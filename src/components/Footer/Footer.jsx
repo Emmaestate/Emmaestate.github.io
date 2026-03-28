@@ -15,7 +15,6 @@ const Footer = () => {
         <div className="footer-layout-left">
           <div className="company-info-newsletter">
             <h1>EMMA JU ESTATE</h1>
-            <img src={companyLogo} alt="Company" className="company-logo" />
           </div>
 
           <div className="company-contacts">
@@ -180,7 +179,14 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-label" style={{ justifyContent: "center" }}>
+      <div className="footer-label">
+        <div>
+          <img
+            src={companyLogo}
+            alt="Company"
+            className="footer-company-logo"
+          />
+        </div>
         <div>
           <p>© Copyright 2026</p>
         </div>

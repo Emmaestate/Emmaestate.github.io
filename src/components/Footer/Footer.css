@@ -164,7 +164,7 @@
 }
 
 .company-info-newsletter .company-logo {
-  height: 50px;
+  height: 30px;
   width: auto;
   object-fit: contain;
 }
@@ -313,6 +313,12 @@
 
 .footer-label div:last-child {
   text-align: right;
+}
+
+.footer-company-logo {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* === RESPONSIVE === */
