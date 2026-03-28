@@ -43,7 +43,7 @@ function Team() {
         {leader && (
           <div className="lead-agent-wrapper">
             <AgentCard
-              image={emma_image}
+              image={imageLookup[(leader.name || "").trim().toLowerCase()] || emma_image}
               name={leader.name}
               label={leader.label}
               description={leader.description}
