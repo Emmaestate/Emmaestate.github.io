@@ -4,7 +4,7 @@ import "./YoutubeFeed.css";
 const API_KEY = "AIzaSyCxKZpCzcLR5j8jvPXRG_K35ULmOhpm0zI";
 const CHANNEL_ID = "UCu3TGeWhuGT3X5z3qEmULgA";
 
-const YoutubeFeed = () => {
+const YoutubeFeed = ({ heading = "Latest Videos", loadMoreText = "Load More", loadingText = "Loading..." }) => {
   const [videos, setVideos] = useState([]);
   const [nextPageToken, setNextPageToken] = useState("");
   const [loading, setLoading] = useState(false);
@@ -49,7 +49,7 @@ const YoutubeFeed = () => {
 
   return (
     <div className="youtube-feed-container">
-      <h2 className="youtube-feed-title">Latest Videos</h2>
+      <h2 className="youtube-feed-title">{heading}</h2>
       {error && <p className="youtube-feed-error">Error loading videos: {error}</p>}
       
       <div className="youtube-grid">
@@ -81,7 +81,7 @@ const YoutubeFeed = () => {
             onClick={() => fetchVideos(nextPageToken)}
             disabled={loading}
           >
-            {loading ? "Loading..." : "Load More"}
+            {loading ? loadingText : loadMoreText}
           </button>
         </div>
       )}

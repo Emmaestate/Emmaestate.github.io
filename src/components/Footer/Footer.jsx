@@ -45,7 +45,7 @@ const Footer = () => {
             {/* Right block with Contact */}
             <div className="company-contact">
               <h3>
-                <b>Contact Us</b>
+                <b>{footerConfig.contactTitle[lang]}</b>
               </h3>
               <a href="mailto:realtorlzj@gmail.com">realtorlzj@gmail.com</a>
               <br />

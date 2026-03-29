@@ -31,6 +31,8 @@ Fluent in English and Mandarin, Emma works with a diverse range of buyers, selle
   },
   youtubeFeed: {
     heading: { en: "Latest Videos", zh: "最新视频" },
+    loadMore: { en: "Load More", zh: "加载更多" },
+    loading: { en: "Loading...", zh: "加载中..." },
   },
   agentProfile2: {
     name: { en: "Emma Ju", zh: "Emma Ju" },

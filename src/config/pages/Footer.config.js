@@ -15,6 +15,10 @@ export default {
     valuation: { en: "Home Valuation", zh: "房屋估价" },
     contact: { en: "Let's Connect", zh: "联系我们" },
   },
+  contactTitle: {
+    en: "Contact Us",
+    zh: "联系我们",
+  },
   left: {
     specialization: { en: "Specializing in Luxury Real Estate", zh: "专注豪华房地产" },
     name: { en: "Lizhen(Emma) Ju", zh: "Lizhen(Emma) Ju" },

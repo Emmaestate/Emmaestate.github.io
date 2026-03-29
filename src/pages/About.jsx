@@ -34,7 +34,11 @@ function About() {
         />
       </div>
 
-      <YoutubeFeed />
+      <YoutubeFeed
+        heading={aboutConfig.youtubeFeed.heading[lang]}
+        loadMoreText={aboutConfig.youtubeFeed.loadMore[lang]}
+        loadingText={aboutConfig.youtubeFeed.loading[lang]}
+      />
 
       <Hero
         subtitle={aboutConfig.contactHero.subtitle[lang]}
