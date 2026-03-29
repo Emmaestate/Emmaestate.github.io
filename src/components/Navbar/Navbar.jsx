@@ -3,10 +3,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
+import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
   const [sticky, setSticky] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +35,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               onMouseEnter={() => setShowDropdown(true)}
               onMouseLeave={() => setShowDropdown(false)}
             >
-              <span className="nav-link">PROPERTIES ▾</span>
+              <span className="nav-link">{t("PROPERTIES")} ▾</span>
               {showDropdown && (
                 <div className="dropdown-menu">
                   <Link
@@ -40,14 +43,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                     className="dropdown-link"
                     onClick={handleScrollToTop}
                   >
-                    Exclusive Listings
+                    {t("ExclusiveListings")}
                   </Link>
                   <Link
                     to="/properties/soldlist"
                     className="dropdown-link"
                     onClick={handleScrollToTop}
                   >
-                    Our Sold Listings
+                    {t("OurSoldListings")}
                   </Link>
                 </div>
               )}
@@ -74,13 +77,16 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                 className="nav-link"
                 onClick={handleScrollToTop}
               >
-                Contact
+                {t("Contact")}
               </Link>
             </li>
             <li className="nav-item">
               <a href="tel:1234567890" className="nav-link">
-                (201)-742-1625
+                {t("Phone")}
               </a>
+            </li>
+            <li className="nav-item">
+              <LanguageSwitch />
             </li>
             <li className="nav-item hamburger-wrapper">
               <button

@@ -7,8 +7,10 @@ import wechat_icon from "../../assets/wechat.png";
 import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
 import companyLogo from "../../assets/company.jpeg";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <div className="global-footer">
       <div className="footer-top-row">
@@ -57,7 +59,7 @@ const Footer = () => {
           <div className="newsletter">
             <div className="newsletter-info">
               <h3 style={{ marginBottom: "20px", color: "#000" }}>
-                Leave a Message
+                {t("LetsConnect")}
               </h3>
               <p
                 style={{
@@ -66,8 +68,7 @@ const Footer = () => {
                   lineHeight: "1.6",
                 }}
               >
-                Interested in buying or selling? Let's connect and find your
-                perfect solution.
+                {t("LetsConnect")}
               </p>
               <div style={{ display: "flex", justifyContent: "flex-start" }}>
                 <ContactFormPopup
@@ -85,7 +86,7 @@ const Footer = () => {
                         transition: "background-color 0.3s",
                       }}
                     >
-                      LET'S CONNECT
+                      {t("LetsConnect")}
                     </button>
                   }
                 />
@@ -98,12 +99,12 @@ const Footer = () => {
       {/* Navigation Links + Social Icons on the same row */}
       <div className="footer-bottom-row">
         <div className="footer-links">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/emma">Emma</a>
-          <a href="/featured-listings">Featured Listings</a>
-          <a href="/valuation">Home Valuation</a>
-          <a href="/contact">Let's Connect</a>
+          <a href="/">{t("Home")}</a>
+          <a href="/about">{t("About")}</a>
+          <a href="/emma">{t("Emma")}</a>
+          <a href="/featured-listings">{t("FeaturedListings")}</a>
+          <a href="/valuation">{t("HomeValuation")}</a>
+          <a href="/contact">{t("LetsConnect")}</a>
         </div>
 
         <div className="container-social-media">

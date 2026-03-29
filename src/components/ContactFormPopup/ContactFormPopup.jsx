@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ContactFormPopup.css";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
 
 export default function ContactFormPopup({ customButton }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [lang, setLang] = useState("en"); // 'en' or 'zh'
+  const { lang: globalLang } = useLanguage();
+  const [lang, setLang] = useState(globalLang); // 'en' or 'zh'
+  useEffect(() => {
+    setLang(globalLang);
+  }, [globalLang, isOpen]);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -25,7 +30,7 @@ export default function ContactFormPopup({ customButton }) {
           aria-expanded={isOpen}
           aria-controls="contact-popup"
         >
-          LET'S CONNECT!
+          {globalLang === "zh" ? "联系我们" : "LET'S CONNECT!"}
         </button>
       )}
 
