@@ -9,6 +9,8 @@ import Footer from "../Components/Footer/Footer.jsx";
 import tempImg from "../assets/connectwithus.jpg"; // Placeholder image for properties
 import exclusiveData from "../data/exclusiveListings.json";
 import { images } from "../data/images";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import exclusiveConfig from "../config/pages/Exclusive.config.js";
 
 const exclusiveProperties = exclusiveData.map((item) => ({
   id: `exclusive-${item.id}`,
@@ -17,14 +19,15 @@ const exclusiveProperties = exclusiveData.map((item) => ({
 }));
 
 const ExclusiveListings = () => {
+  const { lang } = useLanguage();
   return (
     <div>
       <Layout />
 
       <div>
         <Hero2
-          title="Exclusive Listings"
-          description="Emma Ju represents sellers across Manhattan, Bergen County, and Hudson County,<br/> showcasing exclusive listings in sought-after communities such as Fort Lee, Edgewater, Englewood Cliffs, Weehawken, and Jersey City."
+          title={exclusiveConfig.hero2.title[lang]}
+          description={exclusiveConfig.hero2.description[lang]}
           showButton={false}
           backgroundImage="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg"
         />
@@ -34,10 +37,10 @@ const ExclusiveListings = () => {
 
       <div>
         <Hero
-          subtitle="Manhattan, Fort Lee, Edgewater and Bergen county Licensed Realtor"
-          title="CONNECT WITH EMMA"
-          description="Emma Ju  Specializing in luxury real estate in Manhattan, Fort Lee, Edgewater and Bergen county new constructions."
-          btnText="CONTACT EMMA"
+          subtitle={exclusiveConfig.contactHero.subtitle[lang]}
+          title={exclusiveConfig.contactHero.title[lang]}
+          description={exclusiveConfig.contactHero.description[lang]}
+          btnText={exclusiveConfig.contactHero.btnText[lang]}
           backgroundImage={connectWithUsImg}
           height="700px"
         />

@@ -8,6 +8,8 @@ import Hero2 from "../Components/Hero2/Hero2.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import soldData from "../data/soldListings.json";
 import { images } from "../data/images";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import soldConfig from "../config/pages/Sold.config.js";
 
 // Transform data to match PropertyList expected format
 // Add prefix to ID to avoid collisions
@@ -22,14 +24,15 @@ const soldProperties = soldData.map((item) => ({
 }));
 
 const SoldListings = () => {
+  const { lang } = useLanguage();
   return (
     <div>
       <Layout />
 
       <div>
         <Hero2
-          title="OUR SOLD LISTINGS"
-          description="Emma Ju features Bergen Counties property. Ju can find real estate in Alpine, Tenafly, Englewood Cliffs, NJ & more"
+          title={soldConfig.hero2.title[lang]}
+          description={soldConfig.hero2.description[lang]}
           showButton={false}
           backgroundImage="https://images.pexels.com/photos/2988860/pexels-photo-2988860.jpeg"
         />
@@ -39,10 +42,10 @@ const SoldListings = () => {
 
       <div>
         <Hero
-          subtitle="Manhattan, Fort Lee, Edgewater and Bergen county Licensed Realtor"
-          title="CONNECT WITH EMMA"
-          description="Emma Ju  Specializing in luxury real estate in Manhattan, Fort Lee, Edgewater and Bergen county new constructions."
-          btnText="CONTACT EMMA"
+          subtitle={soldConfig.contactHero.subtitle[lang]}
+          title={soldConfig.contactHero.title[lang]}
+          description={soldConfig.contactHero.description[lang]}
+          btnText={soldConfig.contactHero.btnText[lang]}
           backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
           height="700px"
         />
