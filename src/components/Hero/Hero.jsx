@@ -17,7 +17,7 @@ const Hero = ({
   const navigate = useNavigate();
 
   const heroStyle = {
-    backgroundImage: `linear-gradient(rgba(175,175,175,0.69), rgba(0,0,0,0.7)), url(${backgroundImage})`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height,

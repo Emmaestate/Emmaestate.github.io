@@ -14,7 +14,7 @@ const Hero2 = ({
   const [hovered, setHovered] = useState(false);
 
   const heroStyle = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.17), rgba(110, 110, 110, 0.23)), url(${backgroundImage})`,
+    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "100vh", // or remove completely and use CSS
