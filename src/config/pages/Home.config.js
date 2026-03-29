@@ -62,4 +62,22 @@ export default {
       zh: "了解与我们合作的客户成功案例。",
     },
   },
+  agentProfile: {
+    title: { en: "Meet Emma Ju", zh: "认识 Emma Ju" },
+    position: {
+      en: "Real estate specialist in Manhattan and the NJ gold coast",
+      zh: "曼哈顿与新泽西黄金海岸房地产专家",
+    },
+    paragraphs: {
+      en: [
+        "Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both city and suburban transactions with ease.",
+        "Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a trusted guide in today’s competitive real estate market.",
+      ],
+      zh: [
+        "Emma Ju 是 Acre NY Realty 与 Acre NJ 的资深房地产顾问，具备深厚的市场洞察与专业口碑，帮助客户轻松处理城市与郊区的交易。",
+        "她精通中英文，服务买家、卖家与投资人。以客户为中心、沟通清晰，并重视长期关系，是当下竞争激烈市场中值得信赖的向导。",
+      ],
+    },
+    ctaText: { en: "Learn More", zh: "了解更多" },
+  },
 }

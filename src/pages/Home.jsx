@@ -28,7 +28,12 @@ const Home = () => {
       <Layout />
       <VideoWrapper />
       <div className="container-type1">
-        <AgentProfile />
+        <AgentProfile
+          title={homeConfig.agentProfile.title[lang]}
+          position={homeConfig.agentProfile.position[lang]}
+          paragraphs={homeConfig.agentProfile.paragraphs[lang]}
+          ctaText={homeConfig.agentProfile.ctaText[lang]}
+        />
       </div>
       {/* <CompanyStats /> */}
       {/* <CommunitiesGrid/> */}

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navbar from '../Navbar/Navbar.jsx';
 import Sidebar from '../Sidebar/Sidebar.jsx';
 import ScrollDownButton from '../ScrollDownButton/ScrollDownButton.jsx';
+import I18nAuditor from '../../i18n/I18nAuditor.jsx';
 
 const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,6 +13,7 @@ const Layout = () => {
       <Navbar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       <ScrollDownButton />
+      <I18nAuditor />
     </>
   );
 };

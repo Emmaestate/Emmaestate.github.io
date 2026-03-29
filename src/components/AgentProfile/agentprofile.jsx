@@ -8,7 +8,15 @@ import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
 import "./AgentProfile.css";
 
-const AgentProfile = () => {
+const AgentProfile = ({
+  title = "Meet Emma Ju",
+  position = "Real estate specialist in Manhattan and the NJ gold coast",
+  paragraphs = [
+    "Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both city and suburban transactions with ease.",
+    "Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a trusted guide in today’s competitive real estate market.",
+  ],
+  ctaText = "Learn More",
+}) => {
   return (
     <div className="communities-container">
       <div className="agent-profile">
@@ -16,18 +24,12 @@ const AgentProfile = () => {
           <img className="agent-image" src={emma_image} alt="Meet Emma" />
         </div>
         <div className="agent-profile__content">
-          <h2 className="agent-name">Meet Emma Ju</h2>
-          <p className="agent-position">
-            Real estate specialist in Manhattan and the NJ gold coast
-          </p>
+          <h2 className="agent-name">{title}</h2>
+          <p className="agent-position">{position}</p>
           <div className="agent-description">
-            <p>
-              Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both city and suburban transactions with ease.
-            </p>
-
-            <p>
-              Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a trusted guide in today’s competitive real estate market.
-            </p>
+            {paragraphs.map((text, idx) => (
+              <p key={idx}>{text}</p>
+            ))}
           </div>
 
           <div className="content-footer">
@@ -102,7 +104,7 @@ const AgentProfile = () => {
             </ul>
             <div className="cta">
               <a href="#/about" className="lp-link lp-link--dark">
-                Learn More
+                {ctaText}
               </a>
             </div>
           </div>
