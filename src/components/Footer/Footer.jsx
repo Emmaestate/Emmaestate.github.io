@@ -25,22 +25,20 @@ const Footer = () => {
             <div className="company-left-group">
               <div className="company-acre">
                 <h3>
-                  <b>Specializing in Luxury Real Estate</b>
+                  <b>{footerConfig.left.specialization[lang]}</b>
                 </h3>
-                Lizhen(Emma) Ju
+                {footerConfig.left.name[lang]}
               </div>
               <div className="company-location">
                 <h3>
-                  <b>Location</b>
+                  <b>{footerConfig.left.locationTitle[lang]}</b>
                 </h3>
-                <span style={{ color: "#aaa" }}>NJ OFFICE:</span> 2160 N Central
-                Rd #111
+                <span style={{ color: "#aaa" }}>{footerConfig.left.njLabel[lang]}</span> {footerConfig.left.njAddr1[lang]}
                 <br />
-                Fort Lee, NJ 07024
+                {footerConfig.left.njAddr2[lang]}
                 <br />
-                <span style={{ color: "#aaa" }}>NY OFFICE:</span> 45-10 Court
-                Square FL 1, <br />
-                Long Island City, New York, 11101
+                <span style={{ color: "#aaa" }}>{footerConfig.left.nyLabel[lang]}</span> {footerConfig.left.nyAddr1[lang]} <br />
+                {footerConfig.left.nyAddr2[lang]}
               </div>
             </div>
 

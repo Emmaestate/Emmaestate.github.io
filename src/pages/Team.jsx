@@ -15,18 +15,23 @@ import teamConfig from "../config/pages/Team.config.js";
 
 function Team() {
   const { lang } = useLanguage();
-  const leader = teamData.find(member => member.name.includes("Emma"));
-  const teamMembers = teamData.filter(member => !member.name.includes("Emma"));
-  const importedImages = import.meta.glob("../../source/team/*.{jpg,jpeg,png,webp}", {
-    eager: true,
-    import: "default",
-  });
+  const leader = teamData.find((member) => member.name.includes("Emma"));
+  const teamMembers = teamData.filter(
+    (member) => !member.name.includes("Emma"),
+  );
+  const importedImages = import.meta.glob(
+    "../../source/team/*.{jpg,jpeg,png,webp}",
+    {
+      eager: true,
+      import: "default",
+    },
+  );
   const imageLookup = Object.fromEntries(
     Object.entries(importedImages).map(([fullPath, url]) => {
       const file = fullPath.split("/").pop() || "";
       const base = file.replace(/\.[^/.]+$/, "").toLowerCase();
       return [base, url];
-    })
+    }),
   );
   const resolveMemberImage = (name) => {
     const key = (name || "").trim().toLowerCase();
@@ -46,7 +51,10 @@ function Team() {
         {leader && (
           <div className="lead-agent-wrapper">
             <AgentCard
-              image={imageLookup[(leader.name || "").trim().toLowerCase()] || emma_image}
+              image={
+                imageLookup[(leader.name || "").trim().toLowerCase()] ||
+                emma_image
+              }
               name={leader.name}
               label={leader.label}
               description={leader.description}
@@ -71,10 +79,10 @@ function Team() {
       </div>
       <ContactFormPopup />
       <Hero
-        subtitle="Manhattan, Fort Lee, Edgewater and Bergen county Licensed Realtor"
-        title="CONNECT WITH EMMA"
-        description="Emma specializes in Bergen County NJ and NYC buyers, sellers, and renters."
-        btnText="CONTACT EMMA"
+        subtitle={teamConfig.contactHero.subtitle[lang]}
+        title={teamConfig.contactHero.title[lang]}
+        description={teamConfig.contactHero.description[lang]}
+        btnText={teamConfig.contactHero.btnText[lang]}
         backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
         height="700px"
       />

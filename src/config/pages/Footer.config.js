@@ -15,4 +15,15 @@ export default {
     valuation: { en: "Home Valuation", zh: "房屋估价" },
     contact: { en: "Let's Connect", zh: "联系我们" },
   },
+  left: {
+    specialization: { en: "Specializing in Luxury Real Estate", zh: "专注豪华房地产" },
+    name: { en: "Lizhen(Emma) Ju", zh: "Lizhen(Emma) Ju" },
+    locationTitle: { en: "Location", zh: "地址" },
+    njLabel: { en: "NJ OFFICE:", zh: "新泽西办公室：" },
+    njAddr1: { en: "2160 N Central Rd #111", zh: "2160 N Central Rd #111" },
+    njAddr2: { en: "Fort Lee, NJ 07024", zh: "Fort Lee, NJ 07024" },
+    nyLabel: { en: "NY OFFICE:", zh: "纽约办公室：" },
+    nyAddr1: { en: "45-10 Court Square FL 1,", zh: "45-10 Court Square FL 1," },
+    nyAddr2: { en: "Long Island City, New York, 11101", zh: "Long Island City, New York, 11101" },
+  },
 }
