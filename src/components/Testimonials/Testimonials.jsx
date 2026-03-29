@@ -60,15 +60,16 @@ const ReviewCard = ({ comment }) => {
   );
 };
 
-const Testimonials = () => {
+const Testimonials = ({
+  title = "What Our Clients Say",
+  subtitle = "Read success stories from people who have worked with us.",
+}) => {
   return (
     <section className="testimonials-section">
       <div className="testimonials-container">
         <div className="testimonials-title-wrapper">
-          <h2 className="testimonials-title">What Our Clients Say</h2>
-          <p className="testimonials-subtitle">
-            Read success stories from people who have worked with us.
-          </p>
+          <h2 className="testimonials-title">{title}</h2>
+          <p className="testimonials-subtitle">{subtitle}</p>
         </div>
 
         <Swiper

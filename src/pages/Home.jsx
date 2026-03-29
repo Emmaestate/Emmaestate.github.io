@@ -18,8 +18,11 @@ import HomeValuation from "../Components/HomeValuation/HomeValuation.jsx";
 import ChatBot from "../Components/ChatBot/ChatBot.jsx";
 import ContactFormPopup from "../Components/ContactFormPopup/ContactFormPopup.jsx";
 import Testimonials from "../components/Testimonials/Testimonials.jsx";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import homeConfig from "../config/pages/Home.config.js";
 
 const Home = () => {
+  const { lang } = useLanguage();
   return (
     <div>
       <Layout />
@@ -37,15 +40,18 @@ const Home = () => {
         <ExclusiveListings />
       </div>
 
-      <Testimonials />
+      <Testimonials
+        title={homeConfig.testimonials.title[lang]}
+        subtitle={homeConfig.testimonials.subtitle[lang]}
+      />
 
       {/*<HomeValuation/>*/}
       <div>
         <Hero
-          subtitle="New York City and New Jersey Licensed Realtor"
-          title="CONNECT WITH EMMA"
-          description="Emma specializes in representing buyers and sellers in Manhattan, Bergen county and along the NJ Gold Coast."
-          btnText="CONTACT EMMA"
+          subtitle={homeConfig.homeHero.subtitle[lang]}
+          title={homeConfig.homeHero.title[lang]}
+          description={homeConfig.homeHero.description[lang]}
+          btnText={homeConfig.homeHero.btnText[lang]}
           backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
           height="700px"
         />

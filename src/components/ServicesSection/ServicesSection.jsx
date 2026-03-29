@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "./ServicesSection.css";
 import buyImg from "../../assets/Buy.jpg";
 import sellImg from "../../assets/Sell.jpg";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
+import homeConfig from "../../config/pages/Home.config.js";
 
 const ServicesSection = () => {
   const navigate = useNavigate();
+  const { lang } = useLanguage();
 
   // Intersection Observer for fade-in animation
   const observerRef = useRef(null);
@@ -46,16 +49,20 @@ const ServicesSection = () => {
           </div>
         </div>
         <div className="service-content">
-          <h2 className="service-title">ACQUIRE</h2>
-          <h3 className="service-subtitle">Find Your Dream Home</h3>
+          <h2 className="service-title">
+            {homeConfig.services.buy.title[lang]}
+          </h2>
+          <h3 className="service-subtitle">
+            {homeConfig.services.buy.subtitle[lang]}
+          </h3>
           <p className="service-description">
-            Discover exclusive properties and personalized buying experiences tailored to your lifestyle across Manhattan, Fort Lee and New Jersey’s Gold Coast. We guide you through every step of the home-finding journey that truly reflects who you are.
+            {homeConfig.services.buy.description[lang]}
           </p>
           <button
             className="service-btn"
             onClick={() => navigate("/properties/exclusivelist")}
           >
-            EXPLORE LISTINGS
+            {homeConfig.services.buy.btn[lang]}
           </button>
         </div>
       </div>
@@ -72,16 +79,20 @@ const ServicesSection = () => {
           </div>
         </div>
         <div className="service-content">
-          <h2 className="service-title">CURATE</h2>
-          <h3 className="service-subtitle">Selling With Confidence</h3>
+          <h2 className="service-title">
+            {homeConfig.services.sell.title[lang]}
+          </h2>
+          <h3 className="service-subtitle">
+            {homeConfig.services.sell.subtitle[lang]}
+          </h3>
           <p className="service-description">
-            Maximize your property's value with our strategic marketing and expert negotiation skills. From staging to closing, we handle the details with precision so you can move forward with peace of mind.
+            {homeConfig.services.sell.description[lang]}
           </p>
           <button
             className="service-btn"
             onClick={() => navigate("/properties/soldlist")}
           >
-            REQUEST VALUATION
+            {homeConfig.services.sell.btn[lang]}
           </button>
         </div>
       </div>
