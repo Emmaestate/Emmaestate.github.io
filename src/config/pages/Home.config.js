@@ -80,4 +80,9 @@ export default {
     },
     ctaText: { en: "Learn More", zh: "了解更多" },
   },
+  portfolio: {
+    title: { en: "EMMA'S PORTFOLIO", zh: "EMMA 的作品集" },
+    beds: { en: "Beds", zh: "卧室" },
+    baths: { en: "Baths", zh: "卫浴" },
+  },
 }

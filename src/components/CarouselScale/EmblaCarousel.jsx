@@ -9,6 +9,8 @@ import {
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import soldData from "../../data/soldListings.json";
 import { images } from "../../data/images";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
+import homeConfig from "../../config/pages/Home.config.js";
 
 const OPTIONS = {
   loop: true,
@@ -30,6 +32,7 @@ const SLIDES = soldData.map((item) => ({
 
 const EmblaCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
+  const { lang } = useLanguage();
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -44,7 +47,7 @@ const EmblaCarousel = () => {
   return (
     <section className="embla">
       <div className="embla__controls">
-        <h1 className="embla__heading">EMMA'S PORTFOLIO</h1>
+        <h1 className="embla__heading">{homeConfig.portfolio.title[lang]}</h1>
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
@@ -65,8 +68,8 @@ const EmblaCarousel = () => {
                   <div className="listing-price">{slide.price}</div>
                   <div className="listing-address">{slide.address}</div>
                   <div className="listing-details">
-                    <span>{slide.beds} Beds</span> ·{" "}
-                    <span>{slide.baths} Baths</span>
+                    <span>{slide.beds} {homeConfig.portfolio.beds[lang]}</span> ·{" "}
+                    <span>{slide.baths} {homeConfig.portfolio.baths[lang]}</span>
                   </div>
                 </div>
               </div>
