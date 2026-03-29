@@ -1,0 +1,22 @@
+export default {
+  headerTitle: { en: "Get In Touch", zh: "联系我们" },
+  headerSubtitle: { en: "Work with our world-class team.", zh: "与我们的专业团队合作。" },
+  messageTitle: { en: "Leave a Message", zh: "留言" },
+  messageDesc: {
+    en: "Interested in buying or selling? Let's connect and find your perfect solution.",
+    zh: "有买卖房需求？点击联系，获取最合适的解决方案。",
+  },
+  messageBtn: { en: "LET'S CONNECT", zh: "联系我们" },
+  contactDetailsTitle: { en: "Contact Details", zh: "联系方式" },
+  specialization: { en: "Specializing in Luxury Real Estate", zh: "专注豪华房地产" },
+  name: { en: "Lizhen (Emma) Ju", zh: "Lizhen (Emma) Ju" },
+  email: { en: "realtorlzj@gmail.com", zh: "realtorlzj@gmail.com" },
+  phone: { en: "(201)-742-1625", zh: "(201)-742-1625" },
+  locationTitle: { en: "Location", zh: "地址" },
+  njLabel: { en: "NJ OFFICE:", zh: "新泽西办公室：" },
+  nyLabel: { en: "NY OFFICE:", zh: "纽约办公室：" },
+  njAddrLine1: { en: "2160 N Central Rd #111,", zh: "2160 N Central Rd #111," },
+  njAddrLine2: { en: "Fort Lee, NJ 07024", zh: "Fort Lee, NJ 07024" },
+  nyAddrLine1: { en: "45-10 Court Square FL 1,", zh: "45-10 Court Square FL 1," },
+  nyAddrLine2: { en: "Long Island City, New York, 11101", zh: "Long Island City, New York, 11101" },
+}

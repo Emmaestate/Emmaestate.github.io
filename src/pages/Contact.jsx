@@ -9,9 +9,12 @@ import youtube_icon from "../assets/youtube.png";
 import facebook_icon from "../assets/facebook.png";
 import "animate.css";
 import "./Contact.css";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import contactConfig from "../config/pages/Contact.config.js";
 
 function Contact() {
   const navigate = useNavigate();
+  const { lang } = useLanguage();
 
   useEffect(() => {
     new WOW().init();
@@ -34,72 +37,7 @@ function Contact() {
             role="heading"
             aria-level="2"
           >
-            <span className="word">
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0s"
-              >
-                G
-              </span>
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.1s"
-              >
-                e
-              </span>
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.2s"
-              >
-                t
-              </span>
-            </span>
-            <span className="word">
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.3s"
-              >
-                I
-              </span>
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.4s"
-              >
-                n
-              </span>
-            </span>
-            <span className="word">
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.5s"
-              >
-                T
-              </span>
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.6s"
-              >
-                o
-              </span>
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.7s"
-              >
-                u
-              </span>
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.8s"
-              >
-                c
-              </span>
-              <span
-                className="letter wow animate__animated animate__fadeInDown"
-                data-wow-delay="0.9s"
-              >
-                h
-              </span>
-            </span>
+            {contactConfig.headerTitle[lang]}
           </h1>
 
           <button
@@ -111,22 +49,21 @@ function Contact() {
           </button>
         </div>
         <p className="contact-form__header__subtitle lp-pre-line">
-          Work with our world-class team.
+          {contactConfig.headerSubtitle[lang]}
         </p>
       </div>
 
       <div className="contact-form__contents">
         <div className="contact-form__contents-form">
           <div className="contact-form-message">
-            <h3>Leave a Message</h3>
-            <p>
-              Interested in buying or selling? Let's connect and find your
-              perfect solution.
-            </p>
+            <h3>{contactConfig.messageTitle[lang]}</h3>
+            <p>{contactConfig.messageDesc[lang]}</p>
             <div style={{ marginTop: "20px" }}>
               <ContactFormPopup
                 customButton={
-                  <button className="link-btn">LET'S CONNECT</button>
+                  <button className="link-btn">
+                    {contactConfig.messageBtn[lang]}
+                  </button>
                 }
               />
             </div>
@@ -136,38 +73,48 @@ function Contact() {
         <div className="contact-form__info">
           <div className="info-footer">
             <div className="info-footer__col">
-              <div className="info-footer__title">Contact Details</div>
-              <div>
-                <strong>Specializing in Luxury Real Estate</strong>
+              <div className="info-footer__title">
+                {contactConfig.contactDetailsTitle[lang]}
               </div>
-              <div>Lizhen (Emma) Ju</div>
+              <div>
+                <strong>{contactConfig.specialization[lang]}</strong>
+              </div>
+              <div>{contactConfig.name[lang]}</div>
               <ul className="links-list">
                 <li className="link">
                   <a
-                    href="mailto:realtorlzj@gmail.com"
+                    href={`mailto:${contactConfig.email[lang]}`}
                     className="hyperlink-style-3"
                   >
-                    realtorlzj@gmail.com
+                    {contactConfig.email[lang]}
                   </a>
                 </li>
                 <li className="link">
                   <a href="tel:2017421625" className="hyperlink-style-3">
-                    (201)-742-1625
+                    {contactConfig.phone[lang]}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div className="info-footer__col">
-              <div className="info-footer__title">Location</div>
+              <div className="info-footer__title">
+                {contactConfig.locationTitle[lang]}
+              </div>
               <p>
-                <span style={{ color: "#aaa" }}>NJ OFFICE:</span> 2160 N Central
-                Rd #111, <br />
-                Fort Lee, NJ 07024
+                <span style={{ color: "#aaa" }}>
+                  {contactConfig.njLabel[lang]}
+                </span>{" "}
+                {contactConfig.njAddrLine1[lang]}
                 <br />
-                <span style={{ color: "#aaa" }}>NY OFFICE:</span> 45-10 Court
-                Square FL 1, <br />
-                Long Island City, New York, 11101
+                {contactConfig.njAddrLine2[lang]}
+                <br />
+                <span style={{ color: "#aaa" }}>
+                  {contactConfig.nyLabel[lang]}
+                </span>{" "}
+                {contactConfig.nyAddrLine1[lang]}
+                <br />
+                {contactConfig.nyAddrLine2[lang]}
               </p>
             </div>
           </div>
