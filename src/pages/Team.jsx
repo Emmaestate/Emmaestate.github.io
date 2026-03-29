@@ -10,8 +10,11 @@ import emma_image from "../assets/emma.jpeg";
 import placeholder_image from "../assets/placeholder.png";
 import teamData from "../data/team.json";
 import "./Team.css";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
+import teamConfig from "../config/pages/Team.config.js";
 
 function Team() {
+  const { lang } = useLanguage();
   const leader = teamData.find(member => member.name.includes("Emma"));
   const teamMembers = teamData.filter(member => !member.name.includes("Emma"));
   const importedImages = import.meta.glob("../../source/team/*.{jpg,jpeg,png,webp}", {
@@ -34,9 +37,9 @@ function Team() {
     <div>
       <Layout />
       <Hero2
-        title="Meet the Team"
+        title={teamConfig.hero.title[lang]}
         backgroundImage={aboutHeroImg}
-        description="Learn about the exclusive neighborhoods in Los Angeles and Beverly Hills."
+        description={teamConfig.hero.description[lang]}
         showButton={false}
       />
       <div className="container-type4">

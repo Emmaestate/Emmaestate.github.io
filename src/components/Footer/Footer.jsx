@@ -8,9 +8,10 @@ import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
 import companyLogo from "../../assets/company.jpeg";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
+import footerConfig from "../../config/pages/Footer.config.js";
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { lang } = useLanguage();
   return (
     <div className="global-footer">
       <div className="footer-top-row">
@@ -59,7 +60,7 @@ const Footer = () => {
           <div className="newsletter">
             <div className="newsletter-info">
               <h3 style={{ marginBottom: "20px", color: "#000" }}>
-                {t("LetsConnect")}
+                {footerConfig.title[lang]}
               </h3>
               <p
                 style={{
@@ -68,7 +69,7 @@ const Footer = () => {
                   lineHeight: "1.6",
                 }}
               >
-                {t("LetsConnect")}
+                {footerConfig.description[lang]}
               </p>
               <div style={{ display: "flex", justifyContent: "flex-start" }}>
                 <ContactFormPopup
@@ -86,7 +87,7 @@ const Footer = () => {
                         transition: "background-color 0.3s",
                       }}
                     >
-                      {t("LetsConnect")}
+                      {footerConfig.links.contact[lang]}
                     </button>
                   }
                 />
@@ -99,12 +100,12 @@ const Footer = () => {
       {/* Navigation Links + Social Icons on the same row */}
       <div className="footer-bottom-row">
         <div className="footer-links">
-          <a href="/">{t("Home")}</a>
-          <a href="/about">{t("About")}</a>
-          <a href="/emma">{t("Emma")}</a>
-          <a href="/featured-listings">{t("FeaturedListings")}</a>
-          <a href="/valuation">{t("HomeValuation")}</a>
-          <a href="/contact">{t("LetsConnect")}</a>
+          <a href="/">{footerConfig.links.home[lang]}</a>
+          <a href="/about">{footerConfig.links.about[lang]}</a>
+          <a href="/emma">{footerConfig.links.emma[lang]}</a>
+          <a href="/featured-listings">{footerConfig.links.featured[lang]}</a>
+          <a href="/valuation">{footerConfig.links.valuation[lang]}</a>
+          <a href="/contact">{footerConfig.links.contact[lang]}</a>
         </div>
 
         <div className="container-social-media">
