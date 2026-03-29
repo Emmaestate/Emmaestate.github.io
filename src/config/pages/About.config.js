@@ -32,4 +32,22 @@ Fluent in English and Mandarin, Emma works with a diverse range of buyers, selle
   youtubeFeed: {
     heading: { en: "Latest Videos", zh: "最新视频" },
   },
+  agentProfile2: {
+    name: { en: "Emma Ju", zh: "Emma Ju" },
+    position: { en: "Luxury Real Estate Agent", zh: "豪华房地产经纪人" },
+    labels: {
+      primaryPhone: { en: "Primary phone", zh: "主要电话" },
+      email: { en: "Email", zh: "邮箱" },
+      address: { en: "Address", zh: "地址" },
+    },
+    contactCta: { en: "Connect with Emma", zh: "联系 Emma" },
+    address: {
+      njLabel: { en: "NJ OFFICE:", zh: "新泽西办公室：" },
+      njAddr1: { en: "2160 N Central Rd #111,", zh: "2160 N Central Rd #111," },
+      njAddr2: { en: "Fort Lee, NJ 07024", zh: "Fort Lee, NJ 07024" },
+      nyLabel: { en: "NY OFFICE:", zh: "纽约办公室：" },
+      nyAddr1: { en: "45-10 Court Square FL 1,", zh: "45-10 Court Square FL 1," },
+      nyAddr2: { en: "Long Island City, New York, 11101", zh: "Long Island City, New York, 11101" },
+    },
+  },
 }

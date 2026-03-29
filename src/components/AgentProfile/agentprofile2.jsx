@@ -7,8 +7,11 @@ import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
 import ContactFormPopup from "../ContactFormPopup/ContactFormPopup.jsx";
 import "./AgentProfile2.css";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
+import aboutConfig from "../../config/pages/About.config.js";
 
 const AgentProfile2 = () => {
+  const { lang } = useLanguage();
   return (
     <div className="communities-container">
       <div className="agent-profile">
@@ -20,15 +23,15 @@ const AgentProfile2 = () => {
         {/* Agent Content */}
         <div className="agent-profile__content">
           <div>
-            <h2 className="agent-name">Emma Ju</h2>
-            <p className="agent-position">Luxury Real Estate Agent</p>
+            <h2 className="agent-name">{aboutConfig.agentProfile2.name[lang]}</h2>
+            <p className="agent-position">{aboutConfig.agentProfile2.position[lang]}</p>
 
             <div className="agent-contact">
               {/* Row 1: Two columns side by side */}
               <div className="contact-row contact-row--split">
                 <div className="split-item">
                   <div className="contact-item">
-                    <p className="contact-title">Primary phone</p>
+                    <p className="contact-title">{aboutConfig.agentProfile2.labels.primaryPhone[lang]}</p>
                     <a
                       className="agent-link"
                       href="tel:(201)-742-1625"
@@ -43,7 +46,7 @@ const AgentProfile2 = () => {
 
               {/* Row 2: Full width */}
               <div className="contact-row">
-                <p className="contact-title">Email</p>
+                <p className="contact-title">{aboutConfig.agentProfile2.labels.email[lang]}</p>
                 <a className="agent-link" href="mailto:realtorlzj@gmail.com">
                   realtorlzj@gmail.com
                 </a>
@@ -51,14 +54,14 @@ const AgentProfile2 = () => {
 
               {/* Row 3: Full width */}
               <div className="contact-row">
-                <p className="contact-title">Address</p>
-                <span style={{ color: "#aaa" }}>NJ OFFICE:</span> 2160 N Central
-                Rd #111, <br />
-                Fort Lee, NJ 07024
+                <p className="contact-title">{aboutConfig.agentProfile2.labels.address[lang]}</p>
+                <span style={{ color: "#aaa" }}>{aboutConfig.agentProfile2.address.njLabel[lang]}</span> {aboutConfig.agentProfile2.address.njAddr1[lang]}
+                <br />
+                {aboutConfig.agentProfile2.address.njAddr2[lang]}
                 <br /> <br />
-                <span style={{ color: "#aaa" }}>NY OFFICE:</span> 45-10 Court
-                Square FL 1, <br />
-                Long Island City, New York, 11101
+                <span style={{ color: "#aaa" }}>{aboutConfig.agentProfile2.address.nyLabel[lang]}</span> {aboutConfig.agentProfile2.address.nyAddr1[lang]}
+                <br />
+                {aboutConfig.agentProfile2.address.nyAddr2[lang]}
               </div>
             </div>
           </div>
@@ -142,7 +145,7 @@ const AgentProfile2 = () => {
                     className="lp-link lp-link--dark"
                     style={{ cursor: "pointer" }}
                   >
-                    Connect with Emma
+                    {aboutConfig.agentProfile2.contactCta[lang]}
                   </a>
                 }
               />
