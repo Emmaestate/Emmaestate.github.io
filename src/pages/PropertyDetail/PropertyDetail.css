@@ -113,8 +113,8 @@
 .features-list li {
   position: relative;
   padding-left: 20px;
-  color: #777; /* Lighter color */
-  font-size: 0.95rem; /* Smaller font size */
+  color: #888; /* Lighter color */
+  font-size: 1.2rem; /* Smaller font size */
   line-height: 1.6; /* Increased line height for better spacing */
 }
 
