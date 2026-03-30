@@ -107,13 +107,15 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  gap: 25px; /* Increased gap for better readability */
 }
 
 .features-list li {
   position: relative;
   padding-left: 20px;
-  color: #555;
+  color: #777; /* Lighter color */
+  font-size: 0.95rem; /* Smaller font size */
+  line-height: 1.6; /* Increased line height for better spacing */
 }
 
 .features-list li::before {
