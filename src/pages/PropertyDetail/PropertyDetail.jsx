@@ -7,11 +7,14 @@ import soldData from "../../data/soldListings.json";
 import exclusiveData from "../../data/exclusiveListings.json";
 import activeData from "../../data/activeListings.json";
 import { images } from "../../data/images";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
+import detailConfig from "../../config/pages/PropertyDetail.config.js";
 import "./PropertyDetail.css";
 
 const PropertyDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { lang } = useLanguage();
   const [property, setProperty] = useState(null);
 
   useEffect(() => {
@@ -127,58 +130,61 @@ const PropertyDetail = () => {
         <div className="property-main-info">
           <div className="info-grid">
             <div className="info-item">
-              <span className="info-label">Bedrooms</span>
+              <span className="info-label">{detailConfig.labels.bedrooms[lang]}</span>
               <span className="info-value">{property.bedrooms}</span>
             </div>
             <div className="info-item">
-              <span className="info-label">Bathrooms</span>
+              <span className="info-label">{detailConfig.labels.bathrooms[lang]}</span>
               <span className="info-value">{property.bathrooms}</span>
             </div>
             {property.sqft && (
               <div className="info-item">
-                <span className="info-label">Sq Ft</span>
+                <span className="info-label">{detailConfig.labels.sqft[lang]}</span>
                 <span className="info-value">{property.sqft}</span>
               </div>
             )}
             <div className="info-item">
-              <span className="info-label">Status</span>
+              <span className="info-label">{detailConfig.labels.status[lang]}</span>
               <span
                 className={`info-value ${property.status === "Sold" ? "status-sold" : "status-active"}`}
               >
-                {property.status}
+                {detailConfig.statusMap[property.status] ? detailConfig.statusMap[property.status][lang] : property.status}
               </span>
             </div>
           </div>
 
           <div className="property-description">
-            <h2>Description</h2>
+            <h2>{detailConfig.labels.description[lang]}</h2>
             <p>
               {property.description ||
-                `Beautiful property located at ${property.address}. This home features ${property.bedrooms} bedrooms and ${property.bathrooms} bathrooms. Contact us for more details about similar listings in this area.`}
+                detailConfig.fallbackDesc[lang]
+                  .replace("{address}", property.address)
+                  .replace("{bedrooms}", property.bedrooms || 0)
+                  .replace("{bathrooms}", property.bathrooms || 0)}
             </p>
           </div>
 
-          <div className="property-features">
-            <h2>Features</h2>
-            <ul className="features-list">
-              <li>High Ceilings</li>
-              <li>Hardwood Floors</li>
-              <li>Modern Kitchen</li>
-              <li>Central Air</li>
-              {/* Add dynamic features if available in data */}
-            </ul>
-          </div>
+          {property.features && property.features.length > 0 && (
+            <div className="property-features">
+              <h2>{detailConfig.labels.features[lang]}</h2>
+              <ul className="features-list">
+                {property.features.map((feature, idx) => (
+                  <li key={idx}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <div className="property-sidebar">
           <div className="agent-card">
-            <h3>Interested in this property?</h3>
-            <p>Contact Emma Ju for more information.</p>
+            <h3>{detailConfig.sidebar.title[lang]}</h3>
+            <p>{detailConfig.sidebar.desc[lang]}</p>
             <button
               className="contact-agent-btn"
               onClick={() => document.querySelector(".connect-btn").click()}
             >
-              Contact Agent
+              {detailConfig.sidebar.btnText[lang]}
             </button>
           </div>
         </div>

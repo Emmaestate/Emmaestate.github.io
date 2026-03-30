@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 import "./PropertyList.css";
 import ContactForm from "../ContactForm/ContactForm";
 
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
+
 const PropertyList = ({ properties = [] }) => {
+  const { lang } = useLanguage();
   const [currentPage, setCurrentPage] = useState(1);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [gridHeight, setGridHeight] = useState("auto"); // Initialize with auto
@@ -79,8 +82,11 @@ const PropertyList = ({ properties = [] }) => {
                   ${property.price.toLocaleString()}
                 </p>
                 <p className="property-info">
-                  {property.bedrooms} Beds | {property.bathrooms} Baths |{" "}
-                  {property.sqft} sqft
+                  {property.bedrooms} {lang === "zh" ? "卧室" : "Beds"} |{" "}
+                  {property.bathrooms} {lang === "zh" ? "卫生间" : "Baths"}
+                  {property.sqft && property.sqft !== "N/A"
+                    ? ` | ${property.sqft} ${lang === "zh" ? "平方英尺" : "sqft"}`
+                    : ""}
                 </p>
               </div>
             </div>

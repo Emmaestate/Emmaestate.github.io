@@ -1,29 +1,220 @@
 [
   {
     "id": "1",
-    "imageKey": "sold_475_oakdene_ave",
-    "address": "475 Oakdene Ave #1, Cliffside Park, NJ 07010",
-    "price": 1099000,
+    "imageKey": "sold_362_lafayette_ave_a",
+    "address": "362 Lafayette Ave #A, Cliffside Park, NJ 07010",
+    "price": 1170000,
     "bedrooms": 4,
-    "bathrooms": 3,
-    "sqft": null
+    "bathrooms": 4,
+    "sqft": null,
+    "features": [
+      "New construction townhouse with four levels of luxury living",
+      "4 bedrooms, 3 full baths, 2 half baths including a primary suite",
+      "Modern kitchen with quartz countertops and contemporary finishes",
+      "Finished ground level with separate entrance",
+      "Top-floor entertainment space with wet bar and private rooftop patio",
+      "Private driveway, garage",
+      "Prime location near parks, shopping, schools, and transportation"
+    ]
   },
   {
     "id": "2",
-    "imageKey": "sold_475_oakdene_ave",
-    "address": "475 Oakdene Ave #2, Cliffside Park, NJ 07010",
-    "price": 1099000,
-    "bedrooms": 4,
-    "bathrooms": 3,
-    "sqft": null
+    "imageKey": "sold_441_elizabeth_st",
+    "address": "441 Elizabeth St, Fort Lee, NJ 07024",
+    "price": 1550000,
+    "bedrooms": 3,
+    "bathrooms": 4.5,
+    "sqft": null,
+    "features": [
+      "Oversized four-level contemporary new-construction townhome in prime Fort Lee location",
+      "3 bedrooms, 4.5 bathrooms including a spa-inspired primary suite with heated floors and soaking tub",
+      "Chef’s kitchen with European cabinetry, integrated appliances, wine cooler, and oversized island",
+      "Open living areas with expansive Andersen windows and wide-plank European flooring",
+      "Ground level with office, recreation room, full bath, and direct backyard access",
+      "Private outdoor spaces including deck off kitchen, rooftop deck, and fenced backyard",
+      "Smart home features, multi-zone HVAC, central vacuum, security cameras, and attached garage — minutes to the GW Bridge"
+    ]
   },
   {
     "id": "3",
-    "imageKey": "sold_65_columbia_ave",
-    "address": "65 Columbia Ave, Cliffside Park, NJ 07010",
-    "price": 975000,
+    "imageKey": "sold_12_thistle_ct",
+    "address": "12 Thistle Ct, Totowa, NJ 07512",
+    "price": 1260000,
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "sqft": null,
+    "features": [
+      "Brand-new luxury Colonial with 5 bedrooms and 4 full bathrooms",
+      "Grand two-story foyer, high ceilings, and open-concept floor plan",
+      "Custom kitchen with quartz countertops, stainless steel appliances, and premium finishes",
+      "Primary suite with walk-in closets and spa-style bathroom, plus a junior suite",
+      "First-floor guest bedroom for added flexibility and convenience",
+      "Fully finished basement ideal for recreation, gym, office, or entertainment",
+      "Cul-de-sac location with private backyard and attached two-car garage"
+    ]
+  },
+  {
+    "id": "4",
+    "imageKey": "sold_9_heatherhill_rd",
+    "address": "9 Heatherhill Rd, Demarest, NJ 07627",
+    "price": 2650000,
+    "bedrooms": 6,
+    "bathrooms": 6.5,
+    "sqft": null,
+    "features": [
+      "Nearly new luxury Colonial designed by award-winning architect Robert Zampolin",
+      "6 bedrooms and 6.5 bathrooms, including multiple en-suite bedrooms and a grand primary suite",
+      "Open-concept main level with 10-foot ceilings, two-story foyer, and great room",
+      "Designer kitchen with high-end WOLF and SUB-ZERO appliances",
+      "Fully finished basement with theater, gym, wet bar, bedroom, and steam shower bath",
+      "Private backyard oasis with patio and hot tub",
+      "Quiet street location with top-rated schools and convenient NYC access"
+    ]
+  },
+  {
+    "id": "5",
+    "imageKey": "sold_781_jefferson_ave_781",
+    "address": "781 Jefferson Ave #781, Cliffside Park, NJ 07010",
+    "price": 1300000,
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "sqft": null,
+    "features": [
+      "Oversized luxury townhouse (approx. 3,300+ SF) with three levels of living space",
+      "3 bedrooms, 3.5 bathrooms including a primary suite with dual walk-in closets",
+      "Chef’s kitchen with outdoor deck, wine closet, and wet bar with beverage refrigerator",
+      "Spacious main level with living room, dining room, family room, and gas fireplace",
+      "Ground level with recreation room or office, full bath, mudroom, and yard access",
+      "Extra-deep two-car garage plus wide foyer and abundant storage",
+      "Prime north Cliffside Park location bordering Fort Lee, close to parks, shopping, and transportation"
+    ]
+  },
+  {
+    "id": "6",
+    "imageKey": "sold_220_washington_pl",
+    "address": "220 Washington Pl, Cliffside Park, NJ 07010",
+    "price": 1320000,
+    "bedrooms": 4,
+    "bathrooms": 4.5,
+    "sqft": null,
+    "features": [
+      "Four-level contemporary new-construction townhome with approx. 3,350 SF",
+      "4 bedrooms and 4.5 bathrooms including a spa-style primary suite with heated floors and soaking tub",
+      "Private rooftop terrace with unobstructed Manhattan skyline views",
+      "Gourmet chef’s kitchen with European cabinetry, integrated appliances, wine cooler, and large island",
+      "Ground level with bedroom, full bath, recreation room, wet bar, and fenced backyard access",
+      "Top-floor bonus space with full bath and wet bar — ideal for office, lounge, or guest suite",
+      "Central Cliffside Park location close to parks, shopping, transportation, and NYC commute"
+    ]
+  },
+  {
+    "id": "7",
+    "imageKey": "sold_771_jefferson_ave_771",
+    "address": "771 Jefferson Ave #771, Cliffside Park, NJ 07010",
+    "price": 1295000,
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "sqft": null,
+    "features": [
+      "Oversized luxury townhouse (approx. 3,300+ SF) with three levels of living space",
+      "3 bedrooms, 3.5 bathrooms including a primary suite with dual walk-in closets",
+      "Chef’s kitchen with outdoor deck, wine closet, wet bar, and beverage refrigerator",
+      "Spacious main level with living room, dining room, family room, and gas fireplace",
+      "Ground level with recreation room or office, full bath, mudroom, and yard access",
+      "Extra-wide two-car garage plus generous foyer and storage space",
+      "Prime north Cliffside Park location bordering Fort Lee, close to parks, shopping, and transportation"
+    ]
+  },
+  {
+    "id": "8",
+    "imageKey": "sold_475_oakdene_ave_1",
+    "address": "475 Oakdene Ave #1, Cliffside Park, NJ 07010",
+    "price": 999000,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": null,
+    "features": [
+      "Brand-new duplex condo on a quiet residential street",
+      "4 bedrooms and 3 full bathrooms including a primary suite with walk-in closet",
+      "Modern kitchen with two-toned cabinetry, quartz countertops, and GE Café appliances",
+      "Spacious living area with integrated fireplace and open dining space",
+      "Finished ground level with recreation room, additional bedroom/office, and full bath",
+      "Private enclosed yard with sliding glass door access plus deck",
+      "Attached garage with additional parking and convenient Cliffside Park location"
+    ]
+  },
+  {
+    "id": "9",
+    "imageKey": "sold_475_oakdene_ave_2",
+    "address": "475 Oakdene Ave #2, Cliffside Park, NJ 07010",
+    "price": 949000,
     "bedrooms": 3,
     "bathrooms": 2.5,
-    "sqft": null
+    "sqft": null,
+    "features": []
+  },
+  {
+    "id": "10",
+    "imageKey": "sold_669_summit_st",
+    "address": "669 Summit St, Englewood Cliff, NJ 07632",
+    "price": 4300000,
+    "bedrooms": 5,
+    "bathrooms": "6 baths 2 half baths",
+    "sqft": null,
+    "features": []
+  },
+  {
+    "id": "11",
+    "imageKey": "sold_439_elizabeth_st",
+    "address": "439 Elizabeth St, Fort Lee, NJ 07024",
+    "price": 1500000,
+    "bedrooms": 3,
+    "bathrooms": 4.5,
+    "sqft": null,
+    "features": [
+      "New construction townhouse with 3 bedrooms and 4.5 bathrooms",
+      "Finished basement plus in-unit laundry for added convenience",
+      "Modern systems including central air, tankless hot water, and multi-source heating",
+      "Two gas fireplaces for added comfort and ambiance",
+      "Private outdoor spaces including terrace and deck/patio",
+      "Attached garage with additional parking",
+      "Prime Fort Lee location close to parks, schools, shopping, and transportation"
+    ]
+  },
+  {
+    "id": "12",
+    "imageKey": "sold_1531_11th_st",
+    "address": "1531 11th st, Fort Lee, NJ 07024",
+    "price": 1700000,
+    "bedrooms": 4,
+    "bathrooms": 4.5,
+    "sqft": null,
+    "features": [
+      "Spacious home featuring 6 bedrooms and 3 full bathrooms",
+      "Central air and multi-zone heating and cooling for year-round comfort",
+      "In-unit laundry for convenience",
+      "Unfinished basement offering potential for customization or expansion",
+      "Hardwood floors throughout (as is)",
+      "1-car garage with tandem parking plus additional parking space",
+      "Located in Fort Lee with sunrise and sunset views, close to local amenities"
+    ]
+  },
+  {
+    "id": "13",
+    "imageKey": "sold_1060_anderson_ave",
+    "address": "1060 Anderson Ave, Fort Lee, NJ 07024",
+    "price": 1600000,
+    "bedrooms": 4,
+    "bathrooms": 4.5,
+    "sqft": null,
+    "features": [
+      "Oversized contemporary new-construction townhome with tall ceilings throughout",
+      "4 bedrooms, 4.5 bathrooms including a spa-style primary suite with heated floors and soaking tub",
+      "Chef’s kitchen with European cabinetry, oversized island, integrated appliances, and wine cooler",
+      "Open-concept main level with wide-plank wood flooring and floor-to-ceiling windows",
+      "Fully finished ground level with home office, wet bar, recreation area, and full bath",
+      "Smart home technology, multi-zone HVAC, central vacuum, and security camera system",
+      "Private outdoor deck, fenced backyard, two-car garage, plus additional parking — minutes to GW Bridge"
+    ]
   }
 ]

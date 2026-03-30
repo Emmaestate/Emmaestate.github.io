@@ -1,20 +1,56 @@
 [
   {
     "id": "1",
-    "imageKey": "exclusive_415_east_37th_street",
-    "address": "415 East 37th Street #11A",
-    "price": 1260000,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "sqft": 860
-  },
-  {
-    "id": "2",
-    "imageKey": "exclusive_26_avenue_at_port_imperial",
+    "imageKey": "exclusive_26_avenue_at_port_imperial_apt_416",
     "address": "26 Avenue At Port Imperial APT 416, West New York, NJ 07093",
     "price": 780000,
     "bedrooms": 2,
     "bathrooms": 2,
-    "sqft": 1121
+    "sqft": 1121,
+    "features": [
+      "Rare 2BR + loft penthouse with soaring 20’ ceilings and bright southwest exposure",
+      "Sun-drenched interior with freshly sanded hardwood floors and open-concept layout",
+      "Chef’s kitchen with JennAir stainless steel appliances and abundant cabinetry",
+      "Primary suite with walk-in closet and full bath, plus versatile loft for office or guest space",
+      "In-unit washer/dryer, brand new boiler (2025), and deeded indoor parking",
+      "Resort-style amenities including pool, fitness center, tennis courts, basketball court, and dog run",
+      "Prime commuter location near ferry, bus, and Light Rail"
+    ]
+  },
+  {
+    "id": "2",
+    "imageKey": "exclusive_343_e_74th_st_ph2b",
+    "address": "343 E 74th St #Ph2B, New York, NY 10021",
+    "price": 1020000,
+    "bedrooms": 2,
+    "bathrooms": 2.5,
+    "sqft": 1111,
+    "features": [
+      "Penthouse corner 2BR/2.5BA condop with private balcony and open city views",
+      "Sun-filled layout with 9’ ceilings and ~1,100 SF of living space",
+      "Open kitchen flowing into dining and expansive living area—ideal for entertaining",
+      "Flexible ownership with no board approval and subletting allowed",
+      "Full-service, pet-friendly building with 24-hour doorman and on-site staff",
+      "Amenities include fitness center, roof deck, concierge, and garage access",
+      "Prime Upper East Side location near dining, shopping, and transportation"
+    ]
+  },
+  {
+    "id": "3",
+    "imageKey": "exclusive_415_e_37th_st_apt_11a",
+    "address": "415 E 37th St APT 11A, New York, NY 10016",
+    "price": 1260000,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": 860,
+    "features": [
+      "Newly renovated 1-bedroom (potential 1BR + den) with stunning East River views",
+      "Sun-filled 860 SF layout with oversized windows and wide-plank hardwood floors",
+      "Excellent storage including walk-in closet and potential for in-unit washer/dryer",
+      "Full-service, white-glove building with 24-hour doorman and concierge",
+      "Extensive amenities including rooftop pool, fitness centers, spa, and screening room",
+      "Prime Murray Hill location near parks, Trader Joe’s, Grand Central, and major transit",
+      "Convenient access to FDR Drive, Midtown Tunnel, and ferry service"
+    ]
   }
 ]
