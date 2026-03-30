@@ -59,17 +59,40 @@ const EmblaCarousel = () => {
           {SLIDES.map((slide) => (
             <div className="embla__slide" key={slide.id}>
               <div className="listing-card">
-                <img
-                  src={slide.imgUrl}
-                  alt={`Listing ${slide.id}`}
-                  className="listing-image"
-                />
+                <div
+                  className="listing-image-container"
+                  style={{
+                    width: "100%",
+                    height: "70%",
+                    backgroundColor: "#e0e0e0",
+                    overflow: "hidden",
+                  }}
+                >
+                  <img
+                    src={slide.imgUrl}
+                    alt={`Listing ${slide.id}`}
+                    className="listing-image"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                    }}
+                  />
+                </div>
                 <div className="listing-info">
                   <div className="listing-price">{slide.price}</div>
                   <div className="listing-address">{slide.address}</div>
                   <div className="listing-details">
-                    <span>{slide.beds} {homeConfig.portfolio.beds[lang]}</span> ·{" "}
-                    <span>{slide.baths} {homeConfig.portfolio.baths[lang]}</span>
+                    <span>
+                      {slide.beds} {homeConfig.portfolio.beds[lang]}
+                    </span>{" "}
+                    ·{" "}
+                    <span>
+                      {slide.baths} {homeConfig.portfolio.baths[lang]}
+                    </span>
                   </div>
                 </div>
               </div>

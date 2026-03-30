@@ -110,11 +110,14 @@ const PropertyDetail = () => {
     <div className="property-detail-page">
       <Layout />
 
-      <div className="property-hero">
+      <div className="property-hero" style={{ backgroundColor: "#e0e0e0", minHeight: "400px" }}>
         <img
           src={property.image}
           alt={property.address}
           className="hero-image"
+          onError={(e) => {
+            e.target.style.display = 'none';
+          }}
         />
         <div className="hero-overlay">
           <div className="hero-content">

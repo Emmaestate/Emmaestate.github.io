@@ -69,11 +69,14 @@ const PropertyList = ({ properties = [] }) => {
               className="property-card"
               onClick={() => handleClick(property.id)}
             >
-              <div className="property-image-container">
+              <div className="property-image-container" style={{ backgroundColor: "#e0e0e0" }}>
                 <img
                   src={property.image}
                   alt={property.address}
                   className="property-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
                 />
               </div>
               <div className="property-details">
