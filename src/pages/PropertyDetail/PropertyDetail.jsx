@@ -63,22 +63,20 @@ const PropertyDetail = () => {
       foundProperty = activeData.find((item) => item.id === realId);
       status = "Active";
     } else {
-      // Fallback for legacy IDs (just numbers) - This is what causes the issue!
-      // We'll search all, but this is ambiguous.
-      // Prioritize based on some logic or just search all.
+      // Fallback for legacy IDs or MLS IDs directly passed without prefix
       const allListings = [...soldData, ...exclusiveData, ...activeData];
-      foundProperty = allListings.find((item) => item.id === id);
+      foundProperty = allListings.find((item) => item.id === id || item.mlsId === id);
 
       if (foundProperty) {
         if (
           soldData.some(
-            (item) => item.id === id && item.address === foundProperty.address,
+            (item) => (item.id === id || item.mlsId === id) && item.address === foundProperty.address,
           )
         )
           status = "Sold";
         else if (
           exclusiveData.some(
-            (item) => item.id === id && item.address === foundProperty.address,
+            (item) => (item.id === id || item.mlsId === id) && item.address === foundProperty.address,
           )
         )
           status = "Exclusive";

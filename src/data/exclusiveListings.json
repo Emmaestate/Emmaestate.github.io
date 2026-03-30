@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "26006906",
     "imageKey": "exclusive_26_avenue_at_port_imperial_apt_416",
     "address": "26 Avenue At Port Imperial APT 416, West New York, NJ 07093",
     "price": 780000,
@@ -15,10 +15,11 @@
       "In-unit washer/dryer, brand new boiler (2025), and deeded indoor parking",
       "Resort-style amenities including pool, fitness center, tennis courts, basketball court, and dog run",
       "Prime commuter location near ferry, bus, and Light Rail"
-    ]
+    ],
+    "mlsId": "26006906"
   },
   {
-    "id": "2",
+    "id": "S1785517",
     "imageKey": "exclusive_343_e_74th_st_ph2b",
     "address": "343 E 74th St #Ph2B, New York, NY 10021",
     "price": 1020000,
@@ -33,10 +34,11 @@
       "Full-service, pet-friendly building with 24-hour doorman and on-site staff",
       "Amenities include fitness center, roof deck, concierge, and garage access",
       "Prime Upper East Side location near dining, shopping, and transportation"
-    ]
+    ],
+    "mlsId": "S1785517"
   },
   {
-    "id": "3",
+    "id": "S1800899",
     "imageKey": "exclusive_415_e_37th_st_apt_11a",
     "address": "415 E 37th St APT 11A, New York, NY 10016",
     "price": 1260000,
@@ -51,6 +53,7 @@
       "Extensive amenities including rooftop pool, fitness centers, spa, and screening room",
       "Prime Murray Hill location near parks, Trader Joe’s, Grand Central, and major transit",
       "Convenient access to FDR Drive, Midtown Tunnel, and ferry service"
-    ]
+    ],
+    "mlsId": "S1800899"
   }
 ]
