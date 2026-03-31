@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import companyLogo from "../../assets/company.jpeg";
+import companyLogo from "../../assets/company.svg";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch.jsx";
 
@@ -64,10 +64,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
         <div className="nav-logo">
           <div className={`logo-pair ${sticky ? "single" : "paired"}`}>
-            <img src={companyLogo} alt="Company" className="brand-img company" />
+            <div className="logo-box company-box">
+              <img src={companyLogo} alt="Company" className="brand-img company" />
+            </div>
             <span className="logo-divider"></span>
             <Link to="/home" onClick={handleScrollToTop}>
-              <img src={logo} alt="Logo" className="brand-img site" />
+              <div className="logo-box site-box">
+                <img src={logo} alt="Logo" className="brand-img site" />
+              </div>
             </Link>
           </div>
         </div>
