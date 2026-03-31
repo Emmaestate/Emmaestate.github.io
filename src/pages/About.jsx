@@ -8,7 +8,6 @@ import Hero from "../Components/Hero/Hero.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import connectWithUsImg from "../assets/connectwithus.jpg";
 import aboutHeroImg from "../assets/about1.webp";
-import ContactFormPopup from "../Components/ContactFormPopup/ContactFormPopup.jsx";
 import YoutubeFeed from "../components/YoutubeFeed/YoutubeFeed.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import aboutConfig from "../config/pages/About.config.js";
@@ -47,10 +46,7 @@ function About() {
         btnText={aboutConfig.contactHero.btnText[lang]}
         backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
         height="700px"
-        onBtnClick={() => document.querySelector(".connect-btn").click()}
       />
-
-      <ContactFormPopup />
 
       <div className="container-type1">
         <Footer />

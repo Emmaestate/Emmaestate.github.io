@@ -1,25 +1,80 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './ContactForm.css';
 
 const ContactForm = ({ className = '', style = {} }) => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const formRef = useRef(null);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Your submission logic here
-    setFormSubmitted(true);
-  };
+  useEffect(() => {
+    let success = false;
+    const search = window.location.search;
+    if (search) {
+      const params = new URLSearchParams(search);
+      if (params.get('submitted') === 'true') success = true;
+    }
+    if (!success && window.location.hash.includes('?')) {
+      const qs = window.location.hash.split('?')[1];
+      const params = new URLSearchParams(qs);
+      if (params.get('submitted') === 'true') success = true;
+    }
+    if (success) {
+      setSubmitted(true);
+      if (formRef.current) formRef.current.reset();
+    }
+  }, []);
 
   return (
-    <form className={`contact-form-component ${className}`} style={style} onSubmit={handleSubmit} noValidate>
-      {!formSubmitted ? (
+    <form
+      ref={formRef}
+      className={`contact-form-component ${className}`}
+      style={style}
+      action="https://formsubmit.co/xfcdxg_zq@163.com"
+      method="POST"
+      noValidate
+    >
         <div className="contact-form__container">
-          <h3 className="lp-h3" role="heading" aria-level="1">
-            Leave a Message
-          </h3>
+          {submitted && (
+            <div className="success-block">
+              <h3 className="lp-h3 success-message" role="heading" aria-level="2">
+                Thank you for your message. We will be in touch with you shortly.
+              </h3>
+            </div>
+          )}
 
           <div className="contact-form__content">
             <div className="contact-form__inputs-container">
+              <div className="contact-form__item">
+                <input
+                  id="__Name"
+                  type="text"
+                  name="name"
+                  className="lp-input lp-input--light"
+                  required
+                  placeholder="Your Name"
+                  aria-label="Your Name"
+                />
+              </div>
+
+              <div className="contact-form__item">
+                <select
+                  id="__Interest"
+                  name="interest"
+                  className="lp-input lp-input--light"
+                  required
+                  aria-label="Select an Interest"
+                  defaultValue=""
+                >
+                  <option value="" disabled>
+                    Select an Interest
+                  </option>
+                  <option value="Buying">Buying</option>
+                  <option value="Selling">Selling</option>
+                  <option value="Area Information">Area Information</option>
+                  <option value="Home Valuation">Home Valuation</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
               <div className="contact-form__item">
                 <input
                   id="__Email"
@@ -56,41 +111,6 @@ const ContactForm = ({ className = '', style = {} }) => {
                 />
               </div>
 
-              <div className="lp-disclaimer">
-                <label className="lp-tcr-content">
-                  <span className="lp-tcr-checkbox">
-                    <input
-                      type="checkbox"
-                      name="termsAccepted"
-                      required
-                      aria-required="true"
-                      onInvalid={(e) =>
-                        e.target.setCustomValidity(
-                          'Please accept the terms and conditions'
-                        )
-                      }
-                      onInput={(e) => e.target.setCustomValidity('')}
-                    />
-                  </span>
-                  <span className="lp-tcr-message">
-                    By providing Emma Ju Estates your contact
-                    information, you acknowledge and agree to our{' '}
-                    <a
-                      href="/#/privacy-policy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Privacy Policy - open in a new tab"
-                    >
-                      Privacy Policy
-                    </a>{' '}
-                    and consent to receiving marketing communications,
-                    including automated calls, texts, and emails.
-                    Consent isn’t necessary for purchasing products or
-                    services. You may opt out anytime.
-                  </span>
-                </label>
-              </div>
-
               <button
                 type="submit"
                 className="lp-btn lp-btn--filled lp-btn--dark submit contact-form__item"
@@ -115,16 +135,13 @@ const ContactForm = ({ className = '', style = {} }) => {
                 value="CONTACT_INQUIRY"
                 aria-label="Hidden source field"
               />
+              <input type="hidden" name="_subject" value="Emma Ju Estates Website Contact" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://Emmaestate.github.io/#/contact?submitted=true" />
             </div>
           </div>
         </div>
-      ) : (
-        <div className="success-block">
-          <h3 className="lp-h3 success-message" role="heading" aria-level="2">
-            Thank you for your message. We will be in touch with you shortly.
-          </h3>
-        </div>
-      )}
     </form>
   );
 };

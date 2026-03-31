@@ -29,10 +29,7 @@ const Hero = ({
       onBtnClick();
       return;
     }
-
-    if (title === "CONNECT WITH EMMA") {
-      navigate("/about");
-    }
+    navigate("/contact");
   };
 
   return (

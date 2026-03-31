@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ContactFormPopup.css";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
+import ContactForm from "../ContactForm/ContactForm.jsx";
 
 export default function ContactFormPopup({ customButton }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +14,6 @@ export default function ContactFormPopup({ customButton }) {
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
-
-  const formUrl =
-    lang === "en"
-      ? "https://docs.google.com/forms/d/e/1FAIpQLSf7bVlCXoIRK3p97HmOV0lasu3rMvOx4eeFErjVC9hyEahwXQ/viewform?embedded=true"
-      : "https://docs.google.com/forms/d/e/1FAIpQLScKgwJT5Ni7BivMZ_I6j71_4XTpsvYDGFjpf5BLdi5fazmuLQ/viewform?embedded=true";
 
   return (
     <>
@@ -52,33 +48,8 @@ export default function ContactFormPopup({ customButton }) {
               ✕
             </button>
 
-            <div className="lang-switch">
-              <button
-                className={`lang-btn ${lang === "en" ? "active" : ""}`}
-                onClick={() => setLang("en")}
-              >
-                English
-              </button>
-              <button
-                className={`lang-btn ${lang === "zh" ? "active" : ""}`}
-                onClick={() => setLang("zh")}
-              >
-                中文
-              </button>
-            </div>
-
-            <div className="iframe-container">
-              <iframe
-                src={formUrl}
-                width="640"
-                height="800"
-                frameBorder="0"
-                marginHeight="0"
-                marginWidth="0"
-                title="Buyer Questionnaire"
-              >
-                Loading…
-              </iframe>
+            <div className="form-container">
+              <ContactForm className="popup-form" />
             </div>
           </div>
         </div>

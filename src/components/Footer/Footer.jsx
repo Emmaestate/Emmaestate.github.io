@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import ContactFormPopup from "../ContactFormPopup/ContactFormPopup";
+import { useNavigate } from "react-router-dom";
 import x_icon from "../../assets/X.png";
 import instagram_icon from "../../assets/instagram.png";
 import wechat_icon from "../../assets/wechat.png";
@@ -12,6 +12,7 @@ import footerConfig from "../../config/pages/Footer.config.js";
 
 const Footer = () => {
   const { lang } = useLanguage();
+  const navigate = useNavigate();
   return (
     <div className="global-footer">
       <div className="footer-top-row">
@@ -70,25 +71,22 @@ const Footer = () => {
                 {footerConfig.description[lang]}
               </p>
               <div style={{ display: "flex", justifyContent: "flex-start" }}>
-                <ContactFormPopup
-                  customButton={
-                    <button
-                      style={{
-                        backgroundColor: "#333",
-                        color: "#fff",
-                        border: "none",
-                        padding: "10px 20px",
-                        borderRadius: "4px",
-                        cursor: "pointer",
-                        fontSize: "14px",
-                        fontWeight: "500",
-                        transition: "background-color 0.3s",
-                      }}
-                    >
-                      {footerConfig.links.contact[lang]}
-                    </button>
-                  }
-                />
+                <button
+                  style={{
+                    backgroundColor: "#333",
+                    color: "#fff",
+                    border: "none",
+                    padding: "10px 20px",
+                    borderRadius: "4px",
+                    cursor: "pointer",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    transition: "background-color 0.3s",
+                  }}
+                  onClick={() => navigate("/contact")}
+                >
+                  {footerConfig.links.contact[lang]}
+                </button>
               </div>
             </div>
           </div>

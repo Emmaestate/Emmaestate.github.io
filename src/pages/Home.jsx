@@ -16,7 +16,6 @@ import connectWithUsImg from "../assets/connectwithus.jpg";
 import ExclusiveListings from "../Components/ExclusiveListings/ExlcusiveListings.jsx";
 import HomeValuation from "../Components/HomeValuation/HomeValuation.jsx";
 import ChatBot from "../Components/ChatBot/ChatBot.jsx";
-import ContactFormPopup from "../Components/ContactFormPopup/ContactFormPopup.jsx";
 import Testimonials from "../components/Testimonials/Testimonials.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import homeConfig from "../config/pages/Home.config.js";
@@ -62,7 +61,6 @@ const Home = () => {
         />
       </div>
       {/* <ChatBot/> */}
-      <ContactFormPopup />
 
       {/*<Hero_2 /> <div className="container-type2">
        <Programs />

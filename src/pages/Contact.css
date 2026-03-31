@@ -6,6 +6,22 @@
   color: var(--titleColor, #000);
 }
 
+/* Page fade animations */
+.contact-page.fade-in {
+  animation: page-fade-in 300ms ease-out both;
+}
+.contact-page.fade-out {
+  animation: page-fade-out 250ms ease-in both;
+}
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes page-fade-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(10px); }
+}
+
 .contact-form__header-row {
   display: flex;
   justify-content: space-between;

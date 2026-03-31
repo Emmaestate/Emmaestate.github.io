@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import WOW from "../lib/wow";
-import ContactFormPopup from "../components/ContactFormPopup/ContactFormPopup";
+import ContactForm from "../components/ContactForm/ContactForm.jsx";
 import x_icon from "../assets/X.png";
 import instagram_icon from "../assets/instagram.png";
 import wechat_icon from "../assets/wechat.png";
@@ -15,21 +15,25 @@ import contactConfig from "../config/pages/Contact.config.js";
 function Contact() {
   const navigate = useNavigate();
   const { lang } = useLanguage();
+  const [fade, setFade] = useState("fade-in");
 
   useEffect(() => {
     new WOW().init();
   }, []);
 
   const handleExit = () => {
-    if (window.history.length > 1) {
-      navigate(-1); // Go back if possible
-    } else {
-      navigate("/"); // Otherwise fallback to home
-    }
+    setFade("fade-out");
+    setTimeout(() => {
+      if (window.history.length > 1) {
+        navigate(-1);
+      } else {
+        navigate("/");
+      }
+    }, 250);
   };
 
   return (
-    <div className="contact-form lp-vertical-paddings lp-container">
+    <div className={`contact-page contact-form lp-vertical-paddings lp-container ${fade}`}>
       <div className="header-container">
         <div className="contact-form__header-row">
           <h1
@@ -48,9 +52,7 @@ function Contact() {
             &times;
           </button>
         </div>
-        <p className="contact-form__header__subtitle lp-pre-line">
-          {contactConfig.headerSubtitle[lang]}
-        </p>
+       
       </div>
 
       <div className="contact-form__contents">
@@ -59,13 +61,7 @@ function Contact() {
             <h3>{contactConfig.messageTitle[lang]}</h3>
             <p>{contactConfig.messageDesc[lang]}</p>
             <div style={{ marginTop: "20px" }}>
-              <ContactFormPopup
-                customButton={
-                  <button className="link-btn">
-                    {contactConfig.messageBtn[lang]}
-                  </button>
-                }
-              />
+              <ContactForm />
             </div>
           </div>
         </div>
