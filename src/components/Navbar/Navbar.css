@@ -80,11 +80,44 @@
 
 }
 
-.logo-img {
-  height: 60px;
+.logo-pair {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.brand-img {
+  height: 56px;
   width: auto;
-  margin-top: 2%;
-  padding-bottom: 4%;
+  display: block;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1), opacity 450ms ease;
+}
+.logo-divider {
+  width: 1px;
+  height: 42px;
+  background: rgba(255,255,255,0.6);
+  transition: opacity 450ms ease;
+}
+.logo-pair.paired {
+  justify-content: center;
+}
+.logo-pair.paired .company {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+.logo-pair.single {
+  justify-content: center;
+}
+.logo-pair.single .company {
+  opacity: 0;
+  transform: translateX(-12px) scale(0.9);
+  pointer-events: none;
+}
+.logo-pair.single .logo-divider {
+  opacity: 0;
+}
+.logo-pair.single .site {
+  transform: scale(1.06);
 }
 
 /* Dropdown */
@@ -141,10 +174,8 @@
     margin: 0; /* Align left */
   }
 
-  .nav-logo .logo-img {
-    height: 40px; /* Smaller logo for mobile */
-    margin-top: 0;
-    padding-bottom: 0;
+  .nav-logo .brand-img {
+    height: 42px;
   }
   
   .header .navbar-container {
