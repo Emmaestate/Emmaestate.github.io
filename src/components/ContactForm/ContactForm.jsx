@@ -28,7 +28,7 @@ const ContactForm = ({ className = '', style = {} }) => {
       ref={formRef}
       className={`contact-form-component ${className}`}
       style={style}
-      action="https://formsubmit.co/xfcdxg_zq@163.com"
+      action="https://formsubmit.co/realtorlzj@gmail.com"
       method="POST"
       noValidate
     >
