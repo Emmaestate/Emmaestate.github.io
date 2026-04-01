@@ -28,10 +28,12 @@ const ContactForm = ({ className = '', style = {} }) => {
       ref={formRef}
       className={`contact-form-component ${className}`}
       style={style}
-      action="https://formsubmit.co/realtorlzj@gmail.com"
+      action="https://api.web3forms.com/submit"
       method="POST"
       noValidate
     >
+        <input type="hidden" name="access_key" value="cf8f42ba-4d94-4c37-b372-e3b9477b9bcb" />
+
         <div className="contact-form__container">
           {submitted && (
             <div className="success-block">

@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./Components/Layout/Layout.jsx";
+import Layout from "./components/Layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
 import ExclusiveListings from "./pages/ExclusiveListings.jsx";
@@ -14,6 +14,7 @@ import Team from "./pages/Team.jsx";
 import Social from "./pages/Social.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import PropertyDetail from "./pages/PropertyDetail/PropertyDetail.jsx";
+import Questionnaire from "./pages/Questionnaire.jsx";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
         {/* <Route path="/neighborhoods/:path" element={<NeighborhoodPage />} /> */}
         <Route path="/team" element={<Team />} />
         <Route path="/social" element={<Social />} />
+        <Route path="/questionnaire" element={<Questionnaire />} />
 
         {/* Routes WITHOUT Layout (like Contact) */}
         <Route path="/contact" element={<Contact />} />
