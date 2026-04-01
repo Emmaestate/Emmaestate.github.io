@@ -44,6 +44,75 @@
   background: transparent;
 }
 
+/* Password Prompt Styles */
+.password-prompt-container {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.password-prompt-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.password-prompt-desc {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.password-input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.password-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.1);
+}
+
+.password-submit-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.password-submit-btn:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+.password-error-msg {
+  color: #d32f2f;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .questionnaire-content {
     padding: 100px 10px 40px;
