@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./VideoWrapper.css";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import homeConfig from "../../config/pages/Home.config.js";
+import mainBannerVideo from "../../assets/main_banner.mp4";
 
 const getHeadlineNodes = (arr) =>
   arr.map((text, idx) => {
@@ -54,18 +55,13 @@ const VideoWrapper = () => {
     <div className="video-wrapper">
       <video
         className="background-video"
-        poster="https://res.cloudinary.com/luxuryp/videos/f_auto,q_auto/so_0,eo_0/qc2ltgqfyfkdelknxwl8/jade-mills-estates-coldwell-banker-beverly-hills-1.jpg"
         loop
         muted
         autoPlay
         playsInline
       >
         <source
-          src="https://res.cloudinary.com/luxuryp/video/upload/f_webm,q_auto/v1/qc2ltgqfyfkdelknxwl8"
-          type="video/webm"
-        />
-        <source
-          src="https://res.cloudinary.com/luxuryp/video/upload/f_mp4,q_auto/v1/qc2ltgqfyfkdelknxwl8"
+          src={mainBannerVideo}
           type="video/mp4"
         />
       </video>
