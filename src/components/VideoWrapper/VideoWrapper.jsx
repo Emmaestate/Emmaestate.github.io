@@ -4,6 +4,7 @@ import "./VideoWrapper.css";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import homeConfig from "../../config/pages/Home.config.js";
 import mainBannerVideo from "../../assets/main_banner.mp4";
+import coverImage from "../../assets/cover.jpeg";
 
 const getHeadlineNodes = (arr) =>
   arr.map((text, idx) => {
@@ -55,15 +56,13 @@ const VideoWrapper = () => {
     <div className="video-wrapper">
       <video
         className="background-video"
+        poster={coverImage}
         loop
         muted
         autoPlay
         playsInline
       >
-        <source
-          src={mainBannerVideo}
-          type="video/mp4"
-        />
+        <source src={mainBannerVideo} type="video/mp4" />
       </video>
 
       <div className="overlay" />
