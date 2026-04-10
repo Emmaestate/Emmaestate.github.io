@@ -12,17 +12,26 @@ import { useLanguage } from "../i18n/LanguageContext.jsx";
 import soldConfig from "../config/pages/Sold.config.js";
 import soldBannerImg from "../assets/sold_banner.jpg";
 import connectBannerImg from "../assets/connect_banner.jpeg";
+import { getPropertyImages } from "../utils/propertyImages.js";
+
 // Transform data to match PropertyList expected format
 // Add prefix to ID to avoid collisions
-const soldProperties = soldData.map((item) => ({
-  id: `sold-${item.id}`,
-  image: images[item.imageKey] || "https://via.placeholder.com/400x300",
-  price: item.price,
-  address: item.address,
-  bedrooms: item.bedrooms,
-  bathrooms: item.bathrooms,
-  sqft: item.sqft || "N/A",
-}));
+const soldProperties = soldData.map((item) => {
+  const { frontImage } = getPropertyImages(item.mlsId);
+  return {
+    ...item,
+    id: `sold-${item.id}`,
+    image:
+      frontImage ||
+      images[item.imageKey] ||
+      "https://via.placeholder.com/400x300",
+    price: item.price,
+    address: item.address,
+    bedrooms: item.bedrooms,
+    bathrooms: item.bathrooms,
+    sqft: item.sqft || "N/A",
+  };
+});
 
 const SoldListings = () => {
   const { lang } = useLanguage();

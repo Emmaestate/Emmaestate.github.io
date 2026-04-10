@@ -13,12 +13,16 @@ import { useLanguage } from "../i18n/LanguageContext.jsx";
 import exclusiveConfig from "../config/pages/Exclusive.config.js";
 import exclusiveBannerImg from "../assets/exclusive_banner.jpeg";
 import connectBannerImg from "../assets/connect_banner.jpeg";
+import { getPropertyImages } from "../utils/propertyImages.js";
 
-const exclusiveProperties = exclusiveData.map((item) => ({
-  id: `exclusive-${item.id}`,
-  ...item,
-  image: images[item.imageKey] || tempImg,
-}));
+const exclusiveProperties = exclusiveData.map((item) => {
+  const { frontImage } = getPropertyImages(item.mlsId);
+  return {
+    ...item,
+    id: `exclusive-${item.id}`,
+    image: frontImage || images[item.imageKey] || tempImg,
+  };
+});
 
 const ExclusiveListings = () => {
   const { lang } = useLanguage();

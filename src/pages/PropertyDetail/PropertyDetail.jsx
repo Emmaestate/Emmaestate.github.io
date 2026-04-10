@@ -9,6 +9,12 @@ import activeData from "../../data/activeListings.json";
 import { images } from "../../data/images";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import detailConfig from "../../config/pages/PropertyDetail.config.js";
+import { getPropertyImages } from "../../utils/propertyImages.js";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./PropertyDetail.css";
 
 const PropertyDetail = () => {
@@ -65,18 +71,24 @@ const PropertyDetail = () => {
     } else {
       // Fallback for legacy IDs or MLS IDs directly passed without prefix
       const allListings = [...soldData, ...exclusiveData, ...activeData];
-      foundProperty = allListings.find((item) => item.id === id || item.mlsId === id);
+      foundProperty = allListings.find(
+        (item) => item.id === id || item.mlsId === id,
+      );
 
       if (foundProperty) {
         if (
           soldData.some(
-            (item) => (item.id === id || item.mlsId === id) && item.address === foundProperty.address,
+            (item) =>
+              (item.id === id || item.mlsId === id) &&
+              item.address === foundProperty.address,
           )
         )
           status = "Sold";
         else if (
           exclusiveData.some(
-            (item) => (item.id === id || item.mlsId === id) && item.address === foundProperty.address,
+            (item) =>
+              (item.id === id || item.mlsId === id) &&
+              item.address === foundProperty.address,
           )
         )
           status = "Exclusive";
@@ -84,11 +96,14 @@ const PropertyDetail = () => {
     }
 
     if (foundProperty) {
+      const { allImages } = getPropertyImages(foundProperty.mlsId);
+      const mainImage =
+        images[foundProperty.imageKey] || "https://via.placeholder.com/800x600";
+
       setProperty({
         ...foundProperty,
-        image:
-          images[foundProperty.imageKey] ||
-          "https://via.placeholder.com/800x600",
+        image: mainImage,
+        allImages: allImages.length > 0 ? allImages : [mainImage],
         status: foundProperty.status || status,
       });
     }
@@ -108,16 +123,36 @@ const PropertyDetail = () => {
     <div className="property-detail-page">
       <Layout />
 
-      <div className="property-hero" style={{ backgroundColor: "#e0e0e0", minHeight: "400px" }}>
-        <img
-          src={property.image}
-          alt={property.address}
-          className="hero-image"
-          onError={(e) => {
-            e.target.style.display = 'none';
-          }}
-        />
-        <div className="hero-overlay">
+      <div
+        className="property-hero"
+        style={{
+          backgroundColor: "#e0e0e0",
+          minHeight: "400px",
+          position: "relative",
+        }}
+      >
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          loop={true}
+          className="property-hero-swiper"
+        >
+          {property.allImages.map((imgUrl, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={imgUrl}
+                alt={`${property.address} - ${index + 1}`}
+                className="hero-image"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="hero-overlay" style={{ pointerEvents: "none" }}>
           <div className="hero-content">
             <h1 className="hero-address">{property.address}</h1>
             <div className="hero-price">
@@ -131,25 +166,35 @@ const PropertyDetail = () => {
         <div className="property-main-info">
           <div className="info-grid">
             <div className="info-item">
-              <span className="info-label">{detailConfig.labels.bedrooms[lang]}</span>
+              <span className="info-label">
+                {detailConfig.labels.bedrooms[lang]}
+              </span>
               <span className="info-value">{property.bedrooms}</span>
             </div>
             <div className="info-item">
-              <span className="info-label">{detailConfig.labels.bathrooms[lang]}</span>
+              <span className="info-label">
+                {detailConfig.labels.bathrooms[lang]}
+              </span>
               <span className="info-value">{property.bathrooms}</span>
             </div>
             {property.sqft && (
               <div className="info-item">
-                <span className="info-label">{detailConfig.labels.sqft[lang]}</span>
+                <span className="info-label">
+                  {detailConfig.labels.sqft[lang]}
+                </span>
                 <span className="info-value">{property.sqft}</span>
               </div>
             )}
             <div className="info-item">
-              <span className="info-label">{detailConfig.labels.status[lang]}</span>
+              <span className="info-label">
+                {detailConfig.labels.status[lang]}
+              </span>
               <span
                 className={`info-value ${property.status === "Sold" ? "status-sold" : "status-active"}`}
               >
-                {detailConfig.statusMap[property.status] ? detailConfig.statusMap[property.status][lang] : property.status}
+                {detailConfig.statusMap[property.status]
+                  ? detailConfig.statusMap[property.status][lang]
+                  : property.status}
               </span>
             </div>
           </div>
@@ -169,7 +214,10 @@ const PropertyDetail = () => {
             <div className="property-features">
               <h2>{detailConfig.labels.features[lang]}</h2>
               <ul className="features-list">
-                {property.features.map((feature, idx) => (
+                {(lang === "zh" && property.features_zh && property.features_zh.length > 0
+                  ? property.features_zh
+                  : property.features
+                ).map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>

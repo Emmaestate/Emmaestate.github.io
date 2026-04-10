@@ -11,6 +11,9 @@ import soldData from "../../data/soldListings.json";
 import { images } from "../../data/images";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import homeConfig from "../../config/pages/Home.config.js";
+import { getPropertyImages } from "../../utils/propertyImages.js";
+
+import { useNavigate } from "react-router-dom";
 
 const OPTIONS = {
   loop: true,
@@ -21,18 +24,25 @@ const OPTIONS = {
   },
 };
 
-const SLIDES = soldData.map((item) => ({
-  id: item.id,
-  imgUrl: images[item.imageKey] || "https://via.placeholder.com/600x400",
-  price: `$${item.price.toLocaleString()}`,
-  address: item.address,
-  beds: item.bedrooms,
-  baths: item.bathrooms,
-}));
+const SLIDES = soldData.map((item) => {
+  const { frontImage } = getPropertyImages(item.mlsId);
+  return {
+    id: `sold-${item.id}`,
+    imgUrl:
+      frontImage ||
+      images[item.imageKey] ||
+      "https://via.placeholder.com/600x400",
+    price: `$${item.price.toLocaleString()}`,
+    address: item.address,
+    beds: item.bedrooms,
+    baths: item.bathrooms,
+  };
+});
 
 const EmblaCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
   const { lang } = useLanguage();
+  const navigate = useNavigate();
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -43,6 +53,11 @@ const EmblaCarousel = () => {
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
+
+  const handleCardClick = (id) => {
+    navigate(`/property/${id}`);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
 
   return (
     <section className="embla">
@@ -58,7 +73,11 @@ const EmblaCarousel = () => {
         <div className="embla__container">
           {SLIDES.map((slide) => (
             <div className="embla__slide" key={slide.id}>
-              <div className="listing-card">
+              <div
+                className="listing-card"
+                onClick={() => handleCardClick(slide.id)}
+                style={{ cursor: "pointer" }}
+              >
                 <div
                   className="listing-image-container"
                   style={{
