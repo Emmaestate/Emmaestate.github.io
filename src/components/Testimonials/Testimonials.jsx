@@ -6,12 +6,16 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Testimonials.css";
 import commentsData from "../../data/comments.json";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
 
 const ReviewCard = ({ comment }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { lang } = useLanguage();
 
   const MAX_LENGTH = 150;
-  const isLong = comment.content.length > MAX_LENGTH;
+  const displayContent =
+    lang === "zh" && comment.content_zh ? comment.content_zh : comment.content;
+  const isLong = displayContent.length > MAX_LENGTH;
 
   // Generate an avatar initial
   const avatarInitial = comment.name
@@ -45,14 +49,20 @@ const ReviewCard = ({ comment }) => {
         <div
           className={`testimonial-text-wrapper ${isExpanded ? "expanded" : ""}`}
         >
-          <p>{comment.content}</p>
+          <p>{displayContent}</p>
         </div>
         {isLong && (
           <button
             className="read-more-btn"
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            {isExpanded ? "Show less" : "Read more"}
+            {isExpanded
+              ? lang === "zh"
+                ? "收起"
+                : "Show less"
+              : lang === "zh"
+                ? "阅读更多"
+                : "Read more"}
           </button>
         )}
       </div>
