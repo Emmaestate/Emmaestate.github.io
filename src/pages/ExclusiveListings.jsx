@@ -11,6 +11,8 @@ import exclusiveData from "../data/exclusiveListings.json";
 import { images } from "../data/images";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import exclusiveConfig from "../config/pages/Exclusive.config.js";
+import exclusiveBannerImg from "../assets/exclusive_banner.jpeg";
+import connectBannerImg from "../assets/connect_banner.jpeg";
 
 const exclusiveProperties = exclusiveData.map((item) => ({
   id: `exclusive-${item.id}`,
@@ -29,7 +31,7 @@ const ExclusiveListings = () => {
           title={exclusiveConfig.hero2.title[lang]}
           description={exclusiveConfig.hero2.description[lang]}
           showButton={false}
-          backgroundImage="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg"
+          backgroundImage={exclusiveBannerImg}
         />
       </div>
 
@@ -41,7 +43,7 @@ const ExclusiveListings = () => {
           title={exclusiveConfig.contactHero.title[lang]}
           description={exclusiveConfig.contactHero.description[lang]}
           btnText={exclusiveConfig.contactHero.btnText[lang]}
-          backgroundImage={connectWithUsImg}
+          backgroundImage={connectBannerImg}
           height="700px"
         />
       </div>

@@ -19,6 +19,7 @@ import ChatBot from "../Components/ChatBot/ChatBot.jsx";
 import Testimonials from "../components/Testimonials/Testimonials.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import homeConfig from "../config/pages/Home.config.js";
+import connectBannerImg from "../assets/connect_banner.jpeg";
 
 const Home = () => {
   const { lang } = useLanguage();
@@ -56,7 +57,7 @@ const Home = () => {
           title={homeConfig.homeHero.title[lang]}
           description={homeConfig.homeHero.description[lang]}
           btnText={homeConfig.homeHero.btnText[lang]}
-          backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
+          backgroundImage={connectBannerImg}
           height="700px"
         />
       </div>

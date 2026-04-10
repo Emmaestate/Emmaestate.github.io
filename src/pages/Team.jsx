@@ -56,8 +56,16 @@ function Team() {
                 emma_image
               }
               name={leader.name}
-              label={leader.label}
-              description={leader.description}
+              label={
+                lang === "zh" && leader.label_zh
+                  ? leader.label_zh
+                  : leader.label
+              }
+              description={
+                lang === "zh" && leader.description_zh
+                  ? leader.description_zh
+                  : leader.description
+              }
               email={leader.email}
               phone={leader.phone}
             />
@@ -69,8 +77,16 @@ function Team() {
               key={index}
               image={resolveMemberImage(member.name)}
               name={member.name}
-              label={member.label}
-              description={member.description}
+              label={
+                lang === "zh" && member.label_zh
+                  ? member.label_zh
+                  : member.label
+              }
+              description={
+                lang === "zh" && member.description_zh
+                  ? member.description_zh
+                  : member.description
+              }
               email={member.email}
               phone={member.phone}
             />

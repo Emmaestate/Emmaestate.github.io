@@ -34,12 +34,22 @@ const Footer = () => {
                 <h3>
                   <b>{footerConfig.left.locationTitle[lang]}</b>
                 </h3>
-                <span style={{ color: "#aaa" }}>{footerConfig.left.njLabel[lang]}</span> {footerConfig.left.njAddr1[lang]}
+                <span style={{ color: "#333" }}>
+                  {footerConfig.left.njLabel[lang]}
+                </span>{" "}
+                <span style={{ fontWeight: 500 }}>
+                  {footerConfig.left.njAddr1[lang]}
+                  <br />
+                  {footerConfig.left.njAddr2[lang]}
+                </span>
                 <br />
-                {footerConfig.left.njAddr2[lang]}
-                <br />
-                <span style={{ color: "#aaa" }}>{footerConfig.left.nyLabel[lang]}</span> {footerConfig.left.nyAddr1[lang]} <br />
-                {footerConfig.left.nyAddr2[lang]}
+                <span style={{ color: "#333" }}>
+                  {footerConfig.left.nyLabel[lang]}
+                </span>{" "}
+                <span style={{ fontWeight: 500 }}>
+                  {footerConfig.left.nyAddr1[lang]} <br />
+                  {footerConfig.left.nyAddr2[lang]}
+                </span>
               </div>
             </div>
 

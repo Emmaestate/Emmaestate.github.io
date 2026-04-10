@@ -10,7 +10,8 @@ import soldData from "../data/soldListings.json";
 import { images } from "../data/images";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import soldConfig from "../config/pages/Sold.config.js";
-
+import soldBannerImg from "../assets/sold_banner.jpg";
+import connectBannerImg from "../assets/connect_banner.jpeg";
 // Transform data to match PropertyList expected format
 // Add prefix to ID to avoid collisions
 const soldProperties = soldData.map((item) => ({
@@ -34,7 +35,7 @@ const SoldListings = () => {
           title={soldConfig.hero2.title[lang]}
           description={soldConfig.hero2.description[lang]}
           showButton={false}
-          backgroundImage="https://images.pexels.com/photos/2988860/pexels-photo-2988860.jpeg"
+          backgroundImage={soldBannerImg}
         />
       </div>
 
@@ -46,7 +47,7 @@ const SoldListings = () => {
           title={soldConfig.contactHero.title[lang]}
           description={soldConfig.contactHero.description[lang]}
           btnText={soldConfig.contactHero.btnText[lang]}
-          backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
+          backgroundImage={connectBannerImg}
           height="700px"
         />
       </div>

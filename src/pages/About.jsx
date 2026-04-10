@@ -11,7 +11,7 @@ import aboutHeroImg from "../assets/about1.webp";
 import YoutubeFeed from "../components/YoutubeFeed/YoutubeFeed.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import aboutConfig from "../config/pages/About.config.js";
-
+import connectBannerImg from "../assets/connect_banner.jpeg";
 function About() {
   const { lang } = useLanguage();
   return (
@@ -44,7 +44,7 @@ function About() {
         title={aboutConfig.contactHero.title[lang]}
         description={aboutConfig.contactHero.description[lang]}
         btnText={aboutConfig.contactHero.btnText[lang]}
-        backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
+        backgroundImage={connectBannerImg}
         height="700px"
       />
 

@@ -33,7 +33,9 @@ function Contact() {
   };
 
   return (
-    <div className={`contact-page contact-form lp-vertical-paddings lp-container ${fade}`}>
+    <div
+      className={`contact-page contact-form lp-vertical-paddings lp-container ${fade}`}
+    >
       <div className="header-container">
         <div className="contact-form__header-row">
           <h1
@@ -52,7 +54,6 @@ function Contact() {
             &times;
           </button>
         </div>
-       
       </div>
 
       <div className="contact-form__contents">
@@ -98,19 +99,23 @@ function Contact() {
                 {contactConfig.locationTitle[lang]}
               </div>
               <p>
-                <span style={{ color: "#aaa" }}>
+                <span style={{ color: "#333" }}>
                   {contactConfig.njLabel[lang]}
                 </span>{" "}
-                {contactConfig.njAddrLine1[lang]}
+                <span style={{ fontWeight: 500 }}>
+                  {contactConfig.njAddrLine1[lang]}
+                  <br />
+                  {contactConfig.njAddrLine2[lang]}
+                </span>
                 <br />
-                {contactConfig.njAddrLine2[lang]}
-                <br />
-                <span style={{ color: "#aaa" }}>
+                <span style={{ color: "#333" }}>
                   {contactConfig.nyLabel[lang]}
                 </span>{" "}
-                {contactConfig.nyAddrLine1[lang]}
-                <br />
-                {contactConfig.nyAddrLine2[lang]}
+                <span style={{ fontWeight: 500 }}>
+                  {contactConfig.nyAddrLine1[lang]}
+                  <br />
+                  {contactConfig.nyAddrLine2[lang]}
+                </span>
               </p>
             </div>
           </div>
