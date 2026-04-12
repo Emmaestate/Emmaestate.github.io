@@ -24,20 +24,22 @@ const OPTIONS = {
   },
 };
 
-const SLIDES = soldData.map((item) => {
-  const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
-  return {
-    id: `sold-${item.id}`,
-    imgUrl:
-      frontImage ||
-      images[item.imageKey] ||
-      "https://via.placeholder.com/600x400",
-    price: `$${item.price.toLocaleString()}`,
-    address: item.address,
-    beds: item.bedrooms,
-    baths: item.bathrooms,
-  };
-});
+const SLIDES = [...soldData]
+  .sort((a, b) => b.price - a.price)
+  .map((item) => {
+    const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
+    return {
+      id: `sold-${item.id}`,
+      imgUrl:
+        frontImage ||
+        images[item.imageKey] ||
+        "https://via.placeholder.com/600x400",
+      price: `$${item.price.toLocaleString()}`,
+      address: item.address,
+      beds: item.bedrooms,
+      baths: item.bathrooms,
+    };
+  });
 
 const EmblaCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
