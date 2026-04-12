@@ -16,22 +16,24 @@ import { getPropertyImages } from "../utils/propertyImages.js";
 
 // Transform data to match PropertyList expected format
 // Add prefix to ID to avoid collisions
-const soldProperties = soldData.map((item) => {
-  const { frontImage } = getPropertyImages(item.mlsId);
-  return {
-    ...item,
-    id: `sold-${item.id}`,
-    image:
-      frontImage ||
-      images[item.imageKey] ||
-      "https://via.placeholder.com/400x300",
-    price: item.price,
-    address: item.address,
-    bedrooms: item.bedrooms,
-    bathrooms: item.bathrooms,
-    sqft: item.sqft || "N/A",
-  };
-});
+const soldProperties = soldData
+  .map((item) => {
+    const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
+    return {
+      ...item,
+      id: `sold-${item.id}`,
+      image:
+        frontImage ||
+        images[item.imageKey] ||
+        "https://via.placeholder.com/400x300",
+      price: item.price,
+      address: item.address,
+      bedrooms: item.bedrooms,
+      bathrooms: item.bathrooms,
+      sqft: item.sqft || "N/A",
+    };
+  })
+  .sort((a, b) => b.price - a.price);
 
 const SoldListings = () => {
   const { lang } = useLanguage();

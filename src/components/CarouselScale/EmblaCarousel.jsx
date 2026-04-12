@@ -25,7 +25,7 @@ const OPTIONS = {
 };
 
 const SLIDES = soldData.map((item) => {
-  const { frontImage } = getPropertyImages(item.mlsId);
+  const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
   return {
     id: `sold-${item.id}`,
     imgUrl:

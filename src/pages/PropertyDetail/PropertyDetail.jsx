@@ -96,7 +96,10 @@ const PropertyDetail = () => {
     }
 
     if (foundProperty) {
-      const { allImages } = getPropertyImages(foundProperty.mlsId);
+      const { allImages } = getPropertyImages(
+        foundProperty.mlsId,
+        foundProperty.imgid,
+      );
       const mainImage =
         images[foundProperty.imageKey] || "https://via.placeholder.com/800x600";
 
@@ -167,6 +170,18 @@ const PropertyDetail = () => {
           <div className="info-grid">
             <div className="info-item">
               <span className="info-label">
+                {detailConfig.labels.mlsId[lang]}
+              </span>
+              <span className="info-value" style={{ fontSize: "1.1rem" }}>
+                {property.mlsId && !property.mlsId.toLowerCase().includes("off")
+                  ? property.mlsId
+                  : lang === "zh"
+                    ? "售出场外 | 预售"
+                    : "Sold Off-market | Pre-sale"}
+              </span>
+            </div>
+            <div className="info-item">
+              <span className="info-label">
                 {detailConfig.labels.bedrooms[lang]}
               </span>
               <span className="info-value">{property.bedrooms}</span>
@@ -214,7 +229,9 @@ const PropertyDetail = () => {
             <div className="property-features">
               <h2>{detailConfig.labels.features[lang]}</h2>
               <ul className="features-list">
-                {(lang === "zh" && property.features_zh && property.features_zh.length > 0
+                {(lang === "zh" &&
+                property.features_zh &&
+                property.features_zh.length > 0
                   ? property.features_zh
                   : property.features
                 ).map((feature, idx) => (

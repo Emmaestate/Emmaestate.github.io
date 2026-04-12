@@ -17,13 +17,13 @@
       "Prime location near parks, shopping, schools, and transportation"
     ],
     "features_zh": [
-      "新建联排别墅，拥有四层豪华生活空间",
-      "4间卧室，3个全卫，2个半卫，包括一个主卧套房",
-      "现代厨房，配有石英台面和现代装饰",
-      "已完工的底层，设有独立入口",
-      "顶层娱乐空间，配有吧台和私人屋顶露台",
-      "私人车道，车库",
-      "黄金地段，靠近公园、购物中心、学校和交通设施"
+      "新建联排别墅，3间卧室和4.5个浴室",
+      "已完工的地下室加上室内洗衣房，增加便利性",
+      "现代系统，包括中央空调、无水箱热水器和多源供暖",
+      "两个燃气壁炉，增加舒适度和氛围",
+      "私人户外空间，包括露台和甲板/露台",
+      "连体车库，提供额外停车位",
+      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和交通设施"
     ],
     "mlsId": "25042812"
   },
@@ -232,11 +232,19 @@
     "bathrooms": 2.5,
     "sqft": null,
     "features": [],
-    "features_zh": [],
+    "features_zh": [
+      "宽敞的住宅，拥有6间卧室和3个全卫",
+      "中央空调和多区供暖及制冷，全年舒适",
+      "室内洗衣房，方便使用",
+      "未完工的地下室，提供定制或扩建潜力",
+      "全屋硬木地板（按现状）",
+      "1车位车库，可串联停车，另有额外停车位",
+      "位于 Fort Lee，可欣赏日出和日落美景，靠近当地便利设施"
+    ],
     "mlsId": "24035115"
   },
   {
-    "id": "off_market_NjY5IFN1",
+    "id": "off_market_presale_669_summit",
     "imageKey": "sold_669_summit_st",
     "address": "669 Summit St, Englewood Cliff, NJ 07632",
     "price": 4300000,
@@ -244,11 +252,20 @@
     "bathrooms": "6 baths 2 half baths",
     "sqft": null,
     "features": [],
-    "features_zh": [],
-    "mlsId": "off_market_NjY5IFN1"
+    "features_zh": [
+      "新建联排别墅，拥有3间卧室，4个全卫和2个半卫",
+      "四层布局，包括带娱乐空间、天窗和露台的屋顶",
+      "开放式主层，设有厨房、客厅、餐厅、家庭活动室和步出式露台",
+      "两间套房卧室加上带独立浴室的宽敞主卧套房",
+      "底层设有娱乐室、办公室、全卫并可通往后院",
+      "双车位连体车库，配有额外的储物空间和中央吸尘系统",
+      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和纽约交通设施"
+    ],
+    "mlsId": "Off market presale",
+    "imgid": "669 Summit st"
   },
   {
-    "id": "off_market_NDM5IEVs",
+    "id": "off_market_presale_439_elizabeth",
     "imageKey": "sold_439_elizabeth_st",
     "address": "439 Elizabeth St, Fort Lee, NJ 07024",
     "price": 1500000,
@@ -265,18 +282,18 @@
       "Prime Fort Lee location close to parks, schools, shopping, and transportation"
     ],
     "features_zh": [
-      "新建联排别墅，3间卧室和4.5个浴室",
-      "已完工的地下室加上室内洗衣房，增加便利性",
-      "现代系统，包括中央空调、无水箱热水器和多源供暖",
-      "两个燃气壁炉，增加舒适度和氛围",
-      "私人户外空间，包括露台和甲板/露台",
-      "连体车库，提供额外停车位",
-      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和交通设施"
+      "定制新建超大联排别墅",
+      "开放式设计，设有带双层通高天花板和燃气壁炉的大家庭房",
+      "三间卧室加上顶层家庭办公室/客房，配有套间浴室和两个露台",
+      "两间额外的套房卧室，包括一间带步入式衣橱的主卧套房",
+      "美食厨房，配有中岛和现代电器",
+      "一楼设有带地暖的宽敞家庭活动室、全卫以及通往带围栏私人后院的通道",
+      "一车位车库加上室外停车位，靠近购物中心、学校和纽约交通设施"
     ],
-    "mlsId": "off_market_NDM5IEVs"
+    "mlsId": "Off market presale"
   },
   {
-    "id": "off_market_MTUzMSAx",
+    "id": "off_market_presale_1531_11th",
     "imageKey": "sold_1531_11th_st",
     "address": "1531 11th st, Fort Lee, NJ 07024",
     "price": 1700000,
@@ -293,18 +310,18 @@
       "Located in Fort Lee with sunrise and sunset views, close to local amenities"
     ],
     "features_zh": [
-      "宽敞的住宅，拥有6间卧室和3个全卫",
-      "中央空调和多区供暖及制冷，全年舒适",
-      "室内洗衣房，方便使用",
-      "未完工的地下室，提供定制或扩建潜力",
-      "全屋硬木地板（按现状）",
-      "1车位车库，可串联停车，另有额外停车位",
-      "位于 Fort Lee，可欣赏日出和日落美景，靠近当地便利设施"
+      "超大现代新建联排别墅，全屋挑高天花板",
+      "4间卧室，4.5个浴室，包括一个带地暖和浸泡浴缸的水疗风格主卧套房",
+      "主厨厨房，配有欧式橱柜、超大中岛、嵌入式电器和酒柜",
+      "开放式主层，配有宽板木地板和落地窗",
+      "完全完工的底层，设有家庭办公室、吧台、娱乐区和全卫",
+      "智能家居技术、多区暖通空调、中央吸尘器和安全摄像头系统",
+      "私人户外甲板、带围栏的后院、双车位车库以及额外停车位——距乔治华盛顿大桥仅几分钟路程"
     ],
-    "mlsId": "off_market_MTUzMSAx"
+    "mlsId": "Off market presale"
   },
   {
-    "id": "off_market_MTA2MCBB",
+    "id": "off_market_presale_1060_anderson",
     "imageKey": "sold_1060_anderson_ave",
     "address": "1060 Anderson Ave, Fort Lee, NJ 07024",
     "price": 1600000,
@@ -321,14 +338,128 @@
       "Private outdoor deck, fenced backyard, two-car garage, plus additional parking — minutes to GW Bridge"
     ],
     "features_zh": [
-      "超大现代新建联排别墅，全屋挑高天花板",
-      "4间卧室，4.5个浴室，包括一个带地暖和浸泡浴缸的水疗风格主卧套房",
-      "主厨厨房，配有欧式橱柜、超大中岛、嵌入式电器和酒柜",
-      "开放式主层，配有宽板木地板和落地窗",
-      "完全完工的底层，设有家庭办公室、吧台、娱乐区和全卫",
-      "智能家居技术、多区暖通空调、中央吸尘器和安全摄像头系统",
-      "私人户外甲板、带围栏的后院、双车位车库以及额外停车位——距乔治华盛顿大桥仅几分钟路程"
+      "现代新建联排别墅，拥有开阔的视野",
+      "开放式主层，设有带瀑布式石英中岛和定制橱柜的主厨厨房",
+      "三间卧室，包括一间带步入式衣橱、双洗手台和带玻璃淋浴的主卧套房",
+      "完全完工的底层，配有娱乐室、全卫以及通往后院的通道",
+      "三楼私人屋顶露台，尽享曼哈顿天际线美景",
+      "一车位车库以及车道上的额外停车位",
+      "位于便利的 Cliffside Park 地段，靠近公园、学校和纽约通勤路线"
     ],
-    "mlsId": "off_market_MTA2MCBB"
+    "mlsId": "off market presale",
+    "imgid": "1060 Anderson"
+  },
+  {
+    "id": "7586048",
+    "imageKey": "sold_252_south_st_unit_48g",
+    "address": "252 South St Unit 48G, New York, NY 10002",
+    "price": 2325610,
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "sqft": null,
+    "features": [
+      "Spacious 2-bedroom, 2-bath condo (~1,156 SF) with open layout and gourmet kitchen with breakfast bar",
+      "Private outdoor space plus in-unit washer/dryer for added convenience",
+      "Located in a luxury high-rise building with 20-year tax abatement (421a)",
+      "Full-service amenities including doorman, concierge, valet, parking, and storage",
+      "Resort-style features: pool, gym, hot tub, media room, and children’s playroom",
+      "Extensive shared outdoor spaces including deck, garden, and patio",
+      "Prime Two Bridges location with access to transit, dining, and waterfront living"
+    ],
+    "features_zh": [
+      "定制新建豪华联排别墅",
+      "开放式设计，设有带双层通高天花板和燃气壁炉的大家庭房",
+      "三间卧室加上顶层家庭办公室/客房，配有套间浴室和两个露台",
+      "两间额外的套房卧室，包括一间带步入式衣橱的主卧套房",
+      "美食厨房，配有中岛和现代电器",
+      "一楼设有带地暖的宽敞家庭活动室、全卫以及通往带围栏私人后院的通道",
+      "一车位车库加上室外停车位，靠近购物中心、学校和纽约交通设施"
+    ],
+    "mlsId": "7586048",
+    "imgid": "252 South Street"
+  },
+  {
+    "id": "off_market_MzAwIFdl",
+    "imageKey": "sold_300_west_30th_street",
+    "address": "300 West 30th Street, New York, NY 10001",
+    "price": 1075000,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqft": null,
+    "features": [
+      "Spacious 2-bedroom, 2-bath condo (~1,156 SF) with open layout and gourmet kitchen with breakfast bar",
+      "Private outdoor space plus in-unit washer/dryer for added convenience",
+      "Located in a luxury high-rise building with 20-year tax abatement (421a)",
+      "Full-service amenities including doorman, concierge, valet, parking, and storage",
+      "Resort-style features: pool, gym, hot tub, media room, and children’s playroom",
+      "Extensive shared outdoor spaces including deck, garden, and patio",
+      "Prime Two Bridges location with access to transit, dining, and waterfront living"
+    ],
+    "features_zh": [
+      "全新改建的公寓，拥有绝佳的哈德逊河、曼哈顿天际线和乔治华盛顿大桥景观",
+      "开放式主层，设有明亮通透的起居区",
+      "现代厨房，配备高端电器和定制橱柜",
+      "宽敞的卧室，采光极佳",
+      "位于 Fort Lee 中心位置，靠近交通设施、购物中心和餐厅"
+    ],
+    "mlsId": "off_market_MzAwIFdl",
+    "imgid": "300 West 30th Street"
+  },
+  {
+    "id": "240020251",
+    "imageKey": "sold_281_central_avenue_ph5a",
+    "address": "281 Central Avenue #PH5A, Jersey City, NJ 07307",
+    "price": 0,
+    "bedrooms": 3,
+    "bathrooms": 2.5,
+    "sqft": null,
+    "features": [
+      "Exclusive penthouse with approx. 1,828 SF, 3 bedrooms, and 2.5 bathrooms",
+      "Private elevator entry opening to a spacious foyer and expansive layout",
+      "Stunning Manhattan skyline views from every room",
+      "Private rooftop deck ideal for entertaining and outdoor living",
+      "Modern design with integrated smart home technology",
+      "In-unit washer/dryer, dishwasher, and central air for everyday convenience",
+      "Located in Jersey City Heights with easy access to transit and nearby neighborhoods"
+    ],
+    "features_zh": [
+      "新建联排别墅，拥有3间卧室，4个全卫和2个半卫",
+      "四层布局，包括带娱乐空间、天窗和露台的屋顶",
+      "开放式主层，设有厨房、客厅、餐厅、家庭活动室和步出式露台",
+      "两间套房卧室加上带独立浴室的宽敞主卧套房",
+      "底层设有娱乐室、办公室、全卫并可通往后院",
+      "双车位连体车库，配有额外的储物空间和中央吸尘系统",
+      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和纽约交通设施"
+    ],
+    "mlsId": "240020251",
+    "imgid": "281 Central Avenue"
+  },
+  {
+    "id": "25007204",
+    "imageKey": "sold_2187_jones_road",
+    "address": "2187 Jones Road, Fort Lee, NJ 07024",
+    "price": 1450000,
+    "bedrooms": 3,
+    "bathrooms": 5,
+    "sqft": null,
+    "features": [
+      "New construction townhouse with 3 bedrooms, 4 full baths, and 2 half baths",
+      "Four-level layout including rooftop with recreation space, skylights, and terrace",
+      "Open main level with kitchen, living, dining, family room, and walk-out terrace",
+      "Two en-suite bedrooms plus a spacious primary suite with dedicated bath",
+      "Ground level with recreation room, office, full bath, and backyard access",
+      "Two-car attached garage with additional storage and central vacuum system",
+      "Prime Fort Lee location close to parks, schools, shopping, and NYC transportation"
+    ],
+    "features_zh": [
+      "新建联排别墅，拥有3间卧室，4个全卫和2个半卫",
+      "四层布局，包括带娱乐空间、天窗和露台的屋顶",
+      "开放式主层，设有厨房、客厅、餐厅、家庭活动室和步出式露台",
+      "两间套房卧室加上带独立浴室的宽敞主卧套房",
+      "底层设有娱乐室、办公室、全卫并可通往后院",
+      "双车位连体车库，配有额外的储物空间和中央吸尘系统",
+      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和纽约交通设施"
+    ],
+    "mlsId": "25007204"
   }
 ]

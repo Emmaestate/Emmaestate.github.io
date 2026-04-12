@@ -1,5 +1,6 @@
 export default {
   labels: {
+    mlsId: { en: "MLS #", zh: "MLS 编号" },
     bedrooms: { en: "Bedrooms", zh: "卧室" },
     bathrooms: { en: "Bathrooms", zh: "卫生间" },
     sqft: { en: "Sq Ft", zh: "平方英尺" },

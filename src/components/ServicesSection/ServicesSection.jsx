@@ -1,14 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ServicesSection.css";
 import buyImg from "../../assets/Buy.jpg";
 import sellImg from "../../assets/Sell.jpg";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import homeConfig from "../../config/pages/Home.config.js";
+import HomeValuationPopup from "../HomeValuationPopup/HomeValuationPopup.jsx";
 
 const ServicesSection = () => {
   const navigate = useNavigate();
   const { lang } = useLanguage();
+  const [isValuationOpen, setIsValuationOpen] = useState(false);
 
   // Intersection Observer for fade-in animation
   const observerRef = useRef(null);
@@ -90,12 +92,17 @@ const ServicesSection = () => {
           </p>
           <button
             className="service-btn"
-            onClick={() => navigate("/properties/soldlist")}
+            onClick={() => setIsValuationOpen(true)}
           >
             {homeConfig.services.sell.btn[lang]}
           </button>
         </div>
       </div>
+
+      <HomeValuationPopup
+        isOpen={isValuationOpen}
+        onClose={() => setIsValuationOpen(false)}
+      />
     </section>
   );
 };

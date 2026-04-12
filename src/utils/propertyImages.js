@@ -8,8 +8,30 @@ const importedImages = import.meta.glob("../../source/listings_image/**/*.{jpg,j
  * @param {string} mlsId - The MLS ID of the property.
  * @returns {{ frontImage: string | null, allImages: string[] }}
  */
-export const getPropertyImages = (mlsId) => {
-  if (!mlsId) {
+export const getPropertyImages = (mlsId, imgid) => {
+  let targetFolder = null;
+
+  // Check if mlsId exists in the paths
+  if (mlsId) {
+    for (const path in importedImages) {
+      if (path.includes(`/${mlsId}/`)) {
+        targetFolder = mlsId;
+        break;
+      }
+    }
+  }
+
+  // Fallback to imgid if no mlsId match
+  if (!targetFolder && imgid) {
+    for (const path in importedImages) {
+      if (path.includes(`/${imgid}/`)) {
+        targetFolder = imgid;
+        break;
+      }
+    }
+  }
+
+  if (!targetFolder) {
     return { frontImage: null, allImages: [] };
   }
 
@@ -17,11 +39,8 @@ export const getPropertyImages = (mlsId) => {
   let frontImage = null;
 
   for (const path in importedImages) {
-    // Check if the path contains the mlsId as a folder name
-    if (path.includes(`/${mlsId}/`)) {
+    if (path.includes(`/${targetFolder}/`)) {
       const url = importedImages[path];
-      
-      // If the file name contains '-front' or '- front' (case-insensitive)
       if (path.toLowerCase().includes('front')) {
         frontImage = url;
       } else {
@@ -30,7 +49,6 @@ export const getPropertyImages = (mlsId) => {
     }
   }
 
-  // Put frontImage at the beginning of allImages if it exists
   if (frontImage) {
     images.unshift(frontImage);
   }

@@ -16,7 +16,7 @@ import connectBannerImg from "../assets/connect_banner.jpeg";
 import { getPropertyImages } from "../utils/propertyImages.js";
 
 const exclusiveProperties = exclusiveData.map((item) => {
-  const { frontImage } = getPropertyImages(item.mlsId);
+  const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
   return {
     ...item,
     id: `exclusive-${item.id}`,
