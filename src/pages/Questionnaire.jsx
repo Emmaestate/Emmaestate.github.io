@@ -13,13 +13,13 @@ const Questionnaire = () => {
   const [passwordInput, setPasswordInput] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const CORRECT_PASSWORD = "VEX2ZTqg0NFYwGJB";
+  const CORRECT_PASSWORD = "emmateam";
 
   useEffect(() => {
     // 检查 URL 中的 password 参数
     const searchParams = new URLSearchParams(location.search);
     const urlPassword = searchParams.get("pwd");
-    
+
     if (urlPassword === CORRECT_PASSWORD) {
       setIsAuthenticated(true);
     }
@@ -36,7 +36,11 @@ const Questionnaire = () => {
       setIsAuthenticated(true);
       setErrorMsg("");
     } else {
-      setErrorMsg(lang === "en" ? "Incorrect password. Please try again." : "密码错误，请重试。");
+      setErrorMsg(
+        lang === "en"
+          ? "Incorrect password. Please try again."
+          : "密码错误，请重试。",
+      );
     }
   };
 
@@ -48,7 +52,7 @@ const Questionnaire = () => {
   return (
     <div className={`questionnaire-page ${isLoaded ? "page-fade-in" : ""}`}>
       <Layout />
-      
+
       <div className="questionnaire-content">
         {!isAuthenticated ? (
           <div className="password-prompt-container">
@@ -56,8 +60,8 @@ const Questionnaire = () => {
               {lang === "en" ? "Protected Content" : "受保护的内容"}
             </h2>
             <p className="password-prompt-desc">
-              {lang === "en" 
-                ? "Please enter the password to view the questionnaire." 
+              {lang === "en"
+                ? "Please enter the password to view the questionnaire."
                 : "请输入访问密码以查看问卷内容。"}
             </p>
             <form onSubmit={handlePasswordSubmit} className="password-form">

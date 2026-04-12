@@ -2,8 +2,8 @@ export default {
   hero2: {
     title: { en: "OUR SOLD LISTINGS", zh: "我们的已售房源" },
     description: {
-      en: "Emma Ju features Bergen Counties property. Ju can find real estate in Alpine, Tenafly, Englewood Cliffs, NJ & more",
-      zh: "Emma Ju 展示 Bergen 郡的房源，包括 Alpine、Tenafly、Englewood Cliffs 等地区的优质房产。",
+      en: "EJE Notable transactions over $1 million",
+      zh: "EJE 百万美元以上的重要交易",
     },
   },
   contactHero: {

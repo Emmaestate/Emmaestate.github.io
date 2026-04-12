@@ -44,7 +44,7 @@ function Team() {
       <Hero2
         title={teamConfig.hero.title[lang]}
         backgroundImage={aboutHeroImg}
-        description={teamConfig.hero.description[lang]}
+        description={""}
         showButton={false}
       />
       <div className="container-type4">
