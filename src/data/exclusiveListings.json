@@ -1,33 +1,5 @@
 [
   {
-    "id": "26006906",
-    "imageKey": "exclusive_26_avenue_at_port_imperial_apt_416",
-    "address": "26 Avenue At Port Imperial APT 416, West New York, NJ 07093",
-    "price": 780000,
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "sqft": 1121,
-    "features": [
-      "Rare 2BR + loft penthouse with soaring 20’ ceilings and bright southwest exposure",
-      "Sun-drenched interior with freshly sanded hardwood floors and open-concept layout",
-      "Chef’s kitchen with JennAir stainless steel appliances and abundant cabinetry",
-      "Primary suite with walk-in closet and full bath, plus versatile loft for office or guest space",
-      "In-unit washer/dryer, brand new boiler (2025), and deeded indoor parking",
-      "Resort-style amenities including pool, fitness center, tennis courts, basketball court, and dog run",
-      "Prime commuter location near ferry, bus, and Light Rail"
-    ],
-    "features_zh": [
-      "罕见的 2室 + 阁楼 顶层公寓，挑高 20 英尺天花板，朝西南采光极佳",
-      "阳光充足的室内，配有全新打磨的硬木地板和开放式布局",
-      "主厨级厨房，配备 JennAir 不锈钢电器和充足的橱柜",
-      "主卧套房带步入式衣橱和全卫，另有多功能阁楼可作办公室或客房",
-      "室内配有洗衣机/烘干机、全新锅炉 (2025年) 以及带契约的室内停车位",
-      "度假村式便利设施，包括游泳池、健身中心、网球场、篮球场和遛狗区",
-      "优越的通勤位置，靠近渡轮、巴士和轻轨"
-    ],
-    "mlsId": "26006906"
-  },
-  {
     "id": "S1785517",
     "imageKey": "exclusive_343_e_74th_st_ph2b",
     "address": "343 E 74th St #Ph2B, New York, NY 10021",

@@ -172,7 +172,7 @@ const PropertyDetail = () => {
               <span className="info-label">
                 {detailConfig.labels.mlsId[lang]}
               </span>
-              <span className="info-value" style={{ fontSize: "1.1rem" }}>
+              <span className="info-value">
                 {property.mlsId && !property.mlsId.toLowerCase().includes("off")
                   ? property.mlsId
                   : lang === "zh"

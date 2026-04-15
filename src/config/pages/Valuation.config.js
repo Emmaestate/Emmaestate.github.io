@@ -14,8 +14,8 @@ export default {
       zh: "分享一些关于您房屋的细节，包括近期的翻新或当前状况。",
     },
     step3: {
-      en: "Our team will follow up to provide a personalized estimate and, if needed, schedule an in-person assessment.",
-      zh: "我们的团队将跟进提供个性化的估价，并在需要时安排现场评估。",
+      en: "Our team will follow up to provide a personalized estimate and, if needed, schedule an in-person assessment to determine an accurate estimate of your home",
+      zh: "我们的团队将跟进提供个性化的估价，并在需要时安排现场评估以确定您的房屋准确估价。",
     },
   },
   labels: {

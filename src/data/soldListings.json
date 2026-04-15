@@ -17,13 +17,13 @@
       "Prime location near parks, shopping, schools, and transportation"
     ],
     "features_zh": [
-      "新建联排别墅，3间卧室和4.5个浴室",
-      "已完工的地下室加上室内洗衣房，增加便利性",
-      "现代系统，包括中央空调、无水箱热水器和多源供暖",
-      "两个燃气壁炉，增加舒适度和氛围",
-      "私人户外空间，包括露台和甲板/露台",
-      "连体车库，提供额外停车位",
-      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和交通设施"
+      "新建联排别墅，拥有四层豪华生活空间",
+      "4间卧室，3个全卫，2个半卫，包含一间主卧套房",
+      "现代厨房配有石英台面和现代饰面",
+      "已完工的底层配有独立入口",
+      "顶层娱乐空间配有吧台和私人屋顶露台",
+      "私人车道，车库",
+      "黄金地段，靠近公园、购物中心、学校和交通设施"
     ],
     "mlsId": "25042812"
   },
@@ -251,15 +251,25 @@
     "bedrooms": 5,
     "bathrooms": "6 baths 2 half baths",
     "sqft": null,
-    "features": [],
+    "features": [
+      "22’ ceiling great room with fireplace",
+      "Chef’s kitchen + full prep kitchen",
+      "Private primary suite with balcony & fireplace",
+      "Mini golf court and pool",
+      "Fully finished entertainment level (media room, gym, billiards)",
+      "Smart home wiring + EV-ready",
+      "Multi-zone radiant heat",
+      "3-car heated garage + whole-house generator"
+    ],
     "features_zh": [
-      "新建联排别墅，拥有3间卧室，4个全卫和2个半卫",
-      "四层布局，包括带娱乐空间、天窗和露台的屋顶",
-      "开放式主层，设有厨房、客厅、餐厅、家庭活动室和步出式露台",
-      "两间套房卧室加上带独立浴室的宽敞主卧套房",
-      "底层设有娱乐室、办公室、全卫并可通往后院",
-      "双车位连体车库，配有额外的储物空间和中央吸尘系统",
-      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和纽约交通设施"
+      "带壁炉的22英尺挑高大客厅",
+      "主厨厨房 + 完整的备餐厨房",
+      "带阳台和壁炉的私人主卧套房",
+      "迷你高尔夫球场和游泳池",
+      "完全完工的娱乐层（媒体室、健身房、台球室）",
+      "智能家居布线 + 预留电动车充电接口",
+      "多区域辐射供暖",
+      "3车位恒温车库 + 全屋备用发电机"
     ],
     "mlsId": "Off market presale",
     "imgid": "669 Summit st"
@@ -282,15 +292,16 @@
       "Prime Fort Lee location close to parks, schools, shopping, and transportation"
     ],
     "features_zh": [
-      "定制新建超大联排别墅",
-      "开放式设计，设有带双层通高天花板和燃气壁炉的大家庭房",
-      "三间卧室加上顶层家庭办公室/客房，配有套间浴室和两个露台",
-      "两间额外的套房卧室，包括一间带步入式衣橱的主卧套房",
-      "美食厨房，配有中岛和现代电器",
-      "一楼设有带地暖的宽敞家庭活动室、全卫以及通往带围栏私人后院的通道",
-      "一车位车库加上室外停车位，靠近购物中心、学校和纽约交通设施"
+      "新建联排别墅，拥有3间卧室和4.5个浴室",
+      "已完工的地下室加上室内洗衣房，增加便利性",
+      "现代系统，包括中央空调、无水箱热水器和多源供暖",
+      "两个燃气壁炉，增加舒适度和氛围",
+      "私人户外空间，包括露台和甲板/露台",
+      "连体车库，提供额外停车位",
+      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和交通设施"
     ],
-    "mlsId": "Off market presale"
+    "mlsId": "Off market presale",
+    "imgid": "25021347"
   },
   {
     "id": "off_market_presale_1531_11th",
@@ -301,24 +312,21 @@
     "bathrooms": 4.5,
     "sqft": null,
     "features": [
-      "Spacious home featuring 6 bedrooms and 3 full bathrooms",
-      "Central air and multi-zone heating and cooling for year-round comfort",
-      "In-unit laundry for convenience",
-      "Unfinished basement offering potential for customization or expansion",
-      "Hardwood floors throughout (as is)",
-      "1-car garage with tandem parking plus additional parking space",
-      "Located in Fort Lee with sunrise and sunset views, close to local amenities"
+      "Oversized contemporary new construction townhome.",
+      "a PRIVATE ELEVATOR & PRIVATE HOME THEATER.",
+      "2 private decks, and fenced backyard. Floor to Ceiling Andersen windows and European wide plank flooring",
+      "-The chef's kitchen boasts European cabinetry, integrated fridge/freezer, wine cooler, and oversized island.",
+      "Smart home features, multi-zone HVAC, central vacuum, security cameras, and oversized modern all-glass garage door with WiFi"
     ],
     "features_zh": [
-      "超大现代新建联排别墅，全屋挑高天花板",
-      "4间卧室，4.5个浴室，包括一个带地暖和浸泡浴缸的水疗风格主卧套房",
-      "主厨厨房，配有欧式橱柜、超大中岛、嵌入式电器和酒柜",
-      "开放式主层，配有宽板木地板和落地窗",
-      "完全完工的底层，设有家庭办公室、吧台、娱乐区和全卫",
-      "智能家居技术、多区暖通空调、中央吸尘器和安全摄像头系统",
-      "私人户外甲板、带围栏的后院、双车位车库以及额外停车位——距乔治华盛顿大桥仅几分钟路程"
+      "超大现代新建联排别墅",
+      "私人电梯和私人家庭影院",
+      "2个私人甲板和带围栏的后院。落地 Andersen 窗户和宽板欧式木地板",
+      "主厨厨房配有欧式橱柜、嵌入式冰箱/冰柜、酒柜和超大中岛",
+      "智能家居功能，多区暖通空调，中央吸尘器，安全摄像头，以及带 WiFi 的超大现代全玻璃车库门"
     ],
-    "mlsId": "Off market presale"
+    "mlsId": "Off market presale",
+    "imgid": "1531 11th st"
   },
   {
     "id": "off_market_presale_1060_anderson",
@@ -338,15 +346,15 @@
       "Private outdoor deck, fenced backyard, two-car garage, plus additional parking — minutes to GW Bridge"
     ],
     "features_zh": [
-      "现代新建联排别墅，拥有开阔的视野",
-      "开放式主层，设有带瀑布式石英中岛和定制橱柜的主厨厨房",
-      "三间卧室，包括一间带步入式衣橱、双洗手台和带玻璃淋浴的主卧套房",
-      "完全完工的底层，配有娱乐室、全卫以及通往后院的通道",
-      "三楼私人屋顶露台，尽享曼哈顿天际线美景",
-      "一车位车库以及车道上的额外停车位",
-      "位于便利的 Cliffside Park 地段，靠近公园、学校和纽约通勤路线"
+      "超大现代新建联排别墅，全屋挑高天花板",
+      "4间卧室，4.5个浴室，包括一个带地暖和浸泡浴缸的水疗风格主卧套房",
+      "主厨厨房，配有欧式橱柜、超大中岛、嵌入式电器和酒柜",
+      "开放式主层，配有宽板木地板和落地窗",
+      "完全完工的底层，设有家庭办公室、吧台、娱乐区和全卫",
+      "智能家居技术、多区暖通空调、中央吸尘器和安全摄像头系统",
+      "私人户外甲板、带围栏的后院、双车位车库以及额外停车位——距乔治华盛顿大桥仅几分钟路程"
     ],
-    "mlsId": "off market presale",
+    "mlsId": "Off market presale",
     "imgid": "1060 Anderson"
   },
   {
@@ -367,15 +375,15 @@
       "Prime Two Bridges location with access to transit, dining, and waterfront living"
     ],
     "features_zh": [
-      "定制新建豪华联排别墅",
-      "开放式设计，设有带双层通高天花板和燃气壁炉的大家庭房",
-      "三间卧室加上顶层家庭办公室/客房，配有套间浴室和两个露台",
-      "两间额外的套房卧室，包括一间带步入式衣橱的主卧套房",
-      "美食厨房，配有中岛和现代电器",
-      "一楼设有带地暖的宽敞家庭活动室、全卫以及通往带围栏私人后院的通道",
-      "一车位车库加上室外停车位，靠近购物中心、学校和纽约交通设施"
+      "宽敞的2室2卫公寓（约1,156平方英尺），拥有开放式布局和带早餐吧的美食厨房",
+      "私人户外空间加上室内洗衣机/烘干机，增加便利性",
+      "位于豪华高层建筑内，享受20年免税优惠（421a）",
+      "全方位服务设施，包括门卫、礼宾服务、代客泊车、停车场和储藏室",
+      "度假村式设施：游泳池、健身房、热水浴缸、媒体室和儿童游戏室",
+      "广阔的共享户外空间，包括甲板、花园和露台",
+      "位于 Two Bridges 黄金地段，方便前往交通设施、餐饮和水滨生活"
     ],
-    "mlsId": "7586048",
+    "mlsId": "",
     "imgid": "252 South Street"
   },
   {
@@ -383,26 +391,28 @@
     "imageKey": "sold_300_west_30th_street",
     "address": "300 West 30th Street, New York, NY 10001",
     "price": 1075000,
-    "bedrooms": 2,
-    "bathrooms": 2,
+    "bedrooms": 1,
+    "bathrooms": 1,
     "sqft": null,
     "features": [
-      "Spacious 2-bedroom, 2-bath condo (~1,156 SF) with open layout and gourmet kitchen with breakfast bar",
-      "Private outdoor space plus in-unit washer/dryer for added convenience",
-      "Located in a luxury high-rise building with 20-year tax abatement (421a)",
-      "Full-service amenities including doorman, concierge, valet, parking, and storage",
-      "Resort-style features: pool, gym, hot tub, media room, and children’s playroom",
-      "Extensive shared outdoor spaces including deck, garden, and patio",
-      "Prime Two Bridges location with access to transit, dining, and waterfront living"
+      "Prime Midtown location just one block from Penn Station, near Hudson Yards, Chelsea Market, and Times Square",
+      "New construction (2023) 1-bedroom residence with east-facing floor-to-ceiling windows",
+      "Modern island kitchen with integrated Miele appliances and white marble countertops",
+      "Spa-inspired bathroom with radiant heated floors, rain shower, and premium finishes",
+      "Private balcony with city views plus in-unit washer and dryer",
+      "Luxury amenities including 24-hour concierge, fitness center, media room, and outdoor space",
+      "Excellent transit access (Subway, NJ Transit, Amtrak, LIRR) and on-site grocery retail"
     ],
     "features_zh": [
-      "全新改建的公寓，拥有绝佳的哈德逊河、曼哈顿天际线和乔治华盛顿大桥景观",
-      "开放式主层，设有明亮通透的起居区",
-      "现代厨房，配备高端电器和定制橱柜",
-      "宽敞的卧室，采光极佳",
-      "位于 Fort Lee 中心位置，靠近交通设施、购物中心和餐厅"
+      "位于曼哈顿中城的黄金地段，距宾州车站仅一个街区，靠近 Hudson Yards、切尔西市场和时代广场",
+      "新建（2023年）一居室住宅，配有朝东的落地窗",
+      "现代中岛厨房，配有 Miele 嵌入式电器和白色大理石台面",
+      "水疗风格浴室，配有辐射地暖、花洒淋浴和高级饰面",
+      "带城市景观的私人阳台，以及室内洗衣机和烘干机",
+      "豪华设施包括24小时礼宾服务、健身中心、媒体室和户外空间",
+      "极佳的交通便利性（地铁、NJ Transit、Amtrak、LIRR）和内部杂货零售店"
     ],
-    "mlsId": "off_market_MzAwIFdl",
+    "mlsId": "",
     "imgid": "300 West 30th Street"
   },
   {
@@ -423,13 +433,13 @@
       "Located in Jersey City Heights with easy access to transit and nearby neighborhoods"
     ],
     "features_zh": [
-      "新建联排别墅，拥有3间卧室，4个全卫和2个半卫",
-      "四层布局，包括带娱乐空间、天窗和露台的屋顶",
-      "开放式主层，设有厨房、客厅、餐厅、家庭活动室和步出式露台",
-      "两间套房卧室加上带独立浴室的宽敞主卧套房",
-      "底层设有娱乐室、办公室、全卫并可通往后院",
-      "双车位连体车库，配有额外的储物空间和中央吸尘系统",
-      "位于 Fort Lee 黄金地段，靠近公园、学校、购物中心和纽约交通设施"
+      "独家顶层公寓，面积约 1,828 平方英尺，3间卧室和2.5个浴室",
+      "私人电梯入口，通向宽敞的门厅和开阔的布局",
+      "每个房间都能欣赏到令人惊叹的曼哈顿天际线景观",
+      "私人屋顶露台，非常适合娱乐和户外生活",
+      "现代设计，集成智能家居技术",
+      "室内洗衣机/烘干机、洗碗机和中央空调，方便日常生活",
+      "位于泽西市高地（Jersey City Heights），方便前往交通设施和附近社区"
     ],
     "mlsId": "240020251",
     "imgid": "281 Central Avenue"

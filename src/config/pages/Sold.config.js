@@ -2,8 +2,8 @@ export default {
   hero2: {
     title: { en: "OUR SOLD LISTINGS", zh: "我们的已售房源" },
     description: {
-      en: "EJE Notable transactions over $1 million",
-      zh: "EJE 百万美元以上的重要交易",
+      en: "Recent transactions over $1 million",
+      zh: "最近的百万交易记录",
     },
   },
   contactHero: {
