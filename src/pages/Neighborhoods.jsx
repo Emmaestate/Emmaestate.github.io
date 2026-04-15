@@ -145,10 +145,10 @@ const Neighborhoods = () => {
       <NeighborhoodList neighborhoods={communities} />
 
       <Hero
-        subtitle="Manhattan, Fort Lee, Edgewater and Bergen county Licensed Realtor"
-        title="CONNECT WITH EMMA"
-        description="Emma specializes in Bergen County NJ and NYC buyers, sellers, and renters."
-        btnText="CONTACT EMMA"
+        subtitle=""
+        title="WORK WITH US"
+        description="Specializing in Manhattan and Bergen County, New Jersey, we provide expert representation for buyers, sellers, and renters."
+        btnText="CONTACT US"
         backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
         height="700px"
       />

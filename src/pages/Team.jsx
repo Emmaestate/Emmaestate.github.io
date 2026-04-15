@@ -9,6 +9,7 @@ import AgentCard from "../components/AgentCard/AgentCard.jsx";
 import emma_image from "../assets/emma.jpeg";
 import placeholder_image from "../assets/placeholder.png";
 import teamData from "../data/team.json";
+import connectBannerImg from "../assets/connect_banner.jpeg";
 import "./Team.css";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import teamConfig from "../config/pages/Team.config.js";
@@ -99,7 +100,7 @@ function Team() {
         title={teamConfig.contactHero.title[lang]}
         description={teamConfig.contactHero.description[lang]}
         btnText={teamConfig.contactHero.btnText[lang]}
-        backgroundImage="https://images.pexels.com/photos/87378/pexels-photo-87378.jpeg"
+        backgroundImage={connectBannerImg}
         height="700px"
       />
       <div className="container-type1">

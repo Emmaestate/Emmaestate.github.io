@@ -27,7 +27,7 @@ Fluent in English and Mandarin, Emma works with a diverse range of buyers, selle
       en: "Emma Ju  Specializing in luxury real estate in Manhattan, Fort Lee, Edgewater and Bergen county new constructions.",
       zh: "Emma Ju 专注曼哈顿、Fort Lee、Edgewater 以及 Bergen 郡的新建与豪宅房源。",
     },
-    btnText: { en: "CONTACT EMMA", zh: "联系 EMMA" },
+    btnText: { en: "CONTACT US", zh: "联系我们" },
   },
   youtubeFeed: {
     heading: { en: "Latest Videos", zh: "最新视频" },

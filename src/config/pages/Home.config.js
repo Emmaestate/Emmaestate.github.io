@@ -51,8 +51,8 @@ export default {
       zh: "Emma 专注服务曼哈顿、Bergen 郡及新泽西黄金海岸的买卖客户。",
     },
     btnText: {
-      en: "CONTACT EMMA",
-      zh: "联系 EMMA",
+      en: "CONTACT US",
+      zh: "联系我们",
     },
   },
   testimonials: {

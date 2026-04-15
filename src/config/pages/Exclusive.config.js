@@ -8,14 +8,14 @@ export default {
   },
   contactHero: {
     subtitle: {
-      en: "Manhattan, Fort Lee, Edgewater and Bergen county Licensed Realtor",
-      zh: "曼哈顿、Fort Lee、Edgewater 及 Bergen 郡持牌经纪人",
+      en: "",
+      zh: "",
     },
-    title: { en: "CONNECT WITH EMMA", zh: "联系 EMMA" },
+    title: { en: "WORK WITH US", zh: "和我们一起工作" },
     description: {
-      en: "Emma Ju  Specializing in luxury real estate in Manhattan, Fort Lee, Edgewater and Bergen county new constructions.",
+      en: "Specializing in Manhattan and Bergen County, New Jersey, we provide expert representation for buyers, sellers, and renters.",
       zh: "Emma Ju 专注曼哈顿、Fort Lee、Edgewater 以及 Bergen 郡的新建与豪宅房源。",
     },
-    btnText: { en: "CONTACT EMMA", zh: "联系 EMMA" },
+    btnText: { en: "CONTACT US", zh: "联系我们" },
   },
 }
