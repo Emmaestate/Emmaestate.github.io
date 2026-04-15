@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import Layout from "../../Components/Layout/Layout.jsx";
 import Footer from "../../Components/Footer/Footer.jsx";
 import ContactFormPopup from "../../Components/ContactFormPopup/ContactFormPopup.jsx";
@@ -246,17 +246,15 @@ const PropertyDetail = () => {
           <div className="agent-card">
             <h3>{detailConfig.sidebar.title[lang]}</h3>
             <p>{detailConfig.sidebar.desc[lang]}</p>
-            <button
-              className="contact-agent-btn"
-              onClick={() => document.querySelector(".connect-btn").click()}
-            >
-              {detailConfig.sidebar.btnText[lang]}
-            </button>
+            <Link to="/contact">
+              <button className="contact-agent-btn">
+                {detailConfig.sidebar.btnText[lang]}
+              </button>
+            </Link>
           </div>
         </div>
       </div>
 
-      <ContactFormPopup />
       <div className="container-type1">
         <Footer />
       </div>
