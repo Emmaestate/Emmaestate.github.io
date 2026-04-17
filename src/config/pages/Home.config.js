@@ -39,16 +39,13 @@ export default {
   },
   homeHero: {
     subtitle: {
-      en: "New York City and New Jersey Licensed Realtor",
-      zh: "纽约与新泽西持牌经纪人",
+      en: "",
+      zh: "",
     },
-    title: {
-      en: "CONNECT WITH EMMA",
-      zh: "联系 EMMA",
-    },
+    title: { en: "WORK WITH US", zh: "和我们一起工作" },
     description: {
-      en: "Emma specializes in representing buyers and sellers in Manhattan, Bergen county and along the NJ Gold Coast.",
-      zh: "Emma 专注服务曼哈顿、Bergen 郡及新泽西黄金海岸的买卖客户。",
+      en: "Specializing in Manhattan and Bergen County, New Jersey, we provide expert representation for buyers, sellers, and renters.",
+      zh: "专注于曼哈顿和新泽西州 Bergen 郡，我们为买家、卖家和租客提供专业的代理服务。",
     },
     btnText: {
       en: "CONTACT US",

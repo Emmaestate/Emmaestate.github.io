@@ -14,7 +14,7 @@ export default {
     title: { en: "WORK WITH US", zh: "和我们一起工作" },
     description: {
       en: "Specializing in Manhattan and Bergen County, New Jersey, we provide expert representation for buyers, sellers, and renters.",
-      zh: "Emma Ju 专注曼哈顿、Fort Lee、Edgewater 以及 Bergen 郡的新建与豪宅房源。",
+      zh: "专注于曼哈顿和新泽西州 Bergen 郡，我们为买家、卖家和租客提供专业的代理服务。",
     },
     btnText: { en: "CONTACT US", zh: "联系我们" },
   },
