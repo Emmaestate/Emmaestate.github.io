@@ -30,7 +30,8 @@ const Home = () => {
       <div className="container-type1">
         <AgentProfile
           title={homeConfig.agentProfile.title[lang]}
-          position={homeConfig.agentProfile.position[lang]}
+          role={homeConfig.agentProfile.role[lang]}
+          position={homeConfig.agentProfile.subtitle[lang]}
           paragraphs={homeConfig.agentProfile.paragraphs[lang]}
           ctaText={homeConfig.agentProfile.ctaText[lang]}
         />

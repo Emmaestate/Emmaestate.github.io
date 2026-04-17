@@ -10,6 +10,7 @@ import "./AgentProfile.css";
 
 const AgentProfile = ({
   title = "Meet Emma Ju",
+  role = "Team Leader",
   position = "Real estate specialist in Manhattan and the NJ gold coast",
   paragraphs = [
     "Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both city and suburban transactions with ease.",
@@ -25,6 +26,11 @@ const AgentProfile = ({
         </div>
         <div className="agent-profile__content">
           <h2 className="agent-name">{title}</h2>
+          {role && (
+            <p className="agent-role" style={{ fontSize: "1.2rem", fontWeight: "600", color: "#333", marginTop: "-10px", marginBottom: "15px", textTransform: "uppercase", letterSpacing: "1px" }}>
+              {role}
+            </p>
+          )}
           <p className="agent-position">{position}</p>
           <div className="agent-description">
             {paragraphs.map((text, idx) => (

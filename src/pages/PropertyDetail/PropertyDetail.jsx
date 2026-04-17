@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import Layout from "../../Components/Layout/Layout.jsx";
-import Footer from "../../Components/Footer/Footer.jsx";
-import ContactFormPopup from "../../Components/ContactFormPopup/ContactFormPopup.jsx";
+import Layout from "../../components/Layout/Layout.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import ContactFormPopup from "../../components/ContactFormPopup/ContactFormPopup.jsx";
 import soldData from "../../data/soldListings.json";
 import exclusiveData from "../../data/exclusiveListings.json";
 import activeData from "../../data/activeListings.json";
@@ -176,8 +176,16 @@ const PropertyDetail = () => {
                 {property.mlsId && !property.mlsId.toLowerCase().includes("off")
                   ? property.mlsId
                   : lang === "zh"
-                    ? "售出场外 | 预售"
-                    : "Sold Off-market | Pre-sale"}
+                    ? (
+                      <>
+                        售出场外<br />预售
+                      </>
+                    )
+                    : (
+                      <>
+                        Sold Off-market<br />Pre-sale
+                      </>
+                    )}
               </span>
             </div>
             <div className="info-item">

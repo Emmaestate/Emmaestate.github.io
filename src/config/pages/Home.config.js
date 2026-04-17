@@ -61,7 +61,8 @@ export default {
   },
   agentProfile: {
     title: { en: "Meet Emma Ju", zh: "认识 Emma Ju" },
-    position: {
+    role: { en: "Team Leader", zh: "团队负责人" },
+    subtitle: {
       en: "Real estate specialist in Manhattan and the NJ gold coast",
       zh: "曼哈顿与新泽西黄金海岸房地产专家",
     },
@@ -78,7 +79,7 @@ export default {
     ctaText: { en: "Learn More", zh: "了解更多" },
   },
   portfolio: {
-    title: { en: "EMMA'S PORTFOLIO", zh: "EMMA 的作品集" },
+    title: { en: "Finalized Acquisitions", zh: "已完成交易" },
     beds: { en: "Beds", zh: "卧室" },
     baths: { en: "Baths", zh: "卫浴" },
   },
