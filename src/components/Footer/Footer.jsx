@@ -7,6 +7,7 @@ import wechat_icon from "../../assets/wechat.png";
 import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
 import companyLogo from "../../assets/company.jpeg";
+import footer_logo from "../../assets/footer-logo.jpeg";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import footerConfig from "../../config/pages/Footer.config.js";
 
@@ -187,16 +188,26 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Bottom Footer Label */}
       <div className="footer-label">
-        <div>
-          <img
-            src={companyLogo}
-            alt="Company"
-            className="footer-company-logo"
-          />
+        <div className="footer-logos">
+          <a href="https://www.acreny.us/" target="_blank" rel="noopener noreferrer" className="footer-logo-link">
+            <img
+              src={companyLogo}
+              alt="ACRE NY Realty"
+              className="footer-company-logo"
+            />
+          </a>
+          <a href="#" onClick={(e) => { e.preventDefault(); navigate("/"); window.scrollTo(0,0); }} className="footer-logo-link">
+            <img
+              src={footer_logo}
+              alt="Emma Ju Estates"
+              className="footer-website-logo"
+            />
+          </a>
         </div>
         <div>
-          <p>© Copyright 2026</p>
+          Copyright © 2025 Emma Ju Estates - All Rights Reserved.
         </div>
       </div>
     </div>
