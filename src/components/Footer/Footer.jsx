@@ -17,102 +17,56 @@ const Footer = () => {
   return (
     <div className="global-footer">
       <div className="footer-top-row">
-        <div className="footer-layout-left">
-          <div className="company-info-newsletter">
-            <h1>EMMA JU ESTATE</h1>
-          </div>
-
-          <div className="company-contacts">
-            {/* Left block with Acre NJ and Location */}
-            <div className="company-left-group">
-              <div className="company-acre">
-                <h3>
-                  <b>{footerConfig.left.specialization[lang]}</b>
-                </h3>
-                {footerConfig.left.name[lang]}
-              </div>
-              <div className="company-location">
-                <h3>
-                  <b>{footerConfig.left.locationTitle[lang]}</b>
-                </h3>
-                <span style={{ color: "#333" }}>
-                  {footerConfig.left.njLabel[lang]}
-                </span>{" "}
-                <span style={{ fontWeight: 500 }}>
-                  {footerConfig.left.njAddr1[lang]}
-                  <br />
-                  {footerConfig.left.njAddr2[lang]}
-                </span>
-                <br />
-                <span style={{ color: "#333" }}>
-                  {footerConfig.left.nyLabel[lang]}
-                </span>{" "}
-                <span style={{ fontWeight: 500 }}>
-                  {footerConfig.left.nyAddr1[lang]} <br />
-                  {footerConfig.left.nyAddr2[lang]}
-                </span>
-              </div>
-            </div>
-
-            {/* Right block with Contact */}
-            <div className="company-contact">
-              <h3>
-                <b>{footerConfig.contactTitle[lang]}</b>
-              </h3>
-              <a href="mailto:realtorlzj@gmail.com">realtorlzj@gmail.com</a>
-              <br />
-              <a href="tel:2017421625">(201)-742-1625</a>
-            </div>
+        
+        {/* Left Column: Brand & Specialization */}
+        <div className="footer-col footer-col-brand">
+          <h2 className="footer-brand-title">EMMA JU ESTATES</h2>
+          <div className="footer-specialization">
+            <h4>{footerConfig.left.specialization[lang]}</h4>
+            <p>{footerConfig.left.name[lang]}</p>
           </div>
         </div>
 
-        <div className="footer-layout-right">
-          <div className="newsletter">
-            <div className="newsletter-info">
-              <h3 style={{ marginBottom: "20px", color: "#000" }}>
-                {footerConfig.title[lang]}
-              </h3>
-              <p
-                style={{
-                  marginBottom: "20px",
-                  color: "#333",
-                  lineHeight: "1.6",
-                }}
-              >
-                {footerConfig.description[lang]}
-              </p>
-              <div style={{ display: "flex", justifyContent: "flex-start" }}>
-                <button
-                  style={{
-                    backgroundColor: "#333",
-                    color: "#fff",
-                    border: "none",
-                    padding: "10px 20px",
-                    borderRadius: "4px",
-                    cursor: "pointer",
-                    fontSize: "14px",
-                    fontWeight: "500",
-                    transition: "background-color 0.3s",
-                  }}
-                  onClick={() => navigate("/contact")}
-                >
-                  {footerConfig.links.contact[lang]}
-                </button>
-              </div>
-            </div>
+        {/* Middle Column: Locations */}
+        <div className="footer-col footer-col-locations">
+          <h4 className="footer-col-title">{footerConfig.left.locationTitle[lang]}</h4>
+          <div className="footer-location-item">
+            <span className="location-label">{footerConfig.left.njLabel[lang]}</span>
+            <p>
+              {footerConfig.left.njAddr1[lang]}<br />
+              {footerConfig.left.njAddr2[lang]}
+            </p>
+          </div>
+          <div className="footer-location-item">
+            <span className="location-label">{footerConfig.left.nyLabel[lang]}</span>
+            <p>
+              {footerConfig.left.nyAddr1[lang]}<br />
+              {footerConfig.left.nyAddr2[lang]}
+            </p>
           </div>
         </div>
+
+        {/* Right Column 1: Contact Info */}
+        <div className="footer-col footer-col-contact">
+          <h4 className="footer-col-title">{footerConfig.contactTitle[lang]}</h4>
+          <a href="mailto:realtorlzj@gmail.com" className="footer-contact-link">realtorlzj@gmail.com</a>
+          <a href="tel:2017421625" className="footer-contact-link">(201)-742-1625</a>
+        </div>
+
+        {/* Right Column 2: Call to Action */}
+        <div className="footer-col footer-col-cta">
+          <h4 className="footer-col-title">{footerConfig.title[lang]}</h4>
+          <p className="footer-cta-desc">{footerConfig.description[lang]}</p>
+          <button className="footer-cta-btn" onClick={() => navigate("/contact")}>
+            {footerConfig.links.contact[lang]}
+          </button>
+        </div>
+
       </div>
 
       {/* Navigation Links + Social Icons on the same row */}
       <div className="footer-bottom-row">
         <div className="footer-links">
-          <a href="/">{footerConfig.links.home[lang]}</a>
-          <a href="/about">{footerConfig.links.about[lang]}</a>
-          <a href="/emma">{footerConfig.links.emma[lang]}</a>
-          <a href="/featured-listings">{footerConfig.links.featured[lang]}</a>
-          <a href="/valuation">{footerConfig.links.valuation[lang]}</a>
-          <a href="/contact">{footerConfig.links.contact[lang]}</a>
         </div>
 
         <div className="container-social-media">

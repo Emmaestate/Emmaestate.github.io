@@ -11,16 +11,115 @@
   box-sizing: border-box;
 }
 
-/* === TOP ROW: Left & Right Columns === */
+/* === TOP ROW: 4 Columns Grid === */
 .footer-top-row {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
   width: 100%;
   box-sizing: border-box;
+  padding-bottom: 40px;
 }
 
-/* Footer Logos Container */
+/* Base column styles */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-brand-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-col-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Specific Columns */
+.footer-specialization h4 {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.footer-specialization p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.footer-location-item {
+  margin-bottom: 20px;
+}
+
+.location-label {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.footer-location-item p {
+  color: #333;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.footer-contact-link {
+  color: #222;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.footer-cta-desc {
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.footer-cta-btn {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+  padding: 12px 28px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-cta-btn:hover {
+  background-color: transparent;
+  color: #222;
+}
+
+/* Footer Logos Container (Bottom Label area) */
 .footer-logos {
   display: flex;
   align-items: center;
@@ -357,24 +456,13 @@
 @media (max-width: 768px) {
   /* Stack top columns vertically on small screens */
   .footer-top-row {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .footer-layout-left,
-  .footer-layout-right {
-    max-width: 100%;
-    padding: 0;
-  }
-
-  /* Newsletter full width and left aligned on mobile */
-  .footer-layout-right {
-    justify-content: flex-start;
-  }
-
-  .newsletter {
-    max-width: 100%;
-    width: 100%;
+  .footer-col {
+    align-items: center;
+    text-align: center;
   }
 
   /* Stack bottom row vertically */
