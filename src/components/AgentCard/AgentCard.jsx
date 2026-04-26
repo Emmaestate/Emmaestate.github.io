@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AgentCard.css';
 
-const AgentCard = ({ image, name, label, description, email, phone }) => {
+const AgentCard = ({ image, name, label, licenseNumber, description, email, phone }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
   const MAX_LENGTH = 150; 
@@ -19,6 +19,15 @@ const AgentCard = ({ image, name, label, description, email, phone }) => {
             <div className="agent-contact">
               {email && <a href={`mailto:${email}`} className="agent-email">{email}</a>}
               {phone && <a href={`tel:${phone}`} className="agent-phone">{phone}</a>}
+            </div>
+          )}
+          
+          {licenseNumber && (
+            <div className="agent-licenses">
+              <span className="agent-licenses-title">License Number:</span>
+              {Object.entries(licenseNumber).map(([state, number]) => (
+                <span key={state} className="agent-license">{state}: {number}</span>
+              ))}
             </div>
           )}
         </div>

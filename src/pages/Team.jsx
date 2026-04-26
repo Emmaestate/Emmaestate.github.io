@@ -63,6 +63,7 @@ function Team() {
                   ? leader.label_zh
                   : leader.label
               }
+              licenseNumber={leader["License Number"]}
               description={
                 lang === "zh" && leader.description_zh
                   ? leader.description_zh
@@ -84,6 +85,7 @@ function Team() {
                   ? member.label_zh
                   : member.label
               }
+              licenseNumber={member["License Number"]}
               description={
                 lang === "zh" && member.description_zh
                   ? member.description_zh

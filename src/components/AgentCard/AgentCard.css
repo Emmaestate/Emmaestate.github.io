@@ -49,7 +49,29 @@
   font-size: 1.2rem;
   color: #666;
   margin-top: 0.4rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.agent-licenses {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.agent-licenses-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.agent-license {
+  font-size: 0.9rem;
+  color: #555;
+  background: #f4f4f4;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
 }
 
 .agent-contact {
