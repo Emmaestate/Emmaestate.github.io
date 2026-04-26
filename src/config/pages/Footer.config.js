@@ -21,7 +21,7 @@ export default {
   },
   left: {
     specialization: { en: "Specializing in Luxury Real Estate", zh: "专注豪华房地产" },
-    name: { en: "Lizhen(Emma) Ju", zh: "Lizhen(Emma) Ju" },
+    name: { en: " ", zh: " " },
     locationTitle: { en: "Location", zh: "地址" },
     njLabel: { en: "NJ OFFICE:", zh: "新泽西办公室：" },
     njAddr1: { en: "2160 N Central Rd #111", zh: "2160 N Central Rd #111" },

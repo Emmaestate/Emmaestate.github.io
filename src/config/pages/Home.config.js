@@ -5,12 +5,12 @@ export default {
       zh: ["欢迎来到", ""],
     },
     headline: {
-      en: ["EMMA JU ESTATES", "Specializing in Luxury\nREAL ESTATE"],
-      zh: ["EMMA JU ESTATES", "专注豪华房产\n专业服务"],
+      en: ["EMMA JU TEAM", "SPECIALIZING IN LUXURY REAL ESTATE"],
+      zh: ["EMMA JU团队", "专营豪华房产"],
     },
     subheading: {
-      en: ["Your Luxury Home Professional", "Across Manhattan and the NJ Gold Coast"],
-      zh: ["豪宅置业专家", "服务曼哈顿与新泽西黄金海岸"],
+      en: ["AFFILIATED WITH ACRE NY REALTY AND ACRE NJ", "ACROSS MANHATTAN AND THE NJ GOLD COAST"],
+      zh: ["隶属于ACRE NY REALTY和ACRE NJ", "服务曼哈顿与新泽西黄金海岸"],
     },
     cta: {
       en: "OUR PROPERTIES",
@@ -22,8 +22,8 @@ export default {
       title: { en: "ACQUIRE", zh: "购置" },
       subtitle: { en: "Find Your Dream Home", zh: "寻找理想之家" },
       description: {
-        en: "Discover exclusive properties and personalized buying experiences tailored to your lifestyle across Manhattan, Fort Lee and New Jersey’s Gold Coast. We guide you through every step of the home-finding journey that truly reflects who you are.",
-        zh: "探索优质房源，定制化购房体验覆盖曼哈顿、Fort Lee 与新泽西黄金海岸。我们在每个环节为你提供专业指引，找到真正适合你的家。",
+        en: "Explore thoughtfully selected properties across Manhattan and New Jersey’s Gold Coast, with access to new construction and off-market opportunities not widely available. Backed by strong market insight and industry connections, we provide the guidance and strategy needed to help you secure a home that aligns with your lifestyle and long-term goals.",
+        zh: "探索曼哈顿和新泽西黄金海岸精心挑选的房产，可以接触到新建筑和市场外的机会，这些机会并不普遍。凭借强大的市场洞察力和行业联系，我们提供所需的指导和策略，帮助您确保符合您的生活方式和长期目标的房屋。",
       },
       btn: { en: "EXPLORE LISTINGS", zh: "浏览房源" },
     },
@@ -31,8 +31,8 @@ export default {
       title: { en: "CURATE", zh: "出售" },
       subtitle: { en: "Selling With Confidence", zh: "自信出售" },
       description: {
-        en: "Maximize your property's value with our strategic marketing and expert negotiation skills. From staging to closing, we handle the details with precision so you can move forward with peace of mind.",
-        zh: "通过策略化营销与专业谈判，最大化房产价值。从布置到成交，我们精细把控每一个细节，让你安心前行。",
+        en: "Maximize your property’s value through data-driven marketing, precise pricing strategy, and access to a broad network of local and international buyers. From pre-market preparation—including light renovations handled by our trusted team—to staging and closing, every step is executed with intention to elevate your property’s presentation and maximize its value.",
+        zh: "通过数据驱动的营销、精确的定价策略以及广泛的本地和国际买家网络，使您的房产价值最大化。从上市前的准备——包括由我们值得信赖的团队处理的轻型装修——到分期和关闭，每一步的执行都旨在提升您的房产的外观并最大化其价值。",
       },
       btn: { en: "REQUEST VALUATION", zh: "获取估价" },
     },
@@ -44,8 +44,8 @@ export default {
     },
     title: { en: "WORK WITH US", zh: "和我们一起工作" },
     description: {
-      en: "Specializing in Manhattan and Bergen County, New Jersey, we provide expert representation for buyers, sellers, and renters.",
-      zh: "专注于曼哈顿和新泽西州 Bergen 郡，我们为买家、卖家和租客提供专业的代理服务。",
+      en: "Selling or buying a home is a strategic decision. With strong market insight, access to local and international buyers, and hands-on execution, we help you navigate each step with clarity and confidence.",
+      zh: "出售或购买房屋是一个战略决策。凭借强大的市场洞察力、对本地和国际买家的访问权限以及实际执行，我们帮助您清晰地导航每一步。",
     },
     btnText: {
       en: "CONTACT US",
@@ -61,19 +61,20 @@ export default {
   },
   agentProfile: {
     title: { en: "Meet Emma Ju", zh: "认识 Emma Ju" },
-    role: { en: "Team Leader", zh: "团队负责人" },
+    role: { en: "TEAM LEADER | SALES MANAGER", zh: "团队负责人 | 销售经理" },
     subtitle: {
       en: "Real estate specialist in Manhattan and the NJ gold coast",
       zh: "曼哈顿与新泽西黄金海岸房地产专家",
     },
     paragraphs: {
       en: [
-        "Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both city and suburban transactions with ease.",
-        "Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a trusted guide in today’s competitive real estate market.",
+        "Emma Ju is a real estate professional with Acre NY Realty and Acre NJ, specializing in Manhattan and New Jersey’s Gold Coast. ","In 2025, she achieved over $26 million in sales volume and was recognized with the NJ REALTORS® Circle of Excellence Sales Award® – Gold Level. ",
+        "With strong connections in new construction and off-market opportunities, along with access to a broad network of local and international buyers, she helps position properties to reach the right audience and maximize value.",
       ],
       zh: [
-        "Emma Ju 是 Acre NY Realty 与 Acre NJ 的资深房地产顾问，具备深厚的市场洞察与专业口碑，帮助客户轻松处理城市与郊区的交易。",
-        "她精通中英文，服务买家、卖家与投资人。以客户为中心、沟通清晰，并重视长期关系，是当下竞争激烈市场中值得信赖的向导。",
+        "Emma Ju是Acre NY Realty和Acre NJ的房地产专业人士，专注于曼哈顿和新泽西州的黄金海岸。",
+        "在2025年，她实现了超过2600万美元的销售额，并获得了NJ REALTORS®卓越销售奖®金奖。",
+        "凭借在新建筑和场外市场机会方面的强大联系，以及广泛的本地和国际买家网络，她帮助定位物业，以吸引合适的受众并实现价值最大化。",
       ],
     },
     ctaText: { en: "Learn More", zh: "了解更多" },

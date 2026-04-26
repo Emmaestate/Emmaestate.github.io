@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./YoutubeFeed.css";
 
-const API_KEY = "AIzaSyCxKZpCzcLR5j8jvPXRG_K35ULmOhpm0zI";
-const CHANNEL_ID = "UCu3TGeWhuGT3X5z3qEmULgA";
+const API_KEY = "AIzaSyCxKZpCzcLR";
+const CHANNEL_ID = "UCu3TGeWh";
 
-const YoutubeFeed = ({ heading = "Latest Videos", loadMoreText = "Load More", loadingText = "Loading..." }) => {
+const YoutubeFeed = ({
+  heading = "Latest Videos",
+  loadMoreText = "Load More",
+  loadingText = "Loading...",
+}) => {
   const [videos, setVideos] = useState([]);
   const [nextPageToken, setNextPageToken] = useState("");
   const [loading, setLoading] = useState(false);
@@ -25,14 +29,14 @@ const YoutubeFeed = ({ heading = "Latest Videos", loadMoreText = "Load More", lo
 
       // Filter to make sure it's a video
       const fetchedVideos = data.items.filter(
-        (item) => item.id.kind === "youtube#video"
+        (item) => item.id.kind === "youtube#video",
       );
-      
+
       setVideos((prev) => {
         const newList = pageToken ? [...prev, ...fetchedVideos] : fetchedVideos;
         // Deduplicate based on videoId to prevent React StrictMode double-fetch issues
         return Array.from(
-          new Map(newList.map((video) => [video.id.videoId, video])).values()
+          new Map(newList.map((video) => [video.id.videoId, video])).values(),
         );
       });
       setNextPageToken(data.nextPageToken || "");
@@ -50,11 +54,16 @@ const YoutubeFeed = ({ heading = "Latest Videos", loadMoreText = "Load More", lo
   return (
     <div className="youtube-feed-container">
       <h2 className="youtube-feed-title">{heading}</h2>
-      {error && <p className="youtube-feed-error">Error loading videos: {error}</p>}
-      
+      {error && (
+        <p className="youtube-feed-error">Error loading videos: {error}</p>
+      )}
+
       <div className="youtube-grid">
         {videos.map((video, index) => (
-          <div key={`${video.id.videoId}-${index}`} className="youtube-video-card">
+          <div
+            key={`${video.id.videoId}-${index}`}
+            className="youtube-video-card"
+          >
             <div className="youtube-video-wrapper">
               <iframe
                 src={`https://www.youtube.com/embed/${video.id.videoId}`}
@@ -67,7 +76,9 @@ const YoutubeFeed = ({ heading = "Latest Videos", loadMoreText = "Load More", lo
             <div className="youtube-video-info">
               <h3 className="youtube-video-title">
                 {/* Decode HTML entities if any */}
-                <span dangerouslySetInnerHTML={{ __html: video.snippet.title }}></span>
+                <span
+                  dangerouslySetInnerHTML={{ __html: video.snippet.title }}
+                ></span>
               </h3>
             </div>
           </div>

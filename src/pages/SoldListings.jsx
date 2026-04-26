@@ -12,6 +12,7 @@ import { useLanguage } from "../i18n/LanguageContext.jsx";
 import soldConfig from "../config/pages/Sold.config.js";
 import soldBannerImg from "../assets/sold_banner.jpg";
 import connectBannerImg from "../assets/connect_banner.jpeg";
+import homeConfig from "../config/pages/Home.config.js";
 import { getPropertyImages } from "../utils/propertyImages.js";
 
 // Transform data to match PropertyList expected format
@@ -54,10 +55,10 @@ const SoldListings = () => {
 
       <div>
         <Hero
-          subtitle={soldConfig.contactHero.subtitle[lang]}
-          title={soldConfig.contactHero.title[lang]}
-          description={soldConfig.contactHero.description[lang]}
-          btnText={soldConfig.contactHero.btnText[lang]}
+          subtitle={homeConfig.homeHero.subtitle[lang]}
+          title={homeConfig.homeHero.title[lang]}
+          description={homeConfig.homeHero.description[lang]}
+          btnText={homeConfig.homeHero.btnText[lang]}
           backgroundImage={connectBannerImg}
           height="700px"
         />

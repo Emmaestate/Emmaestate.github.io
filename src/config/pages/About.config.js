@@ -9,12 +9,16 @@ export default {
   intro: {
     title: { en: "GET TO KNOW ME", zh: "了解我" },
     text: {
-      en: `Emma Ju is a real estate professional with Acre NY Realty and Acre NJ. With deep market knowledge and a reputation for trust and professionalism, she helps clients navigate both city and suburban transactions with ease.
+      en: `Emma Ju is a real estate professional with Acre NY Realty and Acre NJ, specializing in properties across Manhattan and New Jersey’s Gold Coast. Known for her strong market insight, professionalism, and client-first approach, she guides buyers, sellers, and investors through both city and suburban transactions with confidence and ease.
 
-Fluent in English and Mandarin, Emma works with a diverse range of buyers, sellers, and investors. Her client-first approach, clear communication, and dedication to long-term relationships make her a trusted guide in today’s competitive real estate market.`,
-      zh: `Emma Ju 是 Acre NY Realty 与 Acre NJ 的资深房地产顾问，拥有深厚的市场洞察与专业声誉，擅长处理纽约都市与新泽西郊区的房产交易。
+In 2025, Emma achieved over $26 million in sales volume and was recognized with the NJ REALTORS® Circle of Excellence Sales Award® – Gold Level, reflecting her consistent performance and commitment to delivering results.
 
-她精通中英文，服务买家、卖家与投资人。以客户为中心、沟通清晰，并重视长期关系，在竞争激烈的市场中始终值得信赖。`,
+Fluent in English and Mandarin, Emma works with a diverse, international clientele. With a strong network in new construction and off-market opportunities, she provides clients with access, strategy, and clear guidance at every step. Her focus on communication, trust, and long-term relationships makes her a reliable partner in today’s competitive real estate market.`,
+      zh: `Emma Ju是Acre NY Realty和Acre NJ的房地产专业人士，专门从事曼哈顿和新泽西黄金海岸的房地产。她以其强大的市场洞察力，专业精神和客户至上的方法而闻名，她引导买家，卖家和投资者通过城市和郊区的交易充满信心和轻松。
+
+2025年，Emma实现了超过2600万美元的销售额，并获得了NJ REALTORS®卓越销售奖®金奖，这反映了她一贯的表现和对交付成果的承诺。
+
+流利的英语和普通话，艾玛与不同的国际客户合作。凭借在新建筑和场外市场机会方面的强大网络，她在每一步都为客户提供渠道、策略和明确的指导。她对沟通、信任和长期关系的关注使她成为当今竞争激烈的房地产市场中可靠的合作伙伴。`,
     },
   },
   contactHero: {

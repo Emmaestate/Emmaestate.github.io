@@ -13,6 +13,7 @@ import connectBannerImg from "../assets/connect_banner.jpeg";
 import "./Team.css";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import teamConfig from "../config/pages/Team.config.js";
+import homeConfig from "../config/pages/Home.config.js";
 
 function Team() {
   const { lang } = useLanguage();
@@ -96,10 +97,10 @@ function Team() {
       </div>
       <ContactFormPopup />
       <Hero
-        subtitle={teamConfig.contactHero.subtitle[lang]}
-        title={teamConfig.contactHero.title[lang]}
-        description={teamConfig.contactHero.description[lang]}
-        btnText={teamConfig.contactHero.btnText[lang]}
+        subtitle={homeConfig.homeHero.subtitle[lang]}
+        title={homeConfig.homeHero.title[lang]}
+        description={homeConfig.homeHero.description[lang]}
+        btnText={homeConfig.homeHero.btnText[lang]}
         backgroundImage={connectBannerImg}
         height="700px"
       />

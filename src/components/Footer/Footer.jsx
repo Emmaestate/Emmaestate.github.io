@@ -17,7 +17,6 @@ const Footer = () => {
   return (
     <div className="global-footer">
       <div className="footer-top-row">
-        
         {/* Left Column: Brand & Specialization */}
         <div className="footer-col footer-col-brand">
           <h2 className="footer-brand-title">EMMA JU ESTATES</h2>
@@ -29,18 +28,26 @@ const Footer = () => {
 
         {/* Middle Column: Locations */}
         <div className="footer-col footer-col-locations">
-          <h4 className="footer-col-title">{footerConfig.left.locationTitle[lang]}</h4>
+          <h4 className="footer-col-title">
+            {footerConfig.left.locationTitle[lang]}
+          </h4>
           <div className="footer-location-item">
-            <span className="location-label">{footerConfig.left.njLabel[lang]}</span>
+            <span className="location-label">
+              {footerConfig.left.njLabel[lang]}
+            </span>
             <p>
-              {footerConfig.left.njAddr1[lang]}<br />
+              {footerConfig.left.njAddr1[lang]}
+              <br />
               {footerConfig.left.njAddr2[lang]}
             </p>
           </div>
           <div className="footer-location-item">
-            <span className="location-label">{footerConfig.left.nyLabel[lang]}</span>
+            <span className="location-label">
+              {footerConfig.left.nyLabel[lang]}
+            </span>
             <p>
-              {footerConfig.left.nyAddr1[lang]}<br />
+              {footerConfig.left.nyAddr1[lang]}
+              <br />
               {footerConfig.left.nyAddr2[lang]}
             </p>
           </div>
@@ -48,26 +55,33 @@ const Footer = () => {
 
         {/* Right Column 1: Contact Info */}
         <div className="footer-col footer-col-contact">
-          <h4 className="footer-col-title">{footerConfig.contactTitle[lang]}</h4>
-          <a href="mailto:realtorlzj@gmail.com" className="footer-contact-link">realtorlzj@gmail.com</a>
-          <a href="tel:2017421625" className="footer-contact-link">(201)-742-1625</a>
+          <h4 className="footer-col-title">
+            {footerConfig.contactTitle[lang]}
+          </h4>
+          <a href="mailto:emma@acrenj.us" className="footer-contact-link">
+            emma@acrenj.us
+          </a>
+          <a href="tel:2017421625" className="footer-contact-link">
+            (201)-742-1625
+          </a>
         </div>
 
         {/* Right Column 2: Call to Action */}
         <div className="footer-col footer-col-cta">
           <h4 className="footer-col-title">{footerConfig.title[lang]}</h4>
           <p className="footer-cta-desc">{footerConfig.description[lang]}</p>
-          <button className="footer-cta-btn" onClick={() => navigate("/contact")}>
+          <button
+            className="footer-cta-btn"
+            onClick={() => navigate("/contact")}
+          >
             {footerConfig.links.contact[lang]}
           </button>
         </div>
-
       </div>
 
       {/* Navigation Links + Social Icons on the same row */}
       <div className="footer-bottom-row">
-        <div className="footer-links">
-        </div>
+        <div className="footer-links"></div>
 
         <div className="container-social-media">
           <ul>
@@ -145,14 +159,27 @@ const Footer = () => {
       {/* Bottom Footer Label */}
       <div className="footer-label">
         <div className="footer-logos">
-          <a href="https://www.acreny.us/" target="_blank" rel="noopener noreferrer" className="footer-logo-link">
+          <a
+            href="https://www.acreny.us/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-logo-link"
+          >
             <img
               src={companyLogo}
               alt="ACRE NY Realty"
               className="footer-company-logo"
             />
           </a>
-          <a href="#" onClick={(e) => { e.preventDefault(); navigate("/"); window.scrollTo(0,0); }} className="footer-logo-link">
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/");
+              window.scrollTo(0, 0);
+            }}
+            className="footer-logo-link"
+          >
             <img
               src={footer_logo}
               alt="Emma Ju Estates"
@@ -160,9 +187,7 @@ const Footer = () => {
             />
           </a>
         </div>
-        <div>
-          Copyright © 2025 Emma Ju Estates - All Rights Reserved.
-        </div>
+        <div>Copyright © 2025 Emma Ju Estates - All Rights Reserved.</div>
       </div>
     </div>
   );

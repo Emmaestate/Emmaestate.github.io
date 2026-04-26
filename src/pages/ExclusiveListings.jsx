@@ -13,6 +13,7 @@ import { useLanguage } from "../i18n/LanguageContext.jsx";
 import exclusiveConfig from "../config/pages/Exclusive.config.js";
 import exclusiveBannerImg from "../assets/exclusive_banner.jpeg";
 import connectBannerImg from "../assets/connect_banner.jpeg";
+import homeConfig from "../config/pages/Home.config.js";
 import { getPropertyImages } from "../utils/propertyImages.js";
 
 const exclusiveProperties = exclusiveData.map((item) => {
@@ -43,10 +44,10 @@ const ExclusiveListings = () => {
 
       <div>
         <Hero
-          subtitle={exclusiveConfig.contactHero.subtitle[lang]}
-          title={exclusiveConfig.contactHero.title[lang]}
-          description={exclusiveConfig.contactHero.description[lang]}
-          btnText={exclusiveConfig.contactHero.btnText[lang]}
+          subtitle={homeConfig.homeHero.subtitle[lang]}
+          title={homeConfig.homeHero.title[lang]}
+          description={homeConfig.homeHero.description[lang]}
+          btnText={homeConfig.homeHero.btnText[lang]}
           backgroundImage={connectBannerImg}
           height="700px"
         />

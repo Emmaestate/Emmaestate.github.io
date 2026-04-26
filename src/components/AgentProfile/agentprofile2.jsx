@@ -23,15 +23,21 @@ const AgentProfile2 = () => {
         {/* Agent Content */}
         <div className="agent-profile__content">
           <div>
-            <h2 className="agent-name">{aboutConfig.agentProfile2.name[lang]}</h2>
-            <p className="agent-position">{aboutConfig.agentProfile2.position[lang]}</p>
+            <h2 className="agent-name">
+              {aboutConfig.agentProfile2.name[lang]}
+            </h2>
+            <p className="agent-position">
+              {aboutConfig.agentProfile2.position[lang]}
+            </p>
 
             <div className="agent-contact">
               {/* Row 1: Two columns side by side */}
               <div className="contact-row contact-row--split">
                 <div className="split-item">
                   <div className="contact-item">
-                    <p className="contact-title">{aboutConfig.agentProfile2.labels.primaryPhone[lang]}</p>
+                    <p className="contact-title">
+                      {aboutConfig.agentProfile2.labels.primaryPhone[lang]}
+                    </p>
                     <a
                       className="agent-link"
                       href="tel:(201)-742-1625"
@@ -46,20 +52,30 @@ const AgentProfile2 = () => {
 
               {/* Row 2: Full width */}
               <div className="contact-row">
-                <p className="contact-title">{aboutConfig.agentProfile2.labels.email[lang]}</p>
-                <a className="agent-link" href="mailto:realtorlzj@gmail.com">
-                  realtorlzj@gmail.com
+                <p className="contact-title">
+                  {aboutConfig.agentProfile2.labels.email[lang]}
+                </p>
+                <a className="agent-link" href="mailto:emma@acrenj.us">
+                  emma@acrenj.us
                 </a>
               </div>
 
               {/* Row 3: Full width */}
               <div className="contact-row">
-                <p className="contact-title">{aboutConfig.agentProfile2.labels.address[lang]}</p>
-                <span style={{ color: "#aaa" }}>{aboutConfig.agentProfile2.address.njLabel[lang]}</span> {aboutConfig.agentProfile2.address.njAddr1[lang]}
+                <p className="contact-title">
+                  {aboutConfig.agentProfile2.labels.address[lang]}
+                </p>
+                <span style={{ color: "#aaa" }}>
+                  {aboutConfig.agentProfile2.address.njLabel[lang]}
+                </span>{" "}
+                {aboutConfig.agentProfile2.address.njAddr1[lang]}
                 <br />
                 {aboutConfig.agentProfile2.address.njAddr2[lang]}
                 <br /> <br />
-                <span style={{ color: "#aaa" }}>{aboutConfig.agentProfile2.address.nyLabel[lang]}</span> {aboutConfig.agentProfile2.address.nyAddr1[lang]}
+                <span style={{ color: "#aaa" }}>
+                  {aboutConfig.agentProfile2.address.nyLabel[lang]}
+                </span>{" "}
+                {aboutConfig.agentProfile2.address.nyAddr1[lang]}
                 <br />
                 {aboutConfig.agentProfile2.address.nyAddr2[lang]}
               </div>

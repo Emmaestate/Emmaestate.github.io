@@ -11,6 +11,7 @@ import aboutHeroImg from "../assets/about1.webp";
 import YoutubeFeed from "../components/YoutubeFeed/YoutubeFeed.jsx";
 import { useLanguage } from "../i18n/LanguageContext.jsx";
 import aboutConfig from "../config/pages/About.config.js";
+import homeConfig from "../config/pages/Home.config.js";
 import connectBannerImg from "../assets/connect_banner.jpeg";
 function About() {
   const { lang } = useLanguage();
@@ -32,18 +33,11 @@ function About() {
           text={aboutConfig.intro.text[lang]}
         />
       </div>
-
-      <YoutubeFeed
-        heading={aboutConfig.youtubeFeed.heading[lang]}
-        loadMoreText={aboutConfig.youtubeFeed.loadMore[lang]}
-        loadingText={aboutConfig.youtubeFeed.loading[lang]}
-      />
-
       <Hero
-        subtitle={aboutConfig.contactHero.subtitle[lang]}
-        title={aboutConfig.contactHero.title[lang]}
-        description={aboutConfig.contactHero.description[lang]}
-        btnText={aboutConfig.contactHero.btnText[lang]}
+        subtitle={homeConfig.homeHero.subtitle[lang]}
+        title={homeConfig.homeHero.title[lang]}
+        description={homeConfig.homeHero.description[lang]}
+        btnText={homeConfig.homeHero.btnText[lang]}
         backgroundImage={connectBannerImg}
         height="700px"
       />
@@ -56,3 +50,9 @@ function About() {
 }
 
 export default About;
+
+//  <YoutubeFeed
+//     heading={aboutConfig.youtubeFeed.heading[lang]}
+//     loadMoreText={aboutConfig.youtubeFeed.loadMore[lang]}
+//     loadingText={aboutConfig.youtubeFeed.loading[lang]}
+//   />

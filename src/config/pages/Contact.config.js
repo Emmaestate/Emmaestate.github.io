@@ -10,7 +10,7 @@ export default {
   contactDetailsTitle: { en: "Contact Details", zh: "联系方式" },
   specialization: { en: "Specializing in Luxury Real Estate", zh: "专注豪华房地产" },
   name: { en: "Lizhen (Emma) Ju", zh: "Lizhen (Emma) Ju" },
-  email: { en: "realtorlzj@gmail.com", zh: "realtorlzj@gmail.com" },
+  email: { en: "emma@acrenj.us", zh: "emma@acrenj.us" },
   phone: { en: "(201)-742-1625", zh: "(201)-742-1625" },
   locationTitle: { en: "Location", zh: "地址" },
   njLabel: { en: "NJ OFFICE:", zh: "新泽西办公室：" },
