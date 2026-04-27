@@ -1,16 +1,16 @@
 export default {
   videoWrapper: {
     preheadline: {
-      en: ["WELCOME TO", ""],
-      zh: ["欢迎来到", ""],
+      en: ["WELCOME TO", "", ""],
+      zh: ["欢迎来到", "", ""],
     },
     headline: {
-      en: ["EMMA JU TEAM", "SPECIALIZING IN LUXURY REAL ESTATE"],
-      zh: ["EMMA JU团队", "专营豪华房产"],
+      en: ["EMMA JU TEAM", "SPECIALIZING IN LUXURY REAL ESTATE", "LOCAL EXPERTISE. GLOBAL REACH."],
+      zh: ["EMMA JU团队", "专营豪华房产", "本地专业知识。全球覆盖"],
     },
     subheading: {
-      en: ["AFFILIATED WITH ACRE NY REALTY AND ACRE NJ", "ACROSS MANHATTAN AND THE NJ GOLD COAST"],
-      zh: ["隶属于ACRE NY REALTY和ACRE NJ", "服务曼哈顿与新泽西黄金海岸"],
+      en: ["AFFILIATED WITH ACRE NY REALTY AND ACRE NJ", "ACROSS MANHATTAN AND THE NJ GOLD COAST", ""],
+      zh: ["隶属于ACRE NY REALTY和ACRE NJ", "服务曼哈顿与新泽西黄金海岸", ""],
     },
     cta: {
       en: "OUR PROPERTIES",
