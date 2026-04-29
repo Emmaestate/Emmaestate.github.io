@@ -63,7 +63,7 @@ const PropertyDetail = () => {
     } else if (id.startsWith("exclusive-")) {
       const realId = id.replace("exclusive-", "");
       foundProperty = exclusiveData.find((item) => item.id === realId);
-      status = "Exclusive";
+      status = "Active";
     } else if (id.startsWith("active-")) {
       const realId = id.replace("active-", "");
       foundProperty = activeData.find((item) => item.id === realId);

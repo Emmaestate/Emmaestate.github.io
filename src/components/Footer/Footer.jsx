@@ -7,6 +7,7 @@ import wechat_icon from "../../assets/wechat.png";
 import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
 import companyLogo from "../../assets/company.jpeg";
+import realtorLogo from "../../assets/realtor.png";
 import footer_logo from "../../assets/footer-logo.jpeg";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import footerConfig from "../../config/pages/Footer.config.js";
@@ -81,7 +82,7 @@ const Footer = () => {
 
       {/* Navigation Links + Social Icons on the same row */}
       <div className="footer-bottom-row">
-        <div className="footer-links"></div>
+        <div className="footer-links">All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</div>
 
         <div className="container-social-media">
           <ul>
@@ -159,6 +160,9 @@ const Footer = () => {
       {/* Bottom Footer Label */}
       <div className="footer-label">
         <div className="footer-logos">
+          <span style={{ marginRight: "10px", padding: ".3rem 1.2rem", borderRadius: "3px", backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
+            <img style={{ height: '3rem' }}  src={realtorLogo} alt="Realtor Logo" className="footer-realtor-logo" />
+          </span>
           <a
             href="https://www.acreny.us/"
             target="_blank"
@@ -186,6 +190,7 @@ const Footer = () => {
               className="footer-website-logo"
             />
           </a>
+          
         </div>
         <div>Copyright © 2025 Emma Ju Estates - All Rights Reserved.</div>
       </div>

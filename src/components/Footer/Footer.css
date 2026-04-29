@@ -138,7 +138,7 @@
 
 .footer-company-logo,
 .footer-website-logo {
-  height: 35px; /* Adjust height as needed */
+  height: 40px; /* Adjust height as needed */
   width: auto;
   object-fit: contain;
   display: block;
@@ -318,6 +318,7 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
+  font-size: 1rem;
 }
 
 .footer-links a {
@@ -447,7 +448,7 @@
 }
 
 .footer-company-logo {
-  height: 30px;
+  height: 40px;
   width: auto;
   object-fit: contain;
 }

@@ -358,7 +358,7 @@
     "imgid": "1060 Anderson"
   },
   {
-    "id": "7586048",
+    "id": "",
     "imageKey": "sold_252_south_st_unit_48g",
     "address": "252 South St Unit 48G, New York, NY 10002",
     "price": 2325610,
@@ -419,7 +419,7 @@
     "id": "240020251",
     "imageKey": "sold_281_central_avenue_ph5a",
     "address": "281 Central Avenue #PH5A, Jersey City, NJ 07307",
-    "price": 0,
+    "price": 1190000,
     "bedrooms": 3,
     "bathrooms": 2.5,
     "sqft": null,
