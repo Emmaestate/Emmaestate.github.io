@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 const OPTIONS = {
   loop: true,
   align: "start",
-  slidesToScroll: 2,
+  slidesToScroll: 1,
   breakpoints: {
     "(max-width: 768px)": { slidesToScroll: 1 },
   },
@@ -65,9 +65,12 @@ const EmblaCarousel = () => {
     <section className="embla">
       <div className="embla__controls">
         <h1 className="embla__heading">{homeConfig.portfolio.title[lang]}</h1>
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        <div className="embla__right-controls">
+          <a href="#/properties/soldlist" className="embla__view-all">VIEW ALL</a>
+          <div className="embla__buttons">
+            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          </div>
         </div>
       </div>
 
@@ -84,7 +87,7 @@ const EmblaCarousel = () => {
                   className="listing-image-container"
                   style={{
                     width: "100%",
-                    height: "70%",
+                    height: "60%", /* increased percentage to make image taller relative to container */
                     backgroundColor: "#e0e0e0",
                     overflow: "hidden",
                   }}

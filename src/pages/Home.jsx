@@ -1,5 +1,6 @@
 import React from "react";
 import AgentProfile from "../Components/AgentProfile/agentprofile.jsx";
+import AgentProfile3 from "../components/AgentProfile/agentprofile3.jsx";
 import Hero from "../Components/Hero/Hero.jsx";
 import Hero_2 from "../Components/Hero2/Hero2.jsx";
 import Communities from "../Components/Communities/Communities.jsx";
@@ -28,7 +29,7 @@ const Home = () => {
       <Layout />
       <VideoWrapper />
       <div className="container-type1">
-        <AgentProfile
+        <AgentProfile3
           title={homeConfig.agentProfile.title[lang]}
           role={homeConfig.agentProfile.role[lang]}
           position={homeConfig.agentProfile.subtitle[lang]}
@@ -47,7 +48,7 @@ const Home = () => {
       </div>
 
       <Testimonials
-        title={homeConfig.testimonials.title[lang]}
+        title="OUR CLIENTS"
         subtitle={homeConfig.testimonials.subtitle[lang]}
       />
 

@@ -80,7 +80,7 @@ export default {
     ctaText: { en: "Learn More", zh: "了解更多" },
   },
   portfolio: {
-    title: { en: "Finalized Acquisitions", zh: "已完成交易" },
+    title: { en: "EMMA'S PORTFOLIO", zh: "EMMA'S PORTFOLIO" },
     beds: { en: "Beds", zh: "卧室" },
     baths: { en: "Baths", zh: "卫浴" },
   },

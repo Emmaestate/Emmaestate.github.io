@@ -17,38 +17,23 @@ const ReviewCard = ({ comment }) => {
     lang === "zh" && comment.content_zh ? comment.content_zh : comment.content;
   const isLong = displayContent.length > MAX_LENGTH;
 
-  // Generate an avatar initial
-  const avatarInitial = comment.name
-    ? comment.name.charAt(0).toUpperCase()
-    : "U";
+  // Extract a short title from the comment or use a default one
+  const title = lang === "zh" 
+    ? "专业、知识渊博且易于合作" 
+    : "Professional, knowledgeable, and easy to work with";
 
   return (
     <div className="testimonial-card">
-      <div className="testimonial-header">
-        <div className="testimonial-avatar">
-          {comment.avatar ? (
-            <img src={comment.avatar} alt={comment.name} />
-          ) : (
-            <div className="avatar-placeholder">{avatarInitial}</div>
-          )}
-        </div>
-        <div className="testimonial-info">
-          <h4 className="testimonial-name">{comment.name}</h4>
-          <span className="testimonial-date">{comment.date}</span>
-        </div>
-        <div className="testimonial-stars" style={{ marginLeft: "auto" }}>
-          {[...Array(5)].map((_, i) => (
-            <span key={i} className={i < comment.star ? "star active" : "star"}>
-              ★
-            </span>
-          ))}
-        </div>
+      <div className="testimonial-stars">
+        {[...Array(5)].map((_, i) => (
+          <span key={i} className={i < comment.star ? "star active" : "star"}>
+            ★
+          </span>
+        ))}
       </div>
 
       <div className="testimonial-content">
-        <div
-          className={`testimonial-text-wrapper ${isExpanded ? "expanded" : ""}`}
-        >
+        <div className={`testimonial-text-wrapper ${isExpanded ? "expanded" : ""}`}>
           <p>{displayContent}</p>
         </div>
         {isLong && (
@@ -66,52 +51,59 @@ const ReviewCard = ({ comment }) => {
           </button>
         )}
       </div>
+
+      <div className="testimonial-author">
+        — {comment.name}
+      </div>
     </div>
   );
 };
 
 const Testimonials = ({
-  title = "What Our Clients Say",
-  subtitle = "Read success stories from people who have worked with us.",
+  title = "OUR CLIENTS",
+  subtitle = "ABOUT US",
 }) => {
+  const { lang } = useLanguage();
   return (
     <section className="testimonials-section">
       <div className="testimonials-container">
-        <div className="testimonials-title-wrapper">
-          <h2 className="testimonials-title">{title}</h2>
+        <div className="testimonials-left">
           <p className="testimonials-subtitle">{subtitle}</p>
+          <h2 className="testimonials-title">{title}</h2>
         </div>
 
-        <Swiper
-          modules={[Pagination, Autoplay, Navigation]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true, dynamicBullets: true }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          className="testimonials-swiper"
-        >
-          {commentsData.map((comment) => (
-            <SwiperSlide key={comment.id}>
-              <ReviewCard comment={comment} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="testimonials-right">
+          <Swiper
+            modules={[Pagination, Autoplay, Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={false}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+            }}
+            className="testimonials-swiper"
+          >
+            {commentsData.map((comment) => (
+              <SwiperSlide key={comment.id}>
+                <ReviewCard comment={comment} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );
