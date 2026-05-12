@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
 .global-footer {
   background-color: #000000;
   color: #ffffff;
-  padding: 60px 40px;
+  padding: 0px 40px 60px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -11,14 +13,15 @@
 }
 
 .footer-top-row {
-  margin-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding-bottom: 20px;
+  text-align: left;
 }
 
 .footer-brand-title {
-  font-family: "Italiana", serif;
-  font-size: 4.5rem;
+  font-family: "Bodoni Moda", serif;
+  font-size: 3.45rem; /* Set explicitly to 3.45rem as requested */
   letter-spacing: 2px;
   color: #ffffff;
   text-transform: uppercase;
@@ -28,13 +31,14 @@
   display: grid;
   grid-template-columns: 1.5fr 2fr 1.2fr 1.5fr;
   gap: 40px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .footer-col-title, .footer-col-title-left {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 25px;
+  font-size: 1.4rem; /* Scaled up from 0.95rem */
+  font-weight: 700;
+  font-family: 'Helvetica', serif;
+  margin-bottom: 20px;
   color: #ffffff;
 }
 
@@ -42,8 +46,8 @@
 .footer-logos {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
 .footer-logo-link {
@@ -52,37 +56,39 @@
 }
 
 .footer-website-logo {
-  height: 60px;
-  filter: brightness(0) invert(1);
+  height: 50px; /* Scaled up */
+  /* filter: brightness(0) invert(1); */
+  position: relative;
+  top:-3px;
 }
 
 .footer-company-logo {
-  height: 50px;
+  height: 48px; /* Scaled up */
   filter: brightness(0) invert(1);
 }
 
 .logo-divider {
   width: 1px;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.5);
+  height: 48px; /* Scaled up */
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .container-social-media ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 15px 0;
+  margin: 0 0 25px 0;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .socials__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
+  width: 42px; /* Scaled up */
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
   transition: all 0.3s ease;
 }
 
@@ -91,9 +97,9 @@
 }
 
 .socials__item img {
-  width: 20px;
+  width: 20px; /* Scaled up */
   height: 20px;
-  filter: brightness(0) invert(1);
+  filter: brightness(100) invert(1);
   transition: filter 0.3s ease;
 }
 
@@ -102,8 +108,8 @@
 }
 
 .footer-copyright {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem; /* Scaled up from 0.85rem */
+  color: rgba(255, 255, 255, 0.5);
   margin-top: 20px;
 }
 
@@ -111,29 +117,42 @@
 .footer-location-item {
   display: flex;
   align-items: flex-start;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.5;
+  font-size: 1.1rem; /* Scaled up from 0.9rem */
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
 }
 
 .location-dot {
   margin-right: 8px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 2rem; /* Scaled up */
+  vertical-align: top;
+  line-height: 2rem;
+  /* margin-top: 5px; */
 }
 
 .location-text {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 8px;
+  display: inline-block;
 }
 
 .location-label {
   font-weight: 500;
-  margin-bottom: 4px;
+  font-family: 'Helvetica', serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  white-space: nowrap;
 }
 
 .footer-location-item p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  display: block;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Helvetica', serif;
 }
 
 /* Contact Column */
@@ -145,14 +164,15 @@
 
 .contact-icon {
   margin-right: 10px;
-  font-size: 1rem;
-  color: #ffffff;
+  font-size: 1.4rem; /* Scaled up from 1rem */
+  color: rgba(255, 255, 255, 1);
 }
 
 .footer-contact-link {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 1);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.2rem; /* Scaled up from 0.9rem */
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -163,18 +183,20 @@
 
 /* Message Column */
 .footer-cta-desc {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem; /* Scaled up from 0.9rem */
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  font-family: 'Helvetica', serif;
   line-height: 1.6;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .footer-cta-btn {
   background-color: transparent;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 12px 30px;
-  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 14px 32px; /* Scaled up padding */
+  font-size: 1rem; /* Scaled up from 0.85rem */
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;

@@ -5,8 +5,8 @@ import instagram_icon from "../../assets/instagram.png";
 import wechat_icon from "../../assets/wechat.png";
 import youtube_icon from "../../assets/youtube.png";
 import facebook_icon from "../../assets/facebook.png";
-import companyLogo from "../../assets/company.jpeg";
-import footer_logo from "../../assets/footer-logo.jpeg";
+import companyLogo from "../../assets/company_b.png";
+import footer_logo from "../../assets/footer-logo_b.png";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
 import footerConfig from "../../config/pages/Footer.config.js";
 
@@ -17,7 +17,7 @@ const Footer = () => {
     <div className="global-footer">
       <div className="footer-content-wrapper">
         <div className="footer-top-row">
-          <div className="footer-brand-title">EMMA JU. ESTATE</div>
+          <div className="footer-brand-title">EMMA JU ESTATES</div>
         </div>
 
         <div className="footer-middle-row">
@@ -124,7 +124,7 @@ const Footer = () => {
           <div className="footer-col footer-col-contact">
             <h4 className="footer-col-title">{footerConfig.contactTitle[lang]}</h4>
             <div className="footer-contact-item">
-              <span className="contact-icon">✉</span>
+              <span className="contact-icon">✉️</span>
               <a href="mailto:emma@acrenj.us" className="footer-contact-link">
                 emma@acrenj.us
               </a>
