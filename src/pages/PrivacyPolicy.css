@@ -2,7 +2,8 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: 'Playfair Display', serif; /* Assuming this font is used elsewhere based on the screenshot style */
+  font-family: 'Cormorant Garamond', serif;
+/* Assuming this font is used elsewhere based on the screenshot style */
   color: #333;
   line-height: 1.8;
 }

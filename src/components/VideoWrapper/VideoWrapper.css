@@ -5,12 +5,12 @@
   height: 100vh;
   overflow: hidden;
   color: white;
-  font-family: "Italiana", sans-serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .fade-text{
-  font-family: "Italiana", sans-serif;
-  font-size: 75px;
+  font-family: 'Cormorant Garamond', serif;
+font-size: 75px;
   font-weight: 500;
 }
 

@@ -1,8 +1,8 @@
 :root {
   /* --gradient-color: var(--overlay-color, rgba(0, 0, 0, 0.4)); */
-  --global-primary-font-family: Cinzel, serif;
-  --global-secondary-font-family: 'Open Sans', sans-serif;
-  --fontColor: #fff;
+  --global-primary-font-family: 'Cormorant Garamond', serif;
+--global-secondary-font-family: 'Helvetica', sans-serif;
+--fontColor: #fff;
 }
 
 /* Main container */

@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding: 40px 2%;
   gap: 60px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .agent-profile3-content {
@@ -20,8 +20,8 @@
 
 .agent-profile3-title {
   font-size: 64px;
-  font-family: 'Italiana', serif;
-  font-weight: normal;
+  font-family: 'Cormorant Garamond', serif;
+font-weight: normal;
   text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 40px;

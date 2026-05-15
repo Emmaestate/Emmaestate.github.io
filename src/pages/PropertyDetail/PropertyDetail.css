@@ -36,8 +36,8 @@
 }
 
 .hero-address {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
+  font-family: 'Cormorant Garamond', serif;
+font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
@@ -114,8 +114,8 @@
 
 .property-description h2, 
 .property-features h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.8rem;
+  font-family: 'Cormorant Garamond', serif;
+font-size: 1.8rem;
   margin-bottom: 20px;
   color: #333;
 }
@@ -158,8 +158,8 @@
 }
 
 .agent-card h3 {
-  font-family: 'Cinzel', serif;
-  margin-bottom: 15px;
+  font-family: 'Cormorant Garamond', serif;
+margin-bottom: 15px;
 }
 
 .contact-agent-btn {
