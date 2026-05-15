@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
 
 .global-footer {
   background-color: #000000;
@@ -20,7 +20,8 @@
 }
 
 .footer-brand-title {
-  font-family: "Bodoni Moda", serif;
+  /* font-family: "Bodoni Moda", serif; */
+  font-family: 'Cormorant Garamond', serif;
   font-size: 3.45rem; /* Set explicitly to 3.45rem as requested */
   letter-spacing: 2px;
   color: #ffffff;
@@ -56,20 +57,20 @@
 }
 
 .footer-website-logo {
-  height: 50px; /* Scaled up */
+  height: 32px; /* Scaled up */
   /* filter: brightness(0) invert(1); */
   position: relative;
   top:-3px;
 }
 
 .footer-company-logo {
-  height: 48px; /* Scaled up */
+  height: 30px; /* Scaled up */
   filter: brightness(0) invert(1);
 }
 
 .logo-divider {
   width: 1px;
-  height: 48px; /* Scaled up */
+  height: 32px; /* Scaled up */
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -108,9 +109,23 @@
 }
 
 .footer-copyright {
-  font-size: 1.05rem; /* Scaled up from 0.85rem */
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.5);
-  margin-top: 20px;
+}
+
+.footer-disclaimer {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Bottom Full-Width Info */
+.footer-bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 25px;
+  margin-top: 50px;
 }
 
 /* Location Column */
@@ -239,6 +254,11 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .footer-bottom-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
   .footer-middle-row {
     grid-template-columns: 1fr 1fr;
   }

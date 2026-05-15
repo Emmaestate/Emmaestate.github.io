@@ -88,13 +88,13 @@ const Footer = () => {
                       aria-label="WeChat"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <img src={facebook_icon} alt="Facebook" />
+                      <img src={wechat_icon} alt="WeChat" />
                     </a>
+                    <span className="tooltip-text">WeChat: emmarocks2</span>
                   </div>
                 </li>
               </ul>
             </div>
-            <div className="footer-copyright">Copyright © 2026 Emma Ju Estates - All Rights Reserved.</div>
           </div>
 
           {/* Column 2: Location */}
@@ -150,6 +150,12 @@ const Footer = () => {
               LET'S CONNECT
             </button>
           </div>
+        </div>
+
+        {/* Bottom Full-Width Row: Disclaimer & Copyright */}
+        <div className="footer-bottom-info">
+          <span className="footer-disclaimer">All information is deemed reliable but not guaranteed and should be independently reviewed and verified.</span>
+          <span className="footer-copyright">Copyright © 2026 Emma Ju Estates - All Rights Reserved.</span>
         </div>
       </div>
     </div>
