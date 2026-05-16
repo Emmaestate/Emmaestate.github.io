@@ -24,9 +24,9 @@ const AgentCard = ({ image, name, label, licenseNumber, description, email, phon
           
           {licenseNumber && (
             <div className="agent-licenses">
-              <span className="agent-licenses-title">License Number:</span>
+              <span className="agent-licenses-title">Licenses:</span>
               {Object.entries(licenseNumber).map(([state, number]) => (
-                <span key={state} className="agent-license">{state}: {number}</span>
+                <span key={state} className="agent-license">{state} {number}</span>
               ))}
             </div>
           )}

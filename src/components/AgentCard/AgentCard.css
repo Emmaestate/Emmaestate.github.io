@@ -148,3 +148,30 @@
 .read-more-btn:hover {
   text-decoration: underline;
 }
+
+/* License Info Styles */
+.agent-licenses {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.agent-licenses-title {
+  font-weight: 500;
+  color: #8b8b8b;
+}
+
+.agent-license {
+  background-color: #f8f9fa;
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #5f6368;
+  border: 1px solid #e8eaed;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
