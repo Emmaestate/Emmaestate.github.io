@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://Emmaestate.github.io",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3088",
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
