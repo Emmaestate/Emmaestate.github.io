@@ -175,3 +175,38 @@
   font-weight: 700;
   letter-spacing: 0.3px;
 }
+
+@media (max-width: 600px) {
+  .agent-card {
+    padding: 1.5rem;
+  }
+  
+  .agent-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .agent-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .agent-description-container {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .agent-description-wrapper p {
+    text-align: center;
+  }
+  
+  .agent-card-name {
+    font-size: 1.5rem;
+  }
+  
+  .agent-label {
+    font-size: 1rem;
+  }
+}

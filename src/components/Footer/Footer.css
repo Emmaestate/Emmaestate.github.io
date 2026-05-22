@@ -268,13 +268,38 @@ line-height: 1.6;
   .global-footer {
     padding: 40px 20px;
   }
-  
-  .footer-brand-title {
-    font-size: 3rem;
-  }
 
   .footer-middle-row {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .footer-brand-title {
+    font-size: 2.5rem; /* Scaled down for mobile */
+    text-align: center;
+  }
+  
+  .footer-top-row {
+    text-align: center;
+  }
+  
+  .footer-col-title {
+    font-size: 1rem; /* Scaled down for mobile */
+  }
+
+  .footer-col-content p,
+  .footer-cta-desc,
+  .footer-location-item,
+  .footer-contact-item {
+    font-size: 0.95rem; /* Scaled down for mobile */
+  }
+
+  .footer-cta-btn {
+    font-size: 0.9rem; /* Scaled down for mobile */
+  }
+
+  .footer-copyright,
+  .footer-disclaimer {
+    font-size: 0.75rem; /* Scaled down for mobile */
   }
 }

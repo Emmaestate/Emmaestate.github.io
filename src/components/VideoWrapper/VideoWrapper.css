@@ -10,8 +10,16 @@
 
 .fade-text{
   font-family: 'Italiana', serif;
-font-size: 75px;
+  font-size: 75px;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .fade-text{
+    font-size: 50px;
+  }
+  .description {
+    font-size: 14px !important;
+  }
 }
 
 /* Background video fills the screen */

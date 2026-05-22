@@ -114,7 +114,7 @@ font-size: 100px;
 /* Responsive */
 @media (max-width: 768px) {
   .title {
-    font-size: 64px;
+    font-size: 50px;
   }
 
   .subtitle {
@@ -122,6 +122,6 @@ font-size: 100px;
   }
 
   .description {
-    font-size: 24px;
+    font-size: 14px;
   }
 }

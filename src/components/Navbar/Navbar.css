@@ -183,43 +183,39 @@
   }
   
   .nav-logo {
-    position: relative;
-    left: 0;
-    transform: none;
-    display: block; /* Ensure logo is visible */
-    margin: 0; /* Align left */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
   }
 
-  .nav-logo .brand-img {
-    height: 100%;
+  .nav-logo .logo {
+    height: 44px;
   }
   .logo-box {
     height: 44px;
   }
-  
-  .header .navbar-container {
-    justify-content: space-between; /* Space between logo and hamburger */
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
-  /* Keep right nav-section visible to keep hamburger */
-  .nav-section.right {
-    display: flex;
-    justify-content: flex-end;
-    flex: 0 0 auto; /* Don't grow, just fit content */
-  }
-
-  /* Hide all right nav items except the hamburger */
-  .nav-section.right .nav-list > .nav-item:not(.hamburger-wrapper) {
+  /* Keep right section visible but hide text links */
+  .nav-section.right .nav-item:not(.hamburger-wrapper) {
     display: none;
   }
+  
+  .header .navbar-container {
+    justify-content: flex-end; /* Push hamburger to right */
+    align-items: center;
+    padding: 15px 20px;
+    position: relative; 
+  }
 
-  /* Make sure hamburger is visible and clickable */
+  .hamburger-wrapper {
+    display: block; 
+  }
   .hamburger {
     display: flex;
-    cursor: pointer;
   }
 }
 

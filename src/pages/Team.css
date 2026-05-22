@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
   padding: 2rem;
+  justify-items: center;
 }
 /* Centers the lead agent */
 .lead-agent-wrapper {
@@ -12,10 +13,14 @@
   padding: 0 2rem;
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  padding: 1rem 2rem;
-  justify-items: center;
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr; /* Force 1 column on mobile */
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .lead-agent-wrapper {
+    padding: 0 1rem;
+  }
 }
