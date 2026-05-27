@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import Layout from "../../components/Layout/Layout.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
+import Layout from "../../Components/Layout/Layout.jsx";
+import Footer from "../../Components/Footer/Footer.jsx";
 import ContactFormPopup from "../../components/ContactFormPopup/ContactFormPopup.jsx";
 import soldData from "../../data/soldListings.json";
 import exclusiveData from "../../data/exclusiveListings.json";
@@ -178,7 +178,7 @@ const PropertyDetail = () => {
                   : lang === "zh"
                     ? (
                       <>
-                        售出场外<br />预售
+                        售出场外<br />已售
                       </>
                     )
                     : (
@@ -252,7 +252,11 @@ const PropertyDetail = () => {
 
         <div className="property-sidebar">
           <div className="agent-card">
-            <h3>{detailConfig.sidebar.title[lang]}</h3>
+            <h3>
+              {property.status === "Sold"
+                ? detailConfig.sidebar.titleSold[lang]
+                : detailConfig.sidebar.titleExclusive[lang]}
+            </h3>
             <p>{detailConfig.sidebar.desc[lang]}</p>
             <Link to="/contact">
               <button className="contact-agent-btn">

@@ -18,7 +18,8 @@ export default {
     zh: "这套美丽的房产位于 {address}，拥有 {bedrooms} 间卧室和 {bathrooms} 间卫生间。欢迎联系我们获取该地区更多相似房源的信息。",
   },
   sidebar: {
-    title: { en: "Interested in similar properties?", zh: "对相似房源感兴趣？" },
+    titleSold: { en: "Interested in similar properties?", zh: "对相似房源感兴趣？" },
+    titleExclusive: { en: "Interested in this property?", zh: "对这套房源感兴趣？" },
     desc: { en: "Contact us for more information.", zh: "联系我们获取更多信息。" },
     btnText: { en: "Contact Agent", zh: "联系经纪人" },
   },
