@@ -64,9 +64,10 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
         <div className="nav-logo">
           <div className={`logo-pair ${sticky ? "single" : "paired"}`}>
+              <Link to="/home" onClick={handleScrollToTop}>
             <div className="logo-box company-box">
               <img src={companyLogo} alt="Company" className="brand-img company" />
-            </div>
+            </div></Link>
             <span className="logo-divider"></span>
             <Link to="/home" onClick={handleScrollToTop}>
               <div className="logo-box site-box">

@@ -23,7 +23,7 @@
 .home-valuation-title h2 {
   color: white;
   font-size: clamp(2.5rem, 5vw, 5rem);
-  font-weight: 100;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }

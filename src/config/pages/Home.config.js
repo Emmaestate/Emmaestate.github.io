@@ -6,7 +6,7 @@ export default {
     },
     headline: {
       en: ["EMMA JU TEAM", "SPECIALIZING IN LUXURY REAL ESTATE", "LOCAL EXPERTISE. GLOBAL REACH."],
-      zh: ["EMMA JU团队", "专营豪华房产", "本地专业知识。全球覆盖"],
+      zh: ["EMMA JU团队", "专营豪华房产", "本地深耕，全球资源"],
     },
     subheading: {
       en: ["AFFILIATED WITH ACRE NY REALTY AND ACRE NJ", "ACROSS MANHATTAN AND THE NJ GOLD COAST", ""],
@@ -42,7 +42,7 @@ export default {
       en: "",
       zh: "",
     },
-    title: { en: "WORK WITH US", zh: "和我们一起工作" },
+    title: { en: "WORK WITH US", zh: "与我们合作" },
     description: {
       en: "Selling or buying a home is a strategic decision. With strong market insight, access to local and international buyers, and hands-on execution, we help you navigate each step with clarity and confidence.",
       zh: "出售或购买房屋是一个战略决策。凭借强大的市场洞察力、对本地和国际买家的访问权限以及实际执行，我们帮助您清晰地导航每一步。",

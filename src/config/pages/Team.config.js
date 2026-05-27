@@ -11,7 +11,7 @@ export default {
       en: "",
       zh: "",
     },
-    title: { en: "WORK WITH US", zh: "和我们一起工作" },
+    title: { en: "WORK WITH US", zh: "与我们合作" },
     description: {
       en: "Specializing in Manhattan and Bergen County, New Jersey, we provide expert representation for buyers, sellers, and renters.",
       zh: "专注于曼哈顿和新泽西州 Bergen 郡，我们为买家、卖家和租客提供专业的代理服务。",

@@ -183,7 +183,7 @@ const PropertyDetail = () => {
                     )
                     : (
                       <>
-                        Sold Off-market<br />Pre-sale
+                        Sold Off-market<br />Sold
                       </>
                     )}
               </span>

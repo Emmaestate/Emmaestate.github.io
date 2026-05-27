@@ -7,14 +7,14 @@ export default {
     },
   },
   intro: {
-    title: { en: "GET TO KNOW ME", zh: "了解我" },
+    title: { en: "GET TO KNOW ME", zh: "关于Emma" },
     text: {
       en: `Emma Ju is a real estate professional with Acre NY Realty and Acre NJ, specializing in properties across Manhattan and New Jersey’s Gold Coast. Known for her strong market insight, professionalism, and client-first approach, she guides buyers, sellers, and investors through both city and suburban transactions with confidence and ease.
 
 In 2025, Emma achieved over $26 million in sales volume and was recognized with the NJ REALTORS® Circle of Excellence Sales Award® – Gold Level, reflecting her consistent performance and commitment to delivering results.
 
 Fluent in English and Mandarin, Emma works with a diverse, international clientele. With a strong network in new construction and off-market opportunities, she provides clients with access, strategy, and clear guidance at every step. Her focus on communication, trust, and long-term relationships makes her a reliable partner in today’s competitive real estate market.`,
-      zh: `Emma Ju是Acre NY Realty和Acre NJ的房地产专业人士，专门从事曼哈顿和新泽西黄金海岸的房地产。她以其强大的市场洞察力，专业精神和客户至上的方法而闻名，她引导买家，卖家和投资者通过城市和郊区的交易充满信心和轻松。
+      zh: `Emma Ju是Acre NY Realty和Acre NJ的房地产专业人士，专门从事曼哈顿和新泽西黄金海岸的房地产。她以其强大的市场洞察力，专业精神和客户至上的方法而闻名，无论是纽约都市住宅还是郊区房屋，她都能以专业经验与高效执行力，为买家、卖家及投资者提供从容且值得信赖的交易指导。
 
 2025年，Emma实现了超过2600万美元的销售额，并获得了NJ REALTORS®卓越销售奖®金奖，这反映了她一贯的表现和对交付成果的承诺。
 
