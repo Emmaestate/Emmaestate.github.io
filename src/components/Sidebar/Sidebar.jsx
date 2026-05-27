@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
+import { useLanguage } from "../../i18n/LanguageContext.jsx";
 
 const SidebarContent = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const { t, lang } = useLanguage();
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -20,7 +22,7 @@ const SidebarContent = () => {
             className="sidebar__nav-link"
             onClick={handleScrollToTop}
           >
-            HOME
+            {lang === "zh" ? "首页" : "HOME"}
           </Link>
         </li>
         <li className="sidebar__nav-item">
@@ -29,7 +31,7 @@ const SidebarContent = () => {
             className="sidebar__nav-link"
             onClick={handleScrollToTop}
           >
-            ABOUT EMMA
+            {lang === "zh" ? "关于 EMMA" : "ABOUT EMMA"}
           </Link>
         </li>
         <li className="sidebar__nav-item">
@@ -38,7 +40,7 @@ const SidebarContent = () => {
             className="sidebar__nav-link"
             onClick={handleScrollToTop}
           >
-            TEAM
+            {lang === "zh" ? "团队介绍" : "TEAM"}
           </Link>
         </li>
 
@@ -47,7 +49,7 @@ const SidebarContent = () => {
             className="sidebar__nav-link sidebar__dropdown-toggle"
             onClick={() => setShowDropdown(!showDropdown)}
           >
-            PROPERTIES
+            {t("PROPERTIES")}
             <span className={`caret-icon ${showDropdown ? "rotate" : ""}`}>
               ▾
             </span>
@@ -60,7 +62,7 @@ const SidebarContent = () => {
                   className="sidebar__dropdown-link"
                   onClick={handleScrollToTop}
                 >
-                  Exclusive Listings
+                  {t("ExclusiveListings")}
                 </Link>
               </li>
               <li>
@@ -69,7 +71,7 @@ const SidebarContent = () => {
                   className="sidebar__dropdown-link"
                   onClick={handleScrollToTop}
                 >
-                  Sold Listings
+                  {t("OurSoldListings")}
                 </Link>
               </li>
             </ul>
