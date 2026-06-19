@@ -13,7 +13,7 @@ import aboutConfig from "../../config/pages/About.config.js";
 const AgentProfile2 = () => {
   const { lang } = useLanguage();
   return (
-    <div className="communities-container">
+    <div className="communities-container agent-profile2-wrapper">
       <div className="agent-profile">
         {/* Agent Image */}
         <div className="agent-profile__image">

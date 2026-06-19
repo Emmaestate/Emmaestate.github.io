@@ -44,10 +44,21 @@ a {
 }
 
 .container-type4 {
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-top: clamp(3rem, 5vw, 6rem);   
   padding-bottom: clamp(3rem, 5vw, 6rem);
+}
+@media screen and (max-width: 768px) {
+  .container-type4 {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: clamp(3rem, 5vw, 6rem);   
+    padding-bottom: clamp(3rem, 5vw, 6rem);
+  }
+  .contact-form {
+    padding: 24px !important;
+  }
 }
 
 .container-black{
