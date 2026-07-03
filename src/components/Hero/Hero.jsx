@@ -37,7 +37,7 @@ const Hero = ({
       <div className="hero" style={heroStyle}>
         <div className="hero-text">
           <p className="subtitle">{subtitle}</p>
-          <h1 className="title1" style={{ fontSize: "85px" }}>
+          <h1 className="title1" style={{ fontSize: "7rem" }}>
             {title}
           </h1>
           <p className="description">{description}</p>
