@@ -18,7 +18,13 @@ import { getPropertyImages } from "../utils/propertyImages.js";
 // Transform data to match PropertyList expected format
 // Add prefix to ID to avoid collisions
 const soldProperties = soldData
-  .map((item) => {
+  .map((item, originalIndex) => ({ item, originalIndex }))
+  .sort((a, b) => {
+    const aTime = Date.parse(a.item.addedAt || "") || 0;
+    const bTime = Date.parse(b.item.addedAt || "") || 0;
+    return bTime - aTime || a.originalIndex - b.originalIndex;
+  })
+  .map(({ item }) => {
     const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
     return {
       ...item,
@@ -33,8 +39,7 @@ const soldProperties = soldData
       bathrooms: item.bathrooms,
       sqft: item.sqft || "N/A",
     };
-  })
-  .sort((a, b) => b.price - a.price);
+  });
 
 const SoldListings = () => {
   const { lang } = useLanguage();

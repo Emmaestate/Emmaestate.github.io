@@ -1,5 +1,197 @@
 [
   {
+    "id": "listing-mudl1php",
+    "address": "502 Longview Pl, Cliffside Park, NJ 07010",
+    "price": 999999,
+    "bedrooms": 3,
+    "bathrooms": 2.5,
+    "sqft": null,
+    "imgid": "admin-listing-mudl1php-1790136602536",
+    "features": [
+      "- Updated Colonial with 3 bedrooms and 2.5 bathrooms.",
+      "- Renovated kitchen with quartz countertops and marble herringbone backsplash.",
+      "- Spacious primary suite with a walk-in closet and large private bathroom.",
+      "- Semi-finished basement with a bar and separate laundry room.",
+      "- Private terrace and paver patio with southern exposure."
+    ],
+    "features_zh": [
+      "- 翻新殖民风格住宅，配有3间卧室、2.5间卫生间。",
+      "- 厨房经过改造，配备石英石台面与人字纹大理石背景墙。",
+      "- 宽敞主卧套间，设有步入式衣帽间与独立大卫生间。",
+      "- 半精装地下室，带吧台以及独立洗衣房。",
+      "- 南向私人露台与铺路石板庭院。"
+    ],
+    "mlsId": "25009198"
+  },
+  {
+    "id": "listing-mudl4gsu",
+    "address": "1631 Maple St, Fort Lee, NJ 07024",
+    "price": 999999,
+    "bedrooms": 3,
+    "bathrooms": 2.5,
+    "sqft": null,
+    "mlsId": "26018097",
+    "imgid": "admin-listing-mudl4gsu-1790136733840",
+    "features": [
+      "- 3 bedrooms and 2.5 bathrooms with a spacious primary suite.",
+      "- Modern eat-in kitchen with excellent everyday functionality.",
+      "- Family room with a wood-burning fireplace and backyard access.",
+      "- Finished walk-up attic with air conditioning for flexible use.",
+      "- Private backyard patio plus a detached garage."
+    ],
+    "features_zh": [
+      "- 3间卧室，2.5个卫生间，配有宽敞的主卧套间。",
+      "- 现代可就餐厨房，日常使用功能极佳。",
+      "- 家庭房设有燃木壁炉，可通往后院。",
+      "- 精装步入式阁楼，配有空调，用途灵活。",
+      "- 私人后院露台外加独立车库。"
+    ]
+  },
+  {
+    "id": "listing-mudkx2kd",
+    "address": "1042 Harvard Pl, Fort Lee, New Jersey 07024",
+    "price": 1099000,
+    "bedrooms": 5,
+    "bathrooms": 3,
+    "sqft": null,
+    "mlsId": "1099000",
+    "imgid": "admin-listing-mudkx2kd-1790136480818",
+    "features": [
+      "-All-brick raised ranch offering flexible and spacious living areas.",
+      "- Lower-level in-law suite with a second kitchen and separate entrances.",
+      "- Bright main level with formal dining and a kitchen with center island.",
+      "- 2-car attached garage, driveway parking, and backyard space.",
+      "- Quiet Fort Lee location close to schools, dining, shopping, and transportation."
+    ],
+    "features_zh": [
+      "- 全砖结构抬高式牧场住宅，空间宽敞灵活。",
+      "- 下层设有长辈套房，配备第二套厨房以及独立出入口。",
+      "- 采光良好的主楼层，包含正式餐厅与带中岛的厨房。",
+      "- 连体双车位车库、车道停车位以及后院空间。",
+      "- 位于福特李安静地段，临近学校、餐厅、商铺与交通站点。"
+    ]
+  },
+  {
+    "id": "listing-mudkv952",
+    "address": "75 Park Ln S #1204, Jersey City, NJ 07310",
+    "price": 1300000,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqft": null,
+    "mlsId": "230000258",
+    "imgid": "admin-listing-mudkv952-1790136272455",
+    "features": [
+      "- Bright residence with 10' ceilings, oversized windows, and sweeping views of the Hudson River, Midtown Manhattan, and Newport Green Park.",
+      "- Elegant chef's kitchen featuring an Integrated Bosch appliance package, Madreperola Quartzite waterfall countertops, and custom millwork.",
+      "- Spacious layout with a large primary bedroom, abundant closet space, in-unit washer/dryer, and smart home features including keyless entry.",
+      "- Luxury amenities include an indoor heated lap pool, fitness center, spa, sky lounge, rooftop terrace, wine lounge, and co-working spaces.",
+      "- Prime Newport waterfront location just steps from the PATH train, parks, dining, shopping, and the Hudson River promenade."
+    ],
+    "features_zh": [
+      "- 采光优异的住宅，层高10英尺，超大窗户，可饱览哈德逊河、曼哈顿中城以及纽波特格林公园全景。",
+      "- 雅致主厨厨房，配备全套博世嵌入式厨电、珍珠母石英岩瀑布台面与定制木工柜体。",
+      "- 户型宽敞，设有大主卧、充足储物衣帽间，室内自带洗烘一体机，支持无钥匙入户等智能家居配置。",
+      "- 高端配套设施：室内恒温短池、健身中心、水疗区、空中休闲厅、屋顶露台、红酒厅以及共享办公空间。",
+      "- 纽波特滨水黄金地段，步行即可抵达PATH通勤列车、公园、餐厅、商铺以及哈德逊河滨步道。"
+    ]
+  },
+  {
+    "id": "listing-mudksfw8",
+    "address": "117 Henry Street  Unit A, Palisades Park, NJ 07650",
+    "price": 1375000,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqft": null,
+    "mlsId": "26012048",
+    "imgid": "admin-listing-mudksfw8-1790136154603",
+    "features": [
+      "- Brand-new oversized 4-bedroom duplex with 10' ceilings and floor-to-ceiling windows",
+      "- Designer chef's kitchen featuring Bertazzoni appliances, waterfall quartz countertops, and wine refrigerator",
+      "- Luxurious primary suite with vaulted ceilings, dual walk-in closets, soaking tub, and rainfall shower",
+      "- Finished walk-out lower level with recreation room/guest space, wet bar, and custom built-ins",
+      "- Two-car garage, 10-year builder warranty, and convenient access to shopping, dining, parks, and NYC transportation"
+    ],
+    "features_zh": [
+      "- 全新超大双层复式公寓，层高 10 英尺，配有落地玻璃窗",
+      "- 定制主厨厨房，搭载博塔桑尼品牌厨电、瀑布式石英石台面以及葡萄酒冷藏柜",
+      "- 奢华主卧套间，挑高穹顶天花板，双步入式衣帽间，浸泡浴缸与顶喷雨淋花洒",
+      "- 精装可直通户外的下层空间，含娱乐室 / 客房区、湿吧以及定制嵌入式柜体",
+      "- 双车位车库，开发商提供 10 年质保，临近商场、餐厅、公园以及纽约公共交通"
+    ]
+  },
+  {
+    "id": "listing-mudknlma",
+    "address": "519 4th St B, Palisades Park, NJ 07650",
+    "price": 1450000,
+    "bedrooms": 4,
+    "bathrooms": 3.5,
+    "sqft": null,
+    "mlsId": "26018502",
+    "imgid": "admin-listing-mudknlma-1790136054122",
+    "features": [
+      "- Offers 4 spacious bedrooms and 3.5 beautifully finished bathrooms.",
+      "- Features approximately 3,000 SF of thoughtfully designed living space.",
+      "- Brand-new construction with modern finishes and an open-concept layout.",
+      "- Designer kitchen with premium appliances, quartz countertops, and an oversized island.",
+      "- Includes a 2-car attached garage with additional flexible living space."
+    ],
+    "features_zh": [
+      "- 配有 4 间宽敞卧室以及 3.5 间装修精美的卫生间。",
+      "- 建筑面积约 3000 平方英尺，空间设计考究。",
+      "- 全新建造，现代装修，开放式格局。",
+      "- 设计师款厨房，配备高端电器、石英石台面与超大中岛。",
+      "- 附带可停放两辆车的连体车库，另有多功能可变空间。"
+    ]
+  },
+  {
+    "id": "listing-mucg1xd8",
+    "address": "3 Court Square, Unit 5504, Long Island City, NY 11101",
+    "price": 1078250,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": null,
+    "mlsId": "11557146",
+    "imgid": "admin-listing-mucg1xd8-1790067758726",
+    "features": [
+      "- 55th-floor luxury residence with breathtaking panoramic skyline and river views through floor-to-ceiling windows.",
+      "- Prime Court Square location with immediate access to the E, M, R, G, and 7 subway lines, just minutes from Manhattan.",
+      "- Modern 1-bedroom, 1-bath layout featuring wide-plank oak flooring, central A/C, and an in-unit washer and dryer.",
+      "- Full-service luxury condominium offering a concierge, fitness center, rooftop access, bike storage, security, and resident amenities.",
+      "- Steps from Long Island City's best amenities, including Trader Joe's, restaurants, cafés, art galleries, and the waterfront."
+    ],
+    "features_zh": [
+      "- 位于 55 层的奢华住宅，透过落地玻璃窗可欣赏令人惊叹的城市天际线与河景全景。",
+      "- 位于法院广场黄金地段，可直达 E、M、R、G 以及 7 号地铁线，距离曼哈顿仅数分钟路程。",
+      "- 现代一居室一卫户型，配有宽橡木地板、中央空调以及户内洗衣机和烘干机。",
+      "- 全套服务豪华公寓，提供礼宾服务、健身中心、屋顶区域、自行车储藏室、安保以及住户配套设施。",
+      "- 步行可达长岛市优质配套，包括乔氏超市、餐厅、咖啡馆、艺术画廊以及滨水区域。"
+    ]
+  },
+  {
+    "id": "listing-mucfz53j",
+    "address": "200 Chamber st #19F, New York, NY 10007",
+    "price": 11538199,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": null,
+    "mlsId": "11538199",
+    "imgid": "admin-listing-mucfz53j-1790067541906",
+    "features": [
+      "- Spacious 754 SF 1-bedroom condo in the heart of Tribeca with floor-to-ceiling windows and abundant natural light.",
+      "- Chef-inspired kitchen featuring Viking and Sub-Zero appliances, Bosch dishwasher, and elegant Basaltina countertops.",
+      "- Luxury interior finishes including hardwood floors, high ceilings, an in-unit Bosch washer/dryer, and a spa-style marble bathroom with a soaking tub.",
+      "- Premium full-service amenities including a 24-hour concierge, fitness center with indoor lap pool, media room, rooftop terrace, and elevator access.",
+      "- Prime Tribeca location just minutes from the subway, parks, renowned restaurants, and neighborhood shopping."
+    ],
+    "features_zh": [
+      "- 宽敞 754 平方英尺一居室公寓，位于翠贝卡核心地段，配有落地玻璃窗，采光充沛。",
+      "- 主厨级厨房，配备维京与萨博零度家电、博世洗碗机，以及雅致的玄武岩台面。",
+      "- 奢华室内装修，含实木地板、挑高天花板、户内博世洗烘一体机，以及带浸泡浴缸的水疗风格大理石浴室。",
+      "- 高端全套配套设施，含 24 小时礼宾服务、带室内长泳道泳池的健身中心、影音室、屋顶露台以及电梯通行。",
+      "- 翠贝卡黄金地段，距离地铁、公园、知名餐厅与社区商铺仅数分钟路程。"
+    ]
+  },
+  {
     "id": "25042812",
     "imageKey": "sold_362_lafayette_ave_a",
     "address": "362 Lafayette Ave #A, Cliffside Park, NJ 07010",
@@ -358,7 +550,7 @@
     "imgid": "1060 Anderson"
   },
   {
-    "id": "",
+    "id": "252-south-st-unit-48g",
     "imageKey": "sold_252_south_st_unit_48g",
     "address": "252 South St Unit 48G, New York, NY 10002",
     "price": 2325610,

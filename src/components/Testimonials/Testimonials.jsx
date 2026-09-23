@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -6,6 +6,58 @@ import "swiper/css/pagination";
 import "./Testimonials.css";
 import commentsData from "../../data/comments.json";
 import { useLanguage } from "../../i18n/LanguageContext.jsx";
+
+const TIME_UNITS_IN_DAYS = {
+  minute: 1 / 1440,
+  minutes: 1 / 1440,
+  hour: 1 / 24,
+  hours: 1 / 24,
+  day: 1,
+  days: 1,
+  week: 7,
+  weeks: 7,
+  month: 30,
+  months: 30,
+  year: 365,
+  years: 365,
+  分钟: 1 / 1440,
+  小时: 1 / 24,
+  天: 1,
+  周: 7,
+  星期: 7,
+  月: 30,
+  个月: 30,
+  年: 365,
+};
+
+function timeAgoInDays(value) {
+  const text = String(value || "").trim().toLowerCase();
+  if (!text) return Number.POSITIVE_INFINITY;
+  if (["just now", "today", "刚刚", "今天"].includes(text)) return 0;
+  if (["yesterday", "昨天"].includes(text)) return 1;
+
+  const relativeMatch = text.match(
+    /^(?:(\d+(?:\.\d+)?)|(a|an))\s*(minutes?|hours?|days?|weeks?|months?|years?|分钟|小时|天|周|星期|个月|月|年)\s*(?:ago|前)?$/,
+  );
+  if (relativeMatch) {
+    const amount = relativeMatch[1] ? Number(relativeMatch[1]) : 1;
+    return amount * TIME_UNITS_IN_DAYS[relativeMatch[3]];
+  }
+
+  const timestamp = Date.parse(text);
+  return Number.isNaN(timestamp)
+    ? Number.POSITIVE_INFINITY
+    : Math.max(0, (Date.now() - timestamp) / 86400000);
+}
+
+const sortedComments = commentsData
+  .map((comment, originalIndex) => ({ comment, originalIndex }))
+  .sort(
+    (a, b) =>
+      timeAgoInDays(a.comment.date) - timeAgoInDays(b.comment.date) ||
+      a.originalIndex - b.originalIndex,
+  )
+  .map(({ comment }) => comment);
 
 const ReviewCard = ({ comment }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -26,7 +78,9 @@ const ReviewCard = ({ comment }) => {
           <div className="testimonial-avatar">{initial}</div>
           <div className="testimonial-author-details">
             <span className="testimonial-name">{comment.name}</span>
-            <span className="testimonial-date">6 months ago</span>
+            {comment.date && (
+              <span className="testimonial-date">{comment.date}</span>
+            )}
           </div>
         </div>
         <div className="testimonial-stars">
@@ -65,7 +119,6 @@ const Testimonials = ({
   title = "What Our Clients Say",
   subtitle = "Read success stories from people who have worked with us.",
 }) => {
-  const { lang } = useLanguage();
   return (
     <section className="testimonials-section">
       <div className="testimonials-header-section">
@@ -97,7 +150,7 @@ const Testimonials = ({
           }}
           className="testimonials-swiper"
         >
-          {commentsData.map((comment) => (
+          {sortedComments.map((comment) => (
             <SwiperSlide key={comment.id}>
               <ReviewCard comment={comment} />
             </SwiperSlide>

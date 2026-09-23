@@ -8,12 +8,15 @@ import Hero2 from "../Components/Hero2/Hero2.jsx";
 import Footer from "../Components/Footer/Footer.jsx";
 import activeData from "../data/activeListings.json";
 import { images } from "../data/images";
-
-const featuredProperties = activeData.map((item) => ({
-  id: `active-${item.id}`,
-  ...item,
-  image: images[item.imageKey],
-}));
+import { getPropertyImages } from "../utils/propertyImages.js";
+const featuredProperties = activeData.map((item) => {
+  const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
+  return {
+    id: `active-${item.id}`,
+    ...item,
+    image: frontImage || images[item.imageKey] || connectWithUsImg,
+  };
+});
 
 const FeaturedListings = () => {
   return (

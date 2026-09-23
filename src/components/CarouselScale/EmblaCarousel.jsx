@@ -25,8 +25,13 @@ const OPTIONS = {
 };
 
 const SLIDES = [...soldData]
-  .sort((a, b) => b.price - a.price)
-  .map((item) => {
+  .map((item, originalIndex) => ({ item, originalIndex }))
+  .sort((a, b) => {
+    const aTime = Date.parse(a.item.addedAt || "") || 0;
+    const bTime = Date.parse(b.item.addedAt || "") || 0;
+    return bTime - aTime || a.originalIndex - b.originalIndex;
+  })
+  .map(({ item }) => {
     const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
     return {
       id: `sold-${item.id}`,

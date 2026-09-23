@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Emma Estate 本地数据管理</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">E</span>
+          <div>
+            <strong>Emma Estate</strong>
+            <small>本地数据管理</small>
+          </div>
+        </div>
+
+        <nav aria-label="管理功能">
+          <button class="nav-button active" data-view="listings">
+            <span>房源管理</span>
+            <span class="nav-count" id="listing-count">0</span>
+          </button>
+          <button class="nav-button" data-view="comments">
+            <span>评论管理</span>
+            <span class="nav-count" id="comment-count">0</span>
+          </button>
+        </nav>
+
+        <div class="local-notice">
+          <span class="status-dot"></span>
+          <div>
+            <strong>仅本地运行</strong>
+            <small>数据直接保存到主站 JSON</small>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">CONTENT WORKSPACE</p>
+            <h1 id="page-title">房源管理</h1>
+          </div>
+          <div class="topbar-actions">
+            <span class="save-status" id="save-status">数据已同步</span>
+            <button class="button secondary" id="reload-button">重新读取</button>
+            <button class="button primary" id="add-button">新增房源</button>
+          </div>
+        </header>
+
+        <section class="content">
+          <div class="summary-grid" id="summary-grid"></div>
+
+          <div class="toolbar">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="search-input" type="search" placeholder="搜索地址、MLS ID 或房源编号..." />
+            </label>
+            <div class="segmented" id="listing-filter">
+              <button class="active" data-filter="all">全部</button>
+              <button data-filter="active">待售</button>
+              <button data-filter="exclusive">独家</button>
+              <button data-filter="sold">已售</button>
+            </div>
+          </div>
+
+          <div id="content-panel" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <dialog id="editor-dialog">
+      <form id="editor-form">
+        <div class="dialog-header">
+          <div>
+            <p class="eyebrow" id="dialog-eyebrow">LISTING</p>
+            <h2 id="dialog-title">新增房源</h2>
+          </div>
+          <button type="button" class="icon-button" id="close-dialog" aria-label="关闭">×</button>
+        </div>
+        <div class="form-grid" id="form-fields"></div>
+        <div class="dialog-actions">
+          <button type="button" class="button danger ghost" id="delete-button">删除</button>
+          <span class="action-spacer"></span>
+          <button type="submit" class="button primary">保存修改</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
