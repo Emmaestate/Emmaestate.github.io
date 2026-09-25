@@ -31,7 +31,9 @@ const TIME_UNITS_IN_DAYS = {
 };
 
 function timeAgoInDays(value) {
-  const text = String(value || "").trim().toLowerCase();
+  const text = String(value || "")
+    .trim()
+    .toLowerCase();
   if (!text) return Number.POSITIVE_INFINITY;
   if (["just now", "today", "刚刚", "今天"].includes(text)) return 0;
   if (["yesterday", "昨天"].includes(text)) return 1;
@@ -93,7 +95,9 @@ const ReviewCard = ({ comment }) => {
       </div>
 
       <div className="testimonial-content">
-        <div className={`testimonial-text-wrapper ${isExpanded ? "expanded" : ""}`}>
+        <div
+          className={`testimonial-text-wrapper ${isExpanded ? "expanded" : ""}`}
+        >
           <p>{displayContent}</p>
         </div>
         {isLong && (
@@ -119,6 +123,15 @@ const Testimonials = ({
   title = "What Our Clients Say",
   subtitle = "Read success stories from people who have worked with us.",
 }) => {
+  const [swiper, setSwiper] = useState(null);
+  const [canGoPrev, setCanGoPrev] = useState(false);
+  const [canGoNext, setCanGoNext] = useState(false);
+
+  const updateNavigation = (instance) => {
+    setCanGoPrev(!instance.isBeginning);
+    setCanGoNext(!instance.isEnd);
+  };
+
   return (
     <section className="testimonials-section">
       <div className="testimonials-header-section">
@@ -127,11 +140,29 @@ const Testimonials = ({
       </div>
 
       <div className="testimonials-carousel-wrapper">
+        {canGoPrev && (
+          <button
+            type="button"
+            className="testimonials-arrow testimonials-arrow-prev"
+            onClick={() => swiper?.slidePrev()}
+            aria-label="上一页评价"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+        )}
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
           pagination={{ clickable: true }}
+          onSwiper={(instance) => {
+            setSwiper(instance);
+            updateNavigation(instance);
+          }}
+          onSlideChange={updateNavigation}
+          onResize={updateNavigation}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -156,6 +187,18 @@ const Testimonials = ({
             </SwiperSlide>
           ))}
         </Swiper>
+        {canGoNext && (
+          <button
+            type="button"
+            className="testimonials-arrow testimonials-arrow-next"
+            onClick={() => swiper?.slideNext()}
+            aria-label="下一页评价"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        )}
       </div>
     </section>
   );

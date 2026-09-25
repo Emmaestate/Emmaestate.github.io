@@ -541,12 +541,20 @@ dialog::backdrop {
 .image-preview {
   position: relative;
   min-width: 0;
-  padding: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: #fff;
+}
+
+.image-cover-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
   text-align: left;
+  cursor: pointer;
 }
 
 .image-preview.selected {
@@ -554,7 +562,7 @@ dialog::backdrop {
   box-shadow: 0 0 0 2px rgba(46, 96, 71, 0.16);
 }
 
-.image-preview-grid img {
+.image-cover-button img {
   width: 100%;
   height: 82px;
   display: block;
@@ -578,6 +586,19 @@ dialog::backdrop {
 
 .image-preview:not(.selected):hover .cover-badge {
   opacity: 1;
+}
+
+.image-remove-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 3px 6px;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  background: rgba(128, 35, 35, 0.88);
+  font-size: 9px;
+  cursor: pointer;
 }
 
 .image-caption {

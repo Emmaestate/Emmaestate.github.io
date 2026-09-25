@@ -19,11 +19,9 @@ import { getPropertyImages } from "../utils/propertyImages.js";
 // Add prefix to ID to avoid collisions
 const soldProperties = soldData
   .map((item, originalIndex) => ({ item, originalIndex }))
-  .sort((a, b) => {
-    const aTime = Date.parse(a.item.addedAt || "") || 0;
-    const bTime = Date.parse(b.item.addedAt || "") || 0;
-    return bTime - aTime || a.originalIndex - b.originalIndex;
-  })
+  .sort(
+    (a, b) => b.item.price - a.item.price || a.originalIndex - b.originalIndex,
+  )
   .map(({ item }) => {
     const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
     return {

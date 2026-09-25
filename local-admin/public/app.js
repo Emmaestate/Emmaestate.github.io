@@ -11,11 +11,11 @@ const state = {
   search: "",
   editor: null,
   pendingImages: [],
-  pendingCoverIndex: 0,
   existingImages: [],
   existingImageFolder: null,
-  existingCover: null,
-  initialExistingCover: null,
+  removedImages: new Set(),
+  selectedCover: null,
+  loadingImages: false,
   saving: false,
 };
 
@@ -84,8 +84,8 @@ async function request(url, options) {
   });
   const payload = await response.json();
     if (!response.ok) {
-      if (response.status === 404 && url === "/api/images") {
-        throw new Error("图片上传服务未加载，请重启本地管理后台后再试");
+      if (response.status === 404 && url.startsWith("/api/images")) {
+        throw new Error("后台图片接口已更新，请重启本地管理后台后再保存");
       }
       throw new Error(payload.error || "请求失败");
     }
@@ -338,7 +338,6 @@ function listingFields(item, status) {
         <div class="image-selection-status">
           ${hasExistingImages ? "当前房源已有图片；不重新选择将保留原图。" : "新增房源请至少上传一张图片。"}
         </div>
-        <div class="existing-image-preview-grid image-preview-grid" id="existing-image-preview-grid"></div>
         <div class="image-preview-grid" id="image-preview-grid"></div>
       </div>
     `,
@@ -377,12 +376,13 @@ function commentFields(item) {
 
 function openEditor(editor) {
   state.editor = editor;
+  state.pendingImages.forEach(({ url }) => URL.revokeObjectURL(url));
   state.pendingImages = [];
-  state.pendingCoverIndex = 0;
   state.existingImages = [];
   state.existingImageFolder = null;
-  state.existingCover = null;
-  state.initialExistingCover = null;
+  state.removedImages = new Set();
+  state.selectedCover = null;
+  state.loadingImages = false;
   const isNew = editor.index === null;
   const isListing = editor.type === "listing";
 
@@ -434,58 +434,59 @@ function renderImagePreviews() {
   const status = document.querySelector(".image-selection-status");
   if (!previewGrid || !status) return;
 
-  previewGrid.innerHTML = state.pendingImages.map((file, index) => `
-    <button class="image-preview${index === state.pendingCoverIndex ? " selected" : ""}"
-      type="button" data-pending-cover="${index}">
-      <img src="${URL.createObjectURL(file)}" alt="${escapeHtml(file.name)}" />
-      <span class="cover-badge">${index === state.pendingCoverIndex ? "主图" : "设为主图"}</span>
-      <span class="image-caption">${escapeHtml(file.name)}</span>
-    </button>
-  `).join("");
-  if (state.pendingImages.length) {
-    status.textContent = `已选择 ${state.pendingImages.length} 张图片，保存房源时一并上传。`;
+  const existing = state.existingImages
+    .filter((image) => !state.removedImages.has(image.filename))
+    .map((image) => ({ kind: "existing", id: image.filename, name: image.filename, url: image.url }));
+  const pending = state.pendingImages
+    .map(({ file, url }, index) => ({ kind: "pending", id: index, name: file.name, url }));
+  const images = [...existing, ...pending];
+  if (!images.some(({ kind, id }) => state.selectedCover?.kind === kind && state.selectedCover.id === id)) {
+    state.selectedCover = images.length ? { kind: images[0].kind, id: images[0].id } : null;
   }
-}
 
-function renderExistingImages() {
-  const previewGrid = document.querySelector("#existing-image-preview-grid");
-  if (!previewGrid) return;
-
-  previewGrid.innerHTML = state.existingImages.map((image) => `
-    <button class="image-preview${image.filename === state.existingCover ? " selected" : ""}"
-      type="button" data-existing-cover="${escapeHtml(image.filename)}">
-      <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.filename)}" />
-      <span class="cover-badge">${image.filename === state.existingCover ? "主图" : "设为主图"}</span>
-      <span class="image-caption">${escapeHtml(image.filename)}</span>
-    </button>
-  `).join("");
+  previewGrid.innerHTML = images.map(({ kind, id, name, url }) => {
+    const selected = state.selectedCover.kind === kind && state.selectedCover.id === id;
+    return `
+      <div class="image-preview${selected ? " selected" : ""}">
+        <button class="image-cover-button" type="button" data-cover-kind="${kind}"
+          data-cover-id="${escapeHtml(id)}" aria-label="设为主图：${escapeHtml(name)}">
+          <img src="${escapeHtml(url)}" alt="${escapeHtml(name)}" />
+          <span class="cover-badge">${selected ? "主图" : "设为主图"}</span>
+          <span class="image-caption">${escapeHtml(name)}</span>
+        </button>
+        <button class="image-remove-button" type="button" data-remove-kind="${kind}"
+          data-remove-id="${escapeHtml(id)}" aria-label="删除图片：${escapeHtml(name)}">删除</button>
+      </div>
+    `;
+  }).join("");
+  status.textContent = `共 ${images.length} 张图片${state.pendingImages.length ? `，新增 ${state.pendingImages.length} 张` : ""}；保存房源后生效。`;
 }
 
 async function loadExistingImages(item) {
+  const editor = state.editor;
   const folder = item.imgid || item.mlsId;
   const params = new URLSearchParams();
   if (folder) params.set("folder", folder);
   if (item.imageKey) params.set("imageKey", item.imageKey);
   if (![...params].length) return;
 
+  state.loadingImages = true;
   try {
     const payload = await request(`/api/images?${params}`);
+    if (state.editor !== editor) return;
     state.existingImages = payload.files;
     state.existingImageFolder = payload.folder;
-    state.existingCover =
-      payload.files.find((image) => image.isCover)?.filename ||
-      payload.files[0]?.filename ||
-      null;
-    state.initialExistingCover = state.existingCover;
-    renderExistingImages();
-    const status = document.querySelector(".image-selection-status");
-    if (status && payload.files.some((image) => image.legacy)) {
-      status.textContent = "当前为旧版单图；可查看原图，重新选择图片并保存即可更新。";
+    const cover = payload.files.find((image) => image.isCover) || payload.files[0];
+    if (cover && !state.selectedCover) {
+      state.selectedCover = { kind: "existing", id: cover.filename };
     }
+    renderImagePreviews();
   } catch (error) {
     if (error.message !== "未找到该房源的图片目录") {
       showToast(error.message, true);
     }
+  } finally {
+    if (state.editor === editor) state.loadingImages = false;
   }
 }
 
@@ -498,46 +499,35 @@ function fileToBase64(file) {
   });
 }
 
-async function uploadPendingImages(listingId) {
-  if (!state.pendingImages.length) return null;
-  const totalSize = state.pendingImages.reduce((sum, file) => sum + file.size, 0);
-  if (state.pendingImages.length > 12) throw new Error("每个房源最多上传 12 张图片");
-  if (state.pendingImages.some((file) => file.size > 12 * 1024 * 1024)) {
+async function saveImages(listingId, imageKey) {
+  if (!state.pendingImages.length && !state.removedImages.size &&
+      state.selectedCover?.kind === "existing" &&
+      state.existingImages.find((image) => image.filename === state.selectedCover.id)?.isCover) {
+    return null;
+  }
+  const totalSize = state.pendingImages.reduce((sum, { file }) => sum + file.size, 0);
+  const remaining = state.existingImages.length - state.removedImages.size;
+  if (remaining + state.pendingImages.length > 24) throw new Error("每个房源最多保留 24 张图片");
+  if (state.pendingImages.some(({ file }) => file.size > 12 * 1024 * 1024)) {
     throw new Error("每张图片必须小于 12 MB");
   }
   if (totalSize > 32 * 1024 * 1024) throw new Error("本次图片总大小必须小于 32 MB");
 
-  setSaveStatus("正在上传图片...");
-  const files = await Promise.all(state.pendingImages.map(async (file) => ({
+  setSaveStatus("正在保存图片...");
+  const files = await Promise.all(state.pendingImages.map(async ({ file }) => ({
     name: file.name,
     type: file.type,
     data: await fileToBase64(file),
   })));
-  return request("/api/images", {
+  return request("/api/images/update", {
     method: "POST",
     body: JSON.stringify({
       listingId,
-      coverIndex: state.pendingCoverIndex,
-      files,
-    }),
-  });
-}
-
-async function saveExistingCover() {
-  if (
-    !state.existingImageFolder ||
-    !state.existingCover ||
-    state.existingCover === state.initialExistingCover
-  ) {
-    return;
-  }
-
-  setSaveStatus("正在设置主图...");
-  await request("/api/images/cover", {
-    method: "PUT",
-    body: JSON.stringify({
       folder: state.existingImageFolder,
-      filename: state.existingCover,
+      imageKey: !state.existingImageFolder && remaining ? imageKey : null,
+      removedFiles: [...state.removedImages],
+      cover: state.selectedCover,
+      files,
     }),
   });
 }
@@ -584,12 +574,15 @@ async function submitEditor(event) {
         : state.data.listings[editor.status][editor.index];
       const targetStatus = formData.get("status");
       const listingId = formData.get("id").trim();
+      if (state.loadingImages) throw new Error("图片尚未加载完成，请稍后保存");
       const hasExistingImages = Boolean(oldItem.imgid || oldItem.mlsId || oldItem.imageKey);
       if (!hasExistingImages && !state.pendingImages.length) {
         throw new Error("请至少选择一张房源图片");
       }
-      const upload = await uploadPendingImages(listingId);
-      if (!upload) await saveExistingCover();
+      if (state.existingImages.length - state.removedImages.size + state.pendingImages.length === 0) {
+        throw new Error("请至少保留一张房源图片");
+      }
+      const upload = await saveImages(listingId, oldItem.imageKey);
       const updated = {
         ...oldItem,
         id: listingId,
@@ -714,22 +707,40 @@ elements.addButton.addEventListener("click", () => {
 elements.form.addEventListener("submit", submitEditor);
 elements.formFields.addEventListener("change", (event) => {
   if (event.target.id !== "listing-images") return;
-  state.pendingImages = Array.from(event.target.files);
-  state.pendingCoverIndex = 0;
+  state.pendingImages.push(...Array.from(event.target.files, (file) => ({
+    file,
+    url: URL.createObjectURL(file),
+  })));
+  event.target.value = "";
   renderImagePreviews();
 });
 elements.formFields.addEventListener("click", (event) => {
-  const pendingButton = event.target.closest("[data-pending-cover]");
-  if (pendingButton) {
-    state.pendingCoverIndex = Number(pendingButton.dataset.pendingCover);
+  const removeButton = event.target.closest("[data-remove-kind]");
+  if (removeButton) {
+    const id = removeButton.dataset.removeId;
+    if (removeButton.dataset.removeKind === "existing") {
+      state.removedImages.add(id);
+    } else {
+      const index = Number(id);
+      const [{ url }] = state.pendingImages.splice(index, 1);
+      URL.revokeObjectURL(url);
+      if (state.selectedCover?.kind === "pending") {
+        if (state.selectedCover.id === index) state.selectedCover = null;
+        else if (state.selectedCover.id > index) state.selectedCover.id -= 1;
+      }
+    }
     renderImagePreviews();
     return;
   }
-
-  const existingButton = event.target.closest("[data-existing-cover]");
-  if (existingButton) {
-    state.existingCover = existingButton.dataset.existingCover;
-    renderExistingImages();
+  const coverButton = event.target.closest("[data-cover-kind]");
+  if (coverButton) {
+    state.selectedCover = {
+      kind: coverButton.dataset.coverKind,
+      id: coverButton.dataset.coverKind === "pending"
+        ? Number(coverButton.dataset.coverId)
+        : coverButton.dataset.coverId,
+    };
+    renderImagePreviews();
   }
 });
 elements.deleteButton.addEventListener("click", deleteRecord);

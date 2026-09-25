@@ -11,21 +11,20 @@ const importedImages = import.meta.glob("../../source/listings_image/**/*.{jpg,j
 export const getPropertyImages = (mlsId, imgid) => {
   let targetFolder = null;
 
-  // Check if mlsId exists in the paths
-  if (mlsId) {
+  // Admin uploads live in imgid; an older MLS folder may also exist.
+  if (imgid) {
     for (const path in importedImages) {
-      if (path.includes(`/${mlsId}/`)) {
-        targetFolder = mlsId;
+      if (path.includes(`/${imgid}/`)) {
+        targetFolder = imgid;
         break;
       }
     }
   }
 
-  // Fallback to imgid if no mlsId match
-  if (!targetFolder && imgid) {
+  if (!targetFolder && mlsId) {
     for (const path in importedImages) {
-      if (path.includes(`/${imgid}/`)) {
-        targetFolder = imgid;
+      if (path.includes(`/${mlsId}/`)) {
+        targetFolder = mlsId;
         break;
       }
     }

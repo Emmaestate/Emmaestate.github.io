@@ -26,11 +26,9 @@ const OPTIONS = {
 
 const SLIDES = [...soldData]
   .map((item, originalIndex) => ({ item, originalIndex }))
-  .sort((a, b) => {
-    const aTime = Date.parse(a.item.addedAt || "") || 0;
-    const bTime = Date.parse(b.item.addedAt || "") || 0;
-    return bTime - aTime || a.originalIndex - b.originalIndex;
-  })
+  .sort(
+    (a, b) => b.item.price - a.item.price || a.originalIndex - b.originalIndex,
+  )
   .map(({ item }) => {
     const { frontImage } = getPropertyImages(item.mlsId, item.imgid);
     return {
@@ -71,10 +69,18 @@ const EmblaCarousel = () => {
       <div className="embla__controls">
         <h1 className="embla__heading">{homeConfig.portfolio.title[lang]}</h1>
         <div className="embla__right-controls">
-          <a href="#/properties/soldlist" className="embla__view-all">VIEW ALL</a>
+          <a href="#/properties/soldlist" className="embla__view-all">
+            VIEW ALL
+          </a>
           <div className="embla__buttons">
-            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
+            />
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
           </div>
         </div>
       </div>
@@ -92,7 +98,8 @@ const EmblaCarousel = () => {
                   className="listing-image-container"
                   style={{
                     width: "100%",
-                    height: "60%", /* increased percentage to make image taller relative to container */
+                    height:
+                      "60%" /* increased percentage to make image taller relative to container */,
                     backgroundColor: "#e0e0e0",
                     overflow: "hidden",
                   }}

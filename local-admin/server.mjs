@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import { access, copyFile, mkdir, readFile, readdir, rename, writeFile } from "node:fs/promises";
+import { access, copyFile, mkdir, readFile, readdir, rename, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -19,7 +19,7 @@ const IMAGE_MAP_FILES = [
 const MAX_BODY_SIZE = 2 * 1024 * 1024;
 const MAX_UPLOAD_BODY_SIZE = 45 * 1024 * 1024;
 const MAX_IMAGE_SIZE = 12 * 1024 * 1024;
-const MAX_IMAGE_COUNT = 12;
+const MAX_IMAGE_COUNT = 24;
 
 const DATA_FILES = {
   active: path.join(PROJECT_ROOT, "src/data/activeListings.json"),
@@ -106,7 +106,8 @@ function normalizeFolderPart(value) {
 
 function safePathPart(value, label) {
   const part = String(value || "");
-  if (!part || part !== path.basename(part) || part.includes("\0")) {
+  if (!part || part === "." || part === ".." ||
+      part !== path.basename(part) || part.includes("\0")) {
     throw Object.assign(new Error(`${label}无效`), { status: 400 });
   }
   return part;
@@ -173,20 +174,26 @@ async function setCoverImage(folderValue, filenameValue) {
   const targetDir = path.join(LISTING_IMAGES_DIR, folder);
   const stamp = `${process.pid}-${Date.now()}`;
   const staged = [];
-
-  for (const [index, currentName] of files.entries()) {
+  const nextNames = files.map((currentName) => {
     const extension = path.extname(currentName).toLowerCase();
     const cleanName = removeFrontMarker(currentName);
     const cleanBase = path.basename(cleanName, path.extname(cleanName));
-    const nextName = currentName === filename
+    return currentName === filename
       ? `${cleanBase}-Front${extension}`
       : `${cleanBase}${extension}`;
+  });
+  if (new Set(nextNames).size !== nextNames.length) {
+    throw Object.assign(new Error("图片文件名冲突，请先整理重复图片"), { status: 400 });
+  }
+
+  for (const [index, currentName] of files.entries()) {
+    const extension = path.extname(currentName).toLowerCase();
     const temporaryName = `.cover-${stamp}-${index}${extension}`;
     await rename(
       path.join(targetDir, currentName),
       path.join(targetDir, temporaryName),
     );
-    staged.push({ temporaryName, nextName });
+    staged.push({ temporaryName, nextName: nextNames[index] });
   }
 
   for (const { temporaryName, nextName } of staged) {
@@ -412,24 +419,65 @@ async function handleApi(request, response, pathname) {
     return true;
   }
 
-  if (request.method === "POST" && pathname === "/api/images") {
+  if (request.method === "POST" && pathname === "/api/images/update") {
     const body = await readBody(request, MAX_UPLOAD_BODY_SIZE);
-    const images = decodeUploadedImages(body?.files);
-    const coverIndex = Number(body?.coverIndex ?? 0);
-    if (!Number.isInteger(coverIndex) || coverIndex < 0 || coverIndex >= images.length) {
+    const images = body?.files?.length ? decodeUploadedImages(body.files) : [];
+    const folder = body?.folder
+      ? safePathPart(body.folder, "图片目录")
+      : `admin-${normalizeFolderPart(body?.listingId)}-${Date.now()}`;
+    const existing = body?.folder ? await listListingImages(folder) : [];
+    const legacyPath = !body?.folder && body?.imageKey
+      ? await resolveLegacyImage(body.imageKey)
+      : null;
+    if (!Array.isArray(body?.removedFiles) ||
+        body.removedFiles.some((name) => !existing.includes(name) &&
+          !(legacyPath && name === body.imageKey))) {
+      throw Object.assign(new Error("要删除的图片无效"), { status: 400 });
+    }
+    const removed = new Set(body.removedFiles);
+    const retained = existing.filter((name) => !removed.has(name));
+    const keepLegacy = legacyPath && !removed.has(body.imageKey);
+    if (retained.length + images.length + (keepLegacy ? 1 : 0) < 1 ||
+        retained.length + images.length + (keepLegacy ? 1 : 0) > MAX_IMAGE_COUNT) {
+      throw Object.assign(new Error(`每个房源需保留 1 至 ${MAX_IMAGE_COUNT} 张图片`), { status: 400 });
+    }
+
+    const cover = body.cover;
+    const isPendingCover = cover?.kind === "pending" &&
+      Number.isInteger(cover.id) && cover.id >= 0 && cover.id < images.length;
+    const isExistingCover = cover?.kind === "existing" &&
+      (retained.includes(cover.id) || (keepLegacy && cover.id === body.imageKey));
+    if (!isPendingCover && !isExistingCover) {
       throw Object.assign(new Error("请选择有效的主图"), { status: 400 });
     }
-    const folder = `admin-${normalizeFolderPart(body?.listingId)}-${Date.now()}`;
+
     const targetDir = path.join(LISTING_IMAGES_DIR, folder);
     await mkdir(targetDir, { recursive: true });
+    const nextNumber = existing.reduce((max, name) => {
+      const number = Number(name.match(/^\d+/)?.[0]) || 0;
+      return Math.max(max, number);
+    }, 0) + 1;
+    const legacyName = keepLegacy ? `${String(nextNumber).padStart(2, "0")}${path.extname(legacyPath)}` : null;
+    const newNames = images.map(({ extension }, index) =>
+      `${String(nextNumber + index + (keepLegacy ? 1 : 0)).padStart(2, "0")}${extension}`);
+    if (keepLegacy) await copyFile(legacyPath, path.join(targetDir, legacyName));
+    await Promise.all(images.map(({ buffer }, index) =>
+      writeFile(path.join(targetDir, newNames[index]), buffer)));
 
-    await Promise.all(images.map(({ buffer, extension }, index) => {
-      const sequence = String(index + 1).padStart(2, "0");
-      const filename = index === coverIndex ? `${sequence}-Front${extension}` : `${sequence}${extension}`;
-      return writeFile(path.join(targetDir, filename), buffer);
-    }));
-
-    sendJson(response, 201, { folder, count: images.length });
+    if (removed.size && existing.length) {
+      const backupDir = path.join(BACKUP_DIR, "images", `${folder}-${backupStamp()}`);
+      await mkdir(backupDir, { recursive: true });
+      for (const name of removed) {
+        if (existing.includes(name)) {
+          await copyFile(path.join(targetDir, name), path.join(backupDir, name));
+          await unlink(path.join(targetDir, name));
+        }
+      }
+    }
+    const coverName = isPendingCover ? newNames[cover.id]
+      : keepLegacy && cover.id === body.imageKey ? legacyName : cover.id;
+    await setCoverImage(folder, coverName);
+    sendJson(response, 200, { folder, count: retained.length + images.length + (keepLegacy ? 1 : 0) });
     return true;
   }
 
