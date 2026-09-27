@@ -1,29 +1,5 @@
 [
   {
-    "id": "listing-mucg1xd8",
-    "address": "3 Court Square, Unit 5504, Long Island City, NY 11101",
-    "price": 1078250,
-    "bedrooms": 1,
-    "bathrooms": 1,
-    "sqft": null,
-    "mlsId": "11557146",
-    "imgid": "admin-listing-mucg1xd8-1790357449841",
-    "features": [
-      "55th-floor luxury residence with breathtaking panoramic skyline and river views through floor-to-ceiling windows.",
-      "Prime Court Square location with immediate access to the E, M, R, G, and 7 subway lines, just minutes from Manhattan.",
-      "Modern 1-bedroom, 1-bath layout featuring wide-plank oak flooring, central A/C, and an in-unit washer and dryer.",
-      "Full-service luxury condominium offering a concierge, fitness center, rooftop access, bike storage, security, and resident amenities.",
-      "Steps from Long Island City's best amenities, including Trader Joe's, restaurants, cafés, art galleries, and the waterfront."
-    ],
-    "features_zh": [
-      "位于 55 层的奢华住宅，透过落地玻璃窗可欣赏令人惊叹的城市天际线与河景全景。",
-      "位于法院广场黄金地段，可直达 E、M、R、G 以及 7 号地铁线，距离曼哈顿仅数分钟路程。",
-      "现代一居室一卫户型，配有宽橡木地板、中央空调以及户内洗衣机和烘干机。",
-      "全套服务豪华公寓，提供礼宾服务、健身中心、屋顶区域、自行车储藏室、安保以及住户配套设施。",
-      "步行可达长岛市优质配套，包括乔氏超市、餐厅、咖啡馆、艺术画廊以及滨水区域。"
-    ]
-  },
-  {
     "id": "listing-mucfz53j",
     "address": "200 Chamber st #19F, New York, NY 10007",
     "price": 1560000,
@@ -45,6 +21,30 @@
       "奢华室内装修，含实木地板、挑高天花板、户内博世洗烘一体机，以及带浸泡浴缸的水疗风格大理石浴室。",
       "高端全套配套设施，含 24 小时礼宾服务、带室内长泳道泳池的健身中心、影音室、屋顶露台以及电梯通行。",
       "翠贝卡黄金地段，距离地铁、公园、知名餐厅与社区商铺仅数分钟路程。"
+    ]
+  },
+  {
+    "id": "listing-mucg1xd8",
+    "address": "3 Court Square, Unit 5504, Long Island City, NY 11101",
+    "price": 1078250,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "sqft": null,
+    "mlsId": "11557146",
+    "imgid": "admin-listing-mucg1xd8-1790357449841",
+    "features": [
+      "55th-floor luxury residence with breathtaking panoramic skyline and river views through floor-to-ceiling windows.",
+      "Prime Court Square location with immediate access to the E, M, R, G, and 7 subway lines, just minutes from Manhattan.",
+      "Modern 1-bedroom, 1-bath layout featuring wide-plank oak flooring, central A/C, and an in-unit washer and dryer.",
+      "Full-service luxury condominium offering a concierge, fitness center, rooftop access, bike storage, security, and resident amenities.",
+      "Steps from Long Island City's best amenities, including Trader Joe's, restaurants, cafés, art galleries, and the waterfront."
+    ],
+    "features_zh": [
+      "位于 55 层的奢华住宅，透过落地玻璃窗可欣赏令人惊叹的城市天际线与河景全景。",
+      "位于法院广场黄金地段，可直达 E、M、R、G 以及 7 号地铁线，距离曼哈顿仅数分钟路程。",
+      "现代一居室一卫户型，配有宽橡木地板、中央空调以及户内洗衣机和烘干机。",
+      "全套服务豪华公寓，提供礼宾服务、健身中心、屋顶区域、自行车储藏室、安保以及住户配套设施。",
+      "步行可达长岛市优质配套，包括乔氏超市、餐厅、咖啡馆、艺术画廊以及滨水区域。"
     ]
   },
   {

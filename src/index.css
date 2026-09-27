@@ -28,8 +28,8 @@ a {
 }
 
 .container-type1 {
-  padding-left: 0.5%;
-  padding-right: 0.5%;
+  /* padding-left: 0.5%;
+  padding-right: 0.5%; */
 }
 
 .container-type2 {
@@ -58,6 +58,14 @@ a {
   }
   .contact-form {
     padding: 24px !important;
+  }
+  .container-type1 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .swiper-pagination {
+    /* bottom: 20px; */
+    display: none;
   }
 }
 

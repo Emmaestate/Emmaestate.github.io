@@ -14,6 +14,11 @@
   text-align: left;
   font-family: 'Cormorant Garamond', serif;
 }
+@media (max-width: 768px) {
+  .text-container-title {
+    font-size: 36px;
+  }
+}
 
 .text-container-text {
   font-size: 16px;

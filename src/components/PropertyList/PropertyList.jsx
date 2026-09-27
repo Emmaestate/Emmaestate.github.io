@@ -1,6 +1,6 @@
 // src/Components/PropertyList/PropertyList.jsx
 import React, { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import "./PropertyList.css";
 import ContactForm from "../ContactForm/ContactForm";
 
@@ -8,7 +8,7 @@ import { useLanguage } from "../../i18n/LanguageContext.jsx";
 
 const PropertyList = ({ properties = [] }) => {
   const { lang } = useLanguage();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [gridHeight, setGridHeight] = useState("auto"); // Initialize with auto
   const propertiesPerPage = 6;
@@ -16,11 +16,23 @@ const PropertyList = ({ properties = [] }) => {
   const listRef = useRef(null);
   const gridRef = useRef(null); // Ref for the grid container
 
+  const totalPages = Math.ceil(properties.length / propertiesPerPage);
+  const pageParam = searchParams.get("page");
+  const requestedPage =
+    pageParam && /^[1-9]\d*$/.test(pageParam) ? Number(pageParam) : 1;
+  const currentPage = Math.min(requestedPage, Math.max(totalPages, 1));
+  const initialPage = useRef(currentPage);
   const indexOfLast = currentPage * propertiesPerPage;
   const indexOfFirst = indexOfLast - propertiesPerPage;
   const currentProperties = properties.slice(indexOfFirst, indexOfLast);
 
-  const totalPages = Math.ceil(properties.length / propertiesPerPage);
+  useEffect(() => {
+    if (initialPage.current <= 1) return;
+    const frame = window.requestAnimationFrame(() => {
+      listRef.current?.scrollIntoView({ behavior: "instant" });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   // Measure height when properties change
   useEffect(() => {
@@ -36,7 +48,12 @@ const PropertyList = ({ properties = [] }) => {
   }, [currentProperties]);
 
   const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
+    setSearchParams((previous) => {
+      const next = new URLSearchParams(previous);
+      if (pageNumber === 1) next.delete("page");
+      else next.set("page", String(pageNumber));
+      return next;
+    });
     if (listRef.current) {
       listRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -69,13 +86,16 @@ const PropertyList = ({ properties = [] }) => {
               className="property-card"
               onClick={() => handleClick(property.id)}
             >
-              <div className="property-image-container" style={{ backgroundColor: "#e0e0e0" }}>
+              <div
+                className="property-image-container"
+                style={{ backgroundColor: "#e0e0e0" }}
+              >
                 <img
                   src={property.image}
                   alt={property.address}
                   className="property-image"
                   onError={(e) => {
-                    e.target.style.display = 'none';
+                    e.target.style.display = "none";
                   }}
                 />
               </div>
